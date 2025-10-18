@@ -1,0 +1,43 @@
+name: Simple Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y portaudio19-dev libasound2-dev
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: Test with pytest
+      run: |
+        pytest tests/test_basic.py -v
+    
+    - name: Test imports
+      run: |
+        python -c "import main_professional_ui; print('Import successful')"
+        python -c "from core.trie import Trie; print('Core import successful')"
+        python -c "from skills.base_skill import BaseSkill; print('Skills import successful')"
