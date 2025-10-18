@@ -1,0 +1,28 @@
+name: Ultra Simple Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Test Python basics
+      run: |
+        python -c "print('Python is working')"
+        python -c "assert 1 + 1 == 2; print('Math works')"
+        python -c "assert 'hello'.upper() == 'HELLO'; print('Strings work')"
+        python -c "assert True == True; print('Booleans work')"
+        python -c "import os; print('OS module works')"
+        python -c "import sys; print('Sys module works')"
+        echo "All basic tests passed!"
