@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to Sigma Voice Assistant! This guide will help you get started with development and understand our contribution process.
 
+---
+
 ## 📋 Table of Contents
 
 - [Getting Started](#-getting-started)

@@ -1,0 +1,95 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release'
+        required: true
+        default: '2.0.0'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install build twine
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Check package
+      run: |
+        twine check dist/*
+    
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          ## 🎉 Sigma Voice Assistant ${{ github.ref }}
+          
+          ### ✨ New Features
+          - Modern Professional UI
+          - Push-to-Talk Mode
+          - Auto-Scrolling Conversation
+          - Chat Bubbles
+          - Quick Actions
+          - Real-time Status Indicators
+          
+          ### 🔧 Improvements
+          - Enhanced voice recognition
+          - Better error handling
+          - Performance optimizations
+          - Comprehensive documentation
+          
+          ### 📦 Installation
+          ```bash
+          pip install sigma-voice-assistant
+          ```
+          
+          ### 🚀 Quick Start
+          ```bash
+          sigma-voice
+          ```
+          
+          See [README.md](README.md) for more information.
+        draft: false
+        prerelease: false
+    
+    - name: Upload Release Assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/
+        asset_name: sigma-voice-assistant-${{ github.ref }}.tar.gz
+        asset_content_type: application/gzip
+    
+    - name: Upload Wheel
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/
+        asset_name: sigma_voice_assistant-${{ github.ref }}-py3-none-any.whl
+        asset_content_type: application/zip

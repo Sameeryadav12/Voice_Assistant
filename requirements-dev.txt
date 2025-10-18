@@ -1,0 +1,54 @@
+# Development Dependencies for Sigma Voice Assistant
+# Install with: pip install -r requirements-dev.txt
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+pytest-asyncio>=0.21.0
+
+# Code Quality
+black>=22.0.0
+flake8>=5.0.0
+mypy>=1.0.0
+isort>=5.10.0
+pylint>=2.15.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+sphinx-autodoc-typehints>=1.19.0
+
+# Development Tools
+pre-commit>=2.20.0
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Performance Profiling
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+py-spy>=0.3.14
+
+# Security
+safety>=2.3.0
+bandit>=1.7.0
+
+# Build Tools
+build>=0.8.0
+twine>=4.0.0
+wheel>=0.40.0
+
+# Type Checking
+types-requests>=2.28.0
+types-PyYAML>=6.0.0
+
+# Audio Testing
+pyaudio>=0.2.11
+webrtcvad>=2.0.10
+
+# System Monitoring
+psutil>=5.9.0
+
+# Code Coverage
+coverage>=7.0.0
+codecov>=2.1.0

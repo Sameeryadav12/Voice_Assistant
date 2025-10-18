@@ -1,31 +1,50 @@
-# 🎤 Sigma Voice Assistant
+# 🎤 Sigma Voice Assistant - Professional Edition
 
-**A sophisticated voice-controlled assistant with advanced data structures, machine learning, and natural language processing.**
+<div align="center">
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![Status](https://img.shields.io/badge/status-working-brightgreen)
+![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![UI](https://img.shields.io/badge/UI-modern--professional-purple)
+
+**A sophisticated voice-controlled assistant with modern UI, advanced data structures, and natural language processing.**
+
+[🚀 Quick Start](#-quick-start) • [📖 Documentation](docs/) • [🎯 Features](#-features) • [🛠️ Installation](#-installation) • [🤝 Contributing](docs/CONTRIBUTING.md)
+
+</div>
 
 ---
 
 ## ✨ Features
 
-### 🎯 Core Capabilities
-- **Voice Recognition** - Push-to-talk mode for accurate speech capture
-- **Text Input** - Type commands for instant response
-- **8 Functional Skills** - Reminders, file search, app launching, system info, and more
-- **Accent Support** - Handles multiple pronunciations and accents
-- **Multi-mode Operation** - Keyboard, voice, or combined modes
+### 🎨 **Modern Professional UI**
+- **Beautiful Dark Theme** with purple/green accents
+- **Push-to-Talk Interface** - Hold button to speak, release when done
+- **Chat Bubbles** - WhatsApp-style conversation display
+- **Auto-Scrolling** - Automatic conversation scrolling
+- **Quick Actions** - One-click common commands
+- **Real-time Status** - Animated status indicators
+- **Responsive Design** - Clean 2-panel layout
 
-### 🧠 Advanced Technologies
-- **Trie-based Keyword Matching** - Efficient wake word detection
+### 🧠 **Advanced Technologies**
+- **Trie-based Keyword Matching** - O(m) wake word detection
 - **Finite State Machine** - Dialogue flow management
 - **Priority Heap Scheduling** - Task scheduling with priorities
 - **LRU Cache** - Performance optimization
 - **Graph-based Search** - File system and application discovery
-- **Machine Learning** - Intent classification
+- **Machine Learning** - Intent classification with scikit-learn
 - **Voice Activity Detection** - Smart speech detection
 - **Audio Resampling** - Automatic sample rate conversion
+
+### 🎯 **8 Functional Skills**
+- ⏰ **Time & Date** - Get current time and date
+- 💻 **System Info** - CPU, memory, disk information
+- ⏲️ **Reminders** - Set and manage reminders
+- 📁 **File Search** - Find files by name or content
+- 🔢 **App Launcher** - Open applications
+- 🎛️ **System Control** - Control system functions
+- ❓ **Help System** - Show available commands
+- 📊 **Statistics** - Real-time performance metrics
 
 ---
 
@@ -41,8 +60,8 @@
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/voice_assistant.git
-cd voice_assistant
+git clone https://github.com/yourusername/sigma-voice-assistant.git
+cd sigma-voice-assistant
 ```
 
 2. **Create virtual environment**
@@ -60,119 +79,140 @@ pip install -r requirements.txt
 
 4. **Run the assistant**
 ```bash
-python main_pushtotalk.py
+python main_professional_ui.py
 ```
 
----
+### 🎮 Usage
 
-## 🎮 Usage
+#### Voice Mode (Push-to-Talk)
+1. **Hold** the green "🎤 HOLD TO SPEAK" button
+2. **Speak** your command: "Hey Sigma, what time is it?"
+3. **Release** the button when done
+4. Watch the response appear as a chat bubble!
 
-### Push-to-Talk Mode (Recommended)
-```bash
-python main_pushtotalk.py
-```
-- **Hold** the green button while speaking
-- **Release** when done
-- Works best for all microphones!
+#### Text Mode
+1. Type your command in the text field
+2. Press **Enter** or click **📤 Send**
+3. Get instant response!
 
-### Combined Mode
-```bash
-python main_combined.py
-```
-- Type OR speak commands
-- Continuous voice listening
-
-### Hybrid Mode (Keyboard Only)
-```bash
-python main_hybrid.py
-```
-- Type all commands
-- 100% reliable, no microphone needed
+#### Quick Actions
+Click any quick action button for instant commands:
+- ⏰ What time is it?
+- 💻 System info
+- ⏲️ Set reminder
+- 🔢 Open calculator
 
 ---
 
 ## 📝 Example Commands
 
-```
+```bash
+# Time & Information
 Hey Sigma, what time is it?
+Hey Sigma, what's the date?
 Hey Sigma, show system information
+
+# Reminders
 Hey Sigma, set a reminder for 5 minutes
-Hey Sigma, remind me to call John at 3pm
+Hey Sigma, remind me to call John in 10 minutes
+Hey Sigma, what reminders do I have?
+
+# Applications
 Hey Sigma, open calculator
+Hey Sigma, launch notepad
 Hey Sigma, open chrome
-Hey Sigma, search for files
-Hey Sigma, find files with report in the name
+Hey Sigma, start command prompt
+
+# File Operations
+Hey Sigma, search for documents
+Hey Sigma, find files with test in the name
+Hey Sigma, search for reports
+
+# Help
 Hey Sigma, what can you do?
+Hey Sigma, help
 ```
 
 ---
 
-## 🛠️ Project Structure
+## 🛠️ Installation
+
+### Windows (Recommended)
+
+1. **Download Python 3.8+** from [python.org](https://python.org)
+2. **Clone this repository**
+3. **Open PowerShell** in the project folder
+4. **Run setup commands:**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main_professional_ui.py
+```
+
+### Linux/macOS
+
+```bash
+git clone https://github.com/yourusername/sigma-voice-assistant.git
+cd sigma-voice-assistant
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 main_professional_ui.py
+```
+
+---
+
+## 📁 Project Structure
 
 ```
-voice_assistant/
-├── audio/                  # Audio processing components
-│   ├── input_handler.py   # Audio capture & VAD
-│   └── output_handler.py  # Text-to-speech
-├── core/                   # Core algorithms
-│   ├── trie.py            # Keyword matching
-│   ├── state_machine.py   # Dialogue management
-│   ├── scheduler.py       # Task scheduling
-│   ├── cache.py           # LRU cache
-│   └── graph_search.py    # Graph algorithms
-├── nlp/                    # Natural language processing
-│   ├── speech_to_text.py  # Speech recognition
-│   ├── intent_classifier.py # Intent classification
-│   └── text_processor.py  # Text preprocessing
-├── skills/                 # Skill implementations
-│   ├── base_skill.py      # Skill framework
-│   ├── reminder_skill.py  # Reminders & scheduling
-│   ├── file_skill.py      # File operations
-│   ├── app_skill.py       # Application control
-│   ├── info_skill.py      # Time, date, system info
-│   └── help_skill.py      # Help system
-├── docs/                   # Documentation
-│   ├── HOW_TO_USE.md      # User guide
-│   ├── TROUBLESHOOTING.md # Problem solving
-│   └── ...
-├── tests/                  # Testing utilities
+sigma-voice-assistant/
+├── 📁 audio/                  # Audio processing components
+│   ├── input_handler.py      # Audio capture & VAD
+│   └── output_handler.py     # Text-to-speech
+├── 📁 core/                   # Core algorithms
+│   ├── trie.py               # Keyword matching
+│   ├── state_machine.py      # Dialogue management
+│   ├── scheduler.py          # Task scheduling
+│   ├── cache.py              # LRU cache
+│   └── graph_search.py       # Graph algorithms
+├── 📁 nlp/                    # Natural language processing
+│   ├── speech_to_text.py     # Speech recognition
+│   ├── intent_classifier.py  # Intent classification
+│   └── text_processor.py     # Text preprocessing
+├── 📁 skills/                 # Skill implementations
+│   ├── base_skill.py         # Skill framework
+│   ├── reminder_skill.py     # Reminders & scheduling
+│   ├── file_skill.py         # File operations
+│   ├── app_skill.py          # Application control
+│   ├── info_skill.py         # Time, date, system info
+│   └── help_skill.py         # Help system
+├── 📁 docs/                   # Documentation
+│   ├── USER_GUIDE.md         # Complete user guide
+│   ├── TROUBLESHOOTING.md    # Problem solving
+│   ├── API_REFERENCE.md      # Technical documentation
+│   └── CONTRIBUTING.md       # Development guide
+├── 📁 tests/                  # Testing utilities
 │   ├── test_microphone_volume.py
-│   └── ...
-├── examples/               # Example scripts
-├── main_pushtotalk.py     # Push-to-talk mode (recommended)
-├── main_combined.py       # Combined keyboard + voice
-├── main_hybrid.py         # Keyboard-only mode
-├── main.py                # Original voice-only mode
-└── requirements.txt       # Dependencies
+│   └── test_speech_recognition.py
+├── 🎮 main_professional_ui.py # Main application (Recommended)
+├── 🎮 main_pushtotalk.py     # Push-to-talk mode
+├── 🎮 main_hybrid.py         # Keyboard-only mode
+├── 🎮 main.py                # Original voice-only mode
+├── 📋 requirements.txt       # Dependencies
+└── 📖 README.md              # This file
 ```
 
 ---
 
-## 🎯 Skills Available
+## 🎯 Available Modes
 
-### 1. **Info Skill**
-- Get current time
-- Get current date
-- View system information (CPU, memory, disk)
-
-### 2. **Reminder Skill**
-- Set reminders with natural language
-- Recurring reminders
-- View upcoming reminders
-
-### 3. **File Search Skill**
-- Search files by name
-- Find files with specific content
-- Navigate file system
-
-### 4. **App Launcher Skill**
-- Open applications (Calculator, Chrome, Notepad, etc.)
-- Close applications
-- List running apps
-
-### 5. **Help Skill**
-- Show available commands
-- Display capabilities
+| Mode | File | Best For | Description |
+|------|------|----------|-------------|
+| **🎨 Professional UI** | `main_professional_ui.py` | Daily use, best looking | Modern UI with push-to-talk |
+| **⌨️ Keyboard-Only** | `main_hybrid.py` | Most reliable, no mic needed | Type all commands |
+| **🎤 Push-to-Talk** | `main_pushtotalk.py` | Precise voice control | Hold button to speak |
+| **🔄 Original** | `main.py` | Continuous listening | Always listening mode |
 
 ---
 
@@ -180,7 +220,7 @@ voice_assistant/
 
 ### Audio Processing
 - **Sample Rate Auto-Detection** - Automatically detects and converts microphone sample rates
-- **28,000x Audio Boost** - Works with low-gain microphones
+- **Audio Enhancement** - Works with low-gain microphones
 - **Noise Filtering** - Ignores background noise below threshold
 - **Voice Activity Detection** - Smart speech detection using WebRTC VAD
 
@@ -213,16 +253,25 @@ voice_assistant/
 - **Solution:** Check internet connection (Google API needs internet)
 - **Alternative:** Use keyboard mode (works offline)
 
+### UI Issues
+
+**Problem:** Interface looks broken
+- **Solution:** Update CustomTkinter: `pip install --upgrade customtkinter`
+
+**Problem:** Buttons not responding
+- **Solution:** Restart the application
+
 For more help, see [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
 
 ---
 
 ## 📚 Documentation
 
-- **[How to Use](docs/HOW_TO_USE.md)** - Complete user guide
-- **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and solutions
-- **[Fixes Applied](docs/FIXES_APPLIED.md)** - Technical details of all improvements
-- **[Accent Support](docs/ACCENT_FIXES.md)** - How accent handling works
+- **[📖 User Guide](docs/USER_GUIDE.md)** - Complete user guide
+- **[🔧 Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and solutions
+- **[⚙️ API Reference](docs/API_REFERENCE.md)** - Technical documentation
+- **[🤝 Contributing](docs/CONTRIBUTING.md)** - Development guidelines
+- **[📊 Performance](docs/PERFORMANCE.md)** - Performance optimization guide
 
 ---
 
@@ -264,7 +313,7 @@ python tests/test_speech_recognition.py
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
 ### Development Setup
 1. Fork the repository
@@ -287,17 +336,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **PyAudio** - Audio I/O
 - **WebRTC VAD** - Voice activity detection
 - **Google Speech API** - Speech recognition engine
-- **PocketSphinx** - Offline speech recognition
 - **CustomTkinter** - Modern UI framework
+- **scikit-learn** - Machine learning library
 
 ---
 
 ## 📊 Project Statistics
 
-- **Lines of Code:** ~5,000+
+- **Lines of Code:** ~6,500+
 - **Skills:** 8 functional skills
 - **Data Structures:** 6 advanced implementations
-- **Audio Modes:** 3 (Push-to-talk, Continuous, Keyboard)
+- **UI Modes:** 4 different interfaces
 - **Wake Word Variations:** 14+ supported
 - **Test Files:** 10+
 - **Documentation Files:** 10+
@@ -309,13 +358,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Completed ✅
 - [x] Voice recognition with multiple modes
 - [x] 8 functional skills
-- [x] Accent support
+- [x] Modern professional UI
 - [x] Push-to-talk mode
-- [x] Keyboard mode
-- [x] File search
-- [x] App launching
-- [x] Reminders
-- [x] System information
+- [x] Auto-scrolling conversation
+- [x] File search and app launching
+- [x] System information and reminders
 
 ### Future Enhancements 🚀
 - [ ] Offline speech recognition (Whisper integration)
@@ -330,8 +377,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💬 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/voice_assistant/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/voice_assistant/discussions)
+- **Issues:** [GitHub Issues](https://github.com/yourusername/sigma-voice-assistant/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/yourusername/sigma-voice-assistant/discussions)
 - **Documentation:** [docs/](docs/)
 
 ---
@@ -346,7 +393,12 @@ If you find this project useful, please consider:
 
 ---
 
+<div align="center">
+
 **Made with ❤️ and Python**
 
 *A demonstration of advanced algorithms, data structures, and AI integration in a practical application.*
 
+[🚀 Get Started](#-quick-start) • [📖 Read Docs](docs/) • [🐛 Report Issues](https://github.com/yourusername/sigma-voice-assistant/issues)
+
+</div>
