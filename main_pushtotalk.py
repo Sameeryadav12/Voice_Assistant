@@ -1,5 +1,5 @@
 """
-Sigma Voice Assistant - Push-to-Talk Mode
+Jarvis Voice Assistant - Push-to-Talk Mode
 SIMPLE & RELIABLE: Hold button to speak, release when done!
 """
 
@@ -92,11 +92,11 @@ class PushToTalkAssistant:
         ctk.set_default_color_theme("blue")
         
         self.root = ctk.CTk()
-        self.root.title("Sigma - Push-to-Talk Mode")
+        self.root.title("Jarvis - Push-to-Talk Mode")
         self.root.geometry("900x700")
         
         # Title
-        title = ctk.CTkLabel(self.root, text="Sigma Voice Assistant", font=ctk.CTkFont(size=24, weight="bold"))
+        title = ctk.CTkLabel(self.root, text="Jarvis Voice Assistant", font=ctk.CTkFont(size=24, weight="bold"))
         title.pack(pady=20)
         
         # Mode info
@@ -158,7 +158,7 @@ class PushToTalkAssistant:
         self._update_conversation("HOLD the green button while speaking, RELEASE when done!")
         self._update_conversation("Or just TYPE your commands below!")
         self._update_conversation("")
-        self._update_conversation("Try: Hold button and say 'Hey Sigma, what time is it?'")
+        self._update_conversation("Try: Hold button and say 'Hey Jarvis, what time is it?'")
     
     def _start_recording(self, event):
         """Start recording when button pressed."""
@@ -245,12 +245,12 @@ class PushToTalkAssistant:
         try:
             # Check wake word
             if not self.keyword_matcher.detect_wake_word(text):
-                self._respond("Please say 'Hey Sigma' first!")
+                self._respond("Please say 'Hey Jarvis' first!")
                 return
             
             # Clean text
             clean_text = text.lower()
-            wake_variations = ["hey sigma", "sigma", "play sigma", "hey cig", "cig"]
+            wake_variations = ["hey jarvis", "jarvis", "play jarvis"]
             for wake_word in wake_variations:
                 clean_text = clean_text.replace(wake_word, "").strip()
             clean_text = clean_text.lstrip(',').lstrip('.').strip()
@@ -283,7 +283,7 @@ class PushToTalkAssistant:
     
     def _respond(self, text: str):
         """Respond to user."""
-        self._update_conversation(f"🤖 Sigma: {text}")
+        self._update_conversation(f"🤖 Jarvis: {text}")
     
     def _update_conversation(self, message: str):
         """Update conversation."""

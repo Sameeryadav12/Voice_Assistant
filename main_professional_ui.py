@@ -1,5 +1,5 @@
 """
-Sigma Voice Assistant - Professional Modern UI
+Jarvis Voice Assistant - Professional Modern UI
 Beautiful, animated, and user-friendly interface
 """
 
@@ -178,7 +178,7 @@ class ConversationBubble(ctk.CTkFrame):
         self.label.pack(padx=15, pady=10)
 
 
-class SigmaVoiceAssistantPro:
+class JarvisVoiceAssistantPro:
     """
     Professional Voice Assistant with Modern UI
     """
@@ -343,7 +343,7 @@ class SigmaVoiceAssistantPro:
         
         # Create main window
         self.root = ctk.CTk()
-        self.root.title("Sigma Voice Assistant - Professional Edition")
+        self.root.title("Jarvis Voice Assistant - Professional Edition")
         self.root.geometry("1200x800")
         self.root.minsize(1000, 700)
         self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
@@ -383,7 +383,7 @@ class SigmaVoiceAssistantPro:
         
         title_label = ctk.CTkLabel(
             left_frame,
-            text="Σ Sigma Assistant",
+            text="⚡ Jarvis Assistant",
             font=ctk.CTkFont(size=28, weight="bold"),
             text_color=Colors.PRIMARY_LIGHT
         )
@@ -444,7 +444,7 @@ class SigmaVoiceAssistantPro:
         self.conversation_frame.pack(fill="both", expand=True, padx=20, pady=(0, 15))
         
         # Welcome message - ATTRACTIVE AND ONE LINE!
-        self._add_conversation_bubble("🎉 Welcome to Sigma Voice Assistant! Hold the green button to speak or type commands below! 🚀", False)
+        self._add_conversation_bubble("🎉 Welcome to Jarvis Voice Assistant! Hold the green button to speak or type commands below! 🚀", False)
         
     def _create_control_panel(self, parent):
         """Create control panel"""
@@ -502,7 +502,7 @@ class SigmaVoiceAssistantPro:
             width=280,
             height=45,
             corner_radius=10,
-            placeholder_text="Hey Sigma, what time is it?",
+            placeholder_text="Hey Jarvis, what time is it?",
             font=ctk.CTkFont(size=13),
             border_width=1,
             border_color=Colors.BORDER
@@ -713,7 +713,7 @@ class SigmaVoiceAssistantPro:
             
     def _quick_action(self, action: str):
         """Execute a quick action"""
-        command = f"Hey Sigma, {action}"
+        command = f"Hey Jarvis, {action}"
         self.text_entry.delete(0, tk.END)
         self.text_entry.insert(0, command)
         self._on_text_submit()
@@ -834,7 +834,7 @@ class SigmaVoiceAssistantPro:
     def run(self):
         """Run the voice assistant application"""
         try:
-            print("Starting Sigma Voice Assistant Professional Edition...")
+            print("Starting Jarvis Voice Assistant Professional Edition...")
             # Welcome message already added in setup_ui
             self.root.mainloop()
         except Exception as e:
@@ -846,7 +846,7 @@ class SigmaVoiceAssistantPro:
 def main():
     """Main entry point"""
     print("=" * 60)
-    print("Sigma Voice Assistant - Professional Edition")
+    print("Jarvis Voice Assistant - Professional Edition")
     print("=" * 60)
     print("\nFeatures:")
     print("- Modern animated UI")
@@ -857,7 +857,7 @@ def main():
     print("\nStarting application...\n")
     
     try:
-        app = SigmaVoiceAssistantPro()
+        app = JarvisVoiceAssistantPro()
         app.run()
     except KeyboardInterrupt:
         print("\nShutting down...")

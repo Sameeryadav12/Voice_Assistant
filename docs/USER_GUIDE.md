@@ -1,6 +1,6 @@
-# 📖 Sigma Voice Assistant - User Guide
+# 📖 Jarvis Voice Assistant - User Guide
 
-## Welcome to Sigma Voice Assistant!
+## Welcome to Jarvis Voice Assistant!
 
 This comprehensive guide will help you get the most out of your voice assistant. Whether you're a beginner or an advanced user, you'll find everything you need here.
 
@@ -25,7 +25,7 @@ This comprehensive guide will help you get the most out of your voice assistant.
 The professional UI has two main panels:
 
 #### Left Panel - Conversation
-- **Chat bubbles** show your conversation with Sigma
+- **Chat bubbles** show your conversation with Jarvis
 - **Auto-scrolling** - automatically shows new messages
 - **Clear button** - start fresh conversation
 
@@ -44,18 +44,18 @@ The professional UI has two main panels:
 1. **Hold** the green "🎤 HOLD TO SPEAK" button
 2. **Speak clearly** your command
 3. **Release** the button when done
-4. **Wait** for Sigma to process and respond
+4. **Wait** for Jarvis to process and respond
 
 ### Wake Words
 
 Always start your commands with one of these:
-- "Hey Sigma"
-- "Sigma"
+- "Hey Jarvis"
+- "Jarvis"
 - "Assistant"
 
 **Examples:**
-- ✅ "Hey Sigma, what time is it?"
-- ✅ "Sigma, open calculator"
+- ✅ "Hey Jarvis, what time is it?"
+- ✅ "Jarvis, open calculator"
 - ❌ "What time is it?" (missing wake word)
 
 ---
@@ -71,7 +71,7 @@ Always start your commands with one of these:
 
 **Example:**
 ```
-Type: Hey Sigma, what time is it?
+Type: Hey Jarvis, what time is it?
 Press: Enter
 Result: Current time displayed
 ```
@@ -84,10 +84,10 @@ Click any quick action button for instant commands:
 
 | Button | Command | Description |
 |--------|---------|-------------|
-| ⏰ **What time is it?** | `Hey Sigma, what time is it?` | Get current time |
-| 💻 **System info** | `Hey Sigma, show system information` | View system details |
-| ⏲️ **Set reminder** | `Hey Sigma, set a reminder for 5 minutes` | Create reminder |
-| 🔢 **Open calculator** | `Hey Sigma, open calculator` | Launch calculator |
+| ⏰ **What time is it?** | `Hey Jarvis, what time is it?` | Get current time |
+| 💻 **System info** | `Hey Jarvis, show system information` | View system details |
+| ⏲️ **Set reminder** | `Hey Jarvis, set a reminder for 5 minutes` | Create reminder |
+| 🔢 **Open calculator** | `Hey Jarvis, open calculator` | Launch calculator |
 
 ---
 
@@ -97,41 +97,41 @@ Click any quick action button for instant commands:
 
 | Command | Example | Response |
 |---------|---------|----------|
-| Get current time | "Hey Sigma, what time is it?" | "The current time is 2:30 PM" |
-| Get current date | "Hey Sigma, what's the date?" | "Today is October 18, 2025" |
-| System information | "Hey Sigma, show system information" | CPU, memory, disk details |
+| Get current time | "Hey Jarvis, what time is it?" | "The current time is 2:30 PM" |
+| Get current date | "Hey Jarvis, what's the date?" | "Today is October 18, 2025" |
+| System information | "Hey Jarvis, show system information" | CPU, memory, disk details |
 
 ### Reminders
 
 | Command | Example | Response |
 |---------|---------|----------|
-| Set reminder | "Hey Sigma, set a reminder for 5 minutes" | "Reminder set for 2:35 PM" |
-| Set reminder with message | "Hey Sigma, remind me to call John in 10 minutes" | "Reminder set: Call John at 2:40 PM" |
-| List reminders | "Hey Sigma, what reminders do I have?" | Shows upcoming reminders |
+| Set reminder | "Hey Jarvis, set a reminder for 5 minutes" | "Reminder set for 2:35 PM" |
+| Set reminder with message | "Hey Jarvis, remind me to call John in 10 minutes" | "Reminder set: Call John at 2:40 PM" |
+| List reminders | "Hey Jarvis, what reminders do I have?" | Shows upcoming reminders |
 
 ### Applications
 
 | Command | Example | Response |
 |---------|---------|----------|
-| Open calculator | "Hey Sigma, open calculator" | "Opened calculator" |
-| Launch notepad | "Hey Sigma, launch notepad" | "Opened notepad" |
-| Open browser | "Hey Sigma, open chrome" | "Opened Chrome browser" |
-| Start command prompt | "Hey Sigma, start cmd" | "Opened command prompt" |
+| Open calculator | "Hey Jarvis, open calculator" | "Opened calculator" |
+| Launch notepad | "Hey Jarvis, launch notepad" | "Opened notepad" |
+| Open browser | "Hey Jarvis, open chrome" | "Opened Chrome browser" |
+| Start command prompt | "Hey Jarvis, start cmd" | "Opened command prompt" |
 
 ### File Operations
 
 | Command | Example | Response |
 |---------|---------|----------|
-| Search files | "Hey Sigma, search for documents" | Lists matching files |
-| Find specific files | "Hey Sigma, find files with test in the name" | Shows test files |
-| Search by content | "Hey Sigma, search for reports" | Finds files containing "reports" |
+| Search files | "Hey Jarvis, search for documents" | Lists matching files |
+| Find specific files | "Hey Jarvis, find files with test in the name" | Shows test files |
+| Search by content | "Hey Jarvis, search for reports" | Finds files containing "reports" |
 
 ### Help & Information
 
 | Command | Example | Response |
 |---------|---------|----------|
-| Show capabilities | "Hey Sigma, what can you do?" | Lists all available commands |
-| Get help | "Hey Sigma, help" | Shows help information |
+| Show capabilities | "Hey Jarvis, what can you do?" | Lists all available commands |
+| Get help | "Hey Jarvis, help" | Shows help information |
 
 ---
 
@@ -139,7 +139,7 @@ Click any quick action button for instant commands:
 
 ### Status Indicator
 
-The pulsing dot in the top-right shows Sigma's current state:
+The pulsing dot in the top-right shows Jarvis's current state:
 
 | Color | State | Description |
 |-------|-------|-------------|
@@ -152,7 +152,7 @@ The pulsing dot in the top-right shows Sigma's current state:
 ### Chat Bubbles
 
 - **Purple bubbles** (right side) - Your messages
-- **Gray bubbles** (left side) - Sigma's responses
+- **Gray bubbles** (left side) - Jarvis's responses
 - **Auto-scrolling** - Always shows latest messages
 - **Timestamps** - Each message is timestamped
 
@@ -176,7 +176,7 @@ The pulsing dot in the top-right shows Sigma's current state:
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| Speech Rate | 50-400 WPM | 200 | How fast Sigma speaks |
+| Speech Rate | 50-400 WPM | 200 | How fast Jarvis speaks |
 | Volume | 0-100% | 80% | Audio output volume |
 
 ---
@@ -185,9 +185,9 @@ The pulsing dot in the top-right shows Sigma's current state:
 
 ### Voice Recognition Issues
 
-**Problem:** Sigma doesn't understand me
+**Problem:** Jarvis doesn't understand me
 - **Solution:** Speak more clearly and slowly
-- **Try:** "Hey Sigma" + pause + your command
+- **Try:** "Hey Jarvis" + pause + your command
 - **Check:** Microphone is working and not muted
 
 **Problem:** Wrong words recognized
@@ -227,15 +227,15 @@ The pulsing dot in the top-right shows Sigma's current state:
 ### Voice Commands
 
 1. **Speak clearly** - Enunciate each word
-2. **Use wake words** - Always start with "Hey Sigma"
-3. **Pause briefly** - Wait a moment after "Hey Sigma"
+2. **Use wake words** - Always start with "Hey Jarvis"
+3. **Pause briefly** - Wait a moment after "Hey Jarvis"
 4. **Hold button firmly** - Don't release too early
 5. **Speak at normal volume** - Not too loud or quiet
 
 ### Text Commands
 
-1. **Use complete sentences** - "Hey Sigma, what time is it?"
-2. **Be specific** - "Hey Sigma, open calculator" not just "calculator"
+1. **Use complete sentences** - "Hey Jarvis, what time is it?"
+2. **Be specific** - "Hey Jarvis, open calculator" not just "calculator"
 3. **Check spelling** - Make sure words are spelled correctly
 4. **Use Enter key** - Faster than clicking Send button
 
@@ -252,7 +252,7 @@ The pulsing dot in the top-right shows Sigma's current state:
 ### For Voice Commands
 
 - **Practice with simple commands** first
-- **Use consistent phrasing** - "Hey Sigma" + command
+- **Use consistent phrasing** - "Hey Jarvis" + command
 - **Speak in quiet environment** for better recognition
 - **Hold the button** until you finish speaking
 
@@ -277,9 +277,9 @@ The pulsing dot in the top-right shows Sigma's current state:
 ### Custom Commands
 
 While you can't create custom commands yet, you can:
-- **Use natural language** - Sigma understands various phrasings
-- **Combine commands** - "Hey Sigma, what time is it and open calculator"
-- **Ask for help** - "Hey Sigma, what can you do?"
+- **Use natural language** - Jarvis understands various phrasings
+- **Combine commands** - "Hey Jarvis, what time is it and open calculator"
+- **Ask for help** - "Hey Jarvis, what can you do?"
 
 ### Keyboard Shortcuts
 
@@ -300,8 +300,8 @@ You can switch between modes anytime:
 
 ### Built-in Help
 
-- **"Hey Sigma, help"** - Shows available commands
-- **"Hey Sigma, what can you do?"** - Lists capabilities
+- **"Hey Jarvis, help"** - Shows available commands
+- **"Hey Jarvis, what can you do?"** - Lists capabilities
 - **Settings panel** - Adjust voice and volume
 
 ### Documentation
@@ -320,11 +320,11 @@ You can switch between modes anytime:
 
 ## 🎉 Conclusion
 
-You now have everything you need to use Sigma Voice Assistant effectively! 
+You now have everything you need to use Jarvis Voice Assistant effectively! 
 
 **Remember:**
 - Start with simple commands
-- Use the wake word "Hey Sigma"
+- Use the wake word "Hey Jarvis"
 - Try both voice and text modes
 - Use quick actions for common tasks
 - Check the status indicator for feedback

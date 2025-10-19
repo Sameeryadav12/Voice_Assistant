@@ -58,7 +58,7 @@ def automatic_voice_training():
     print()
     print("SPEAK THESE PHRASES (say each one clearly):")
     print()
-    print("  1. 'Hey Sigma'")
+    print("  1. 'Hey Jarvis'")
     print("  2. 'What time is it?'")
     print("  3. 'Open calculator'")
     print("  4. 'Set a reminder'")

@@ -1,5 +1,5 @@
 """
-Voice Training Tool - Teach Sigma YOUR Voice!
+Voice Training Tool - Teach Jarvis YOUR Voice!
 This creates a custom mapping of what YOU say vs what Google hears.
 """
 
@@ -26,7 +26,7 @@ class VoiceTrainer:
     def train(self):
         """Run voice training."""
         print("="*70)
-        print("VOICE TRAINING - Teaching Sigma YOUR Voice!")
+        print("VOICE TRAINING - Teaching Jarvis YOUR Voice!")
         print("="*70)
         print()
         print("I will show you a phrase, you say it, and I'll learn how")
@@ -37,7 +37,7 @@ class VoiceTrainer:
         
         # Training phrases
         training_phrases = [
-            ("Hey Sigma", "The wake word"),
+            ("Hey Jarvis", "The wake word"),
             ("what time is it", "Time query"),
             ("open calculator", "Open app"),
             ("set a reminder", "Reminder command"),
@@ -172,7 +172,7 @@ class VoiceTrainer:
 def main():
     """Main entry point."""
     print()
-    print("This tool will teach Sigma to understand YOUR voice!")
+    print("This tool will teach Jarvis to understand YOUR voice!")
     print()
     
     try:
@@ -181,7 +181,7 @@ def main():
         
         if success:
             print("="*70)
-            print("SUCCESS! Sigma has learned your voice!")
+            print("SUCCESS! Jarvis has learned your voice!")
             print("="*70)
         else:
             print("="*70)

@@ -222,11 +222,11 @@ class KeywordMatcher:
         self.trie = AdvancedTrie()
         # Add phonetic variations to handle accents and mishearing
         self.wake_words = {
-            "hey sigma", "sigma", "assistant",
-            "play sigma", "hey cig", "cig", "say sigma",  # Common mishearings
-            "hey cigma", "cigma", "hey sig", "sig",
-            "a sigma", "hey signal", "signal",
-            "hey seema", "seema", "hey sigma"
+            "hey jarvis", "jarvis", "assistant",
+            "play jarvis", "hey jarvas", "jarvas", "say jarvis",  # Common mishearings
+            "hey jarviz", "jarviz", "hey jarv", "jarv",
+            "a jarvis", "hey java", "java",
+            "hey jarvus", "jarvus", "hey jarvis"
         }
         self.command_keywords = {
             "reminder": ["remind", "reminder", "schedule", "alarm"],
@@ -329,11 +329,11 @@ if __name__ == "__main__":
     
     # Test keyword matcher
     print("\nWake word detection:")
-    print("'Hey Sigma, what time is it?' ->", matcher.detect_wake_word("Hey Sigma, what time is it?"))
+    print("'Hey Jarvis, what time is it?' ->", matcher.detect_wake_word("Hey Jarvis, what time is it?"))
     print("'Hello world' ->", matcher.detect_wake_word("Hello world"))
     
     print("\nIntent extraction:")
-    print("'Hey Sigma, set a reminder' ->", matcher.extract_intent("Hey Sigma, set a reminder"))
+    print("'Hey Jarvis, set a reminder' ->", matcher.extract_intent("Hey Jarvis, set a reminder"))
     print("'Open calculator' ->", matcher.extract_intent("Open calculator"))
 
 

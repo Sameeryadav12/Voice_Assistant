@@ -357,7 +357,7 @@ if __name__ == "__main__":
     
     # Simulate a conversation flow
     events = [
-        (EventType.WAKE_WORD_DETECTED, {"user_input": "Hey Sigma"}),
+        (EventType.WAKE_WORD_DETECTED, {"user_input": "Hey Jarvis"}),
         (EventType.SPEECH_RECOGNIZED, {"recognized_text": "What time is it?"}),
         (EventType.INTENT_CLASSIFIED, {"intent": "time_query", "confidence": 0.9}),
         (EventType.RESPONSE_READY, {"response": "It's 3:30 PM"}),

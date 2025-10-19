@@ -1,6 +1,6 @@
-# 🤝 Contributing to Sigma Voice Assistant
+# 🤝 Contributing to Jarvis Voice Assistant
 
-Thank you for your interest in contributing to Sigma Voice Assistant! This guide will help you get started with development and understand our contribution process.
+Thank you for your interest in contributing to Jarvis Voice Assistant! This guide will help you get started with development and understand our contribution process.
 
 ---
 
@@ -141,7 +141,7 @@ def process_audio(audio_data: bytes, sample_rate: int) -> str:
     pass
 
 # Use descriptive variable names
-user_input = "Hey Sigma, what time is it?"
+user_input = "Hey Jarvis, what time is it?"
 current_time = datetime.now()
 
 # Use constants for magic numbers
@@ -472,13 +472,13 @@ We recognize all contributors in:
 
 ## 📄 License
 
-By contributing to Sigma Voice Assistant, you agree that your contributions will be licensed under the MIT License.
+By contributing to Jarvis Voice Assistant, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
 ## 🎉 Thank You!
 
-Thank you for contributing to Sigma Voice Assistant! Your contributions help make this project better for everyone.
+Thank you for contributing to Jarvis Voice Assistant! Your contributions help make this project better for everyone.
 
 **Happy coding!** 🚀
 

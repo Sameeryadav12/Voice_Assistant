@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sigma Voice Assistant - Demo Script
+Jarvis Voice Assistant - Demo Script
 A demonstration script showing the capabilities of the voice assistant.
 """
 
@@ -14,36 +14,36 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 def demo_commands():
     """Demonstrate available commands"""
     print("=" * 60)
-    print("Sigma Voice Assistant - Demo Commands")
+    print("Jarvis Voice Assistant - Demo Commands")
     print("=" * 60)
     print("Here are some example commands you can try:")
     print()
     
     commands = [
         ("Time & Date", [
-            "Hey Sigma, what time is it?",
-            "Hey Sigma, what's the date?",
-            "Hey Sigma, show system information"
+            "Hey Jarvis, what time is it?",
+            "Hey Jarvis, what's the date?",
+            "Hey Jarvis, show system information"
         ]),
         ("Reminders", [
-            "Hey Sigma, set a reminder for 5 minutes",
-            "Hey Sigma, remind me to call John in 10 minutes",
-            "Hey Sigma, what reminders do I have?"
+            "Hey Jarvis, set a reminder for 5 minutes",
+            "Hey Jarvis, remind me to call John in 10 minutes",
+            "Hey Jarvis, what reminders do I have?"
         ]),
         ("Applications", [
-            "Hey Sigma, open calculator",
-            "Hey Sigma, launch notepad",
-            "Hey Sigma, open chrome",
-            "Hey Sigma, start command prompt"
+            "Hey Jarvis, open calculator",
+            "Hey Jarvis, launch notepad",
+            "Hey Jarvis, open chrome",
+            "Hey Jarvis, start command prompt"
         ]),
         ("File Operations", [
-            "Hey Sigma, search for documents",
-            "Hey Sigma, find files with test in the name",
-            "Hey Sigma, search for reports"
+            "Hey Jarvis, search for documents",
+            "Hey Jarvis, find files with test in the name",
+            "Hey Jarvis, search for reports"
         ]),
         ("Help", [
-            "Hey Sigma, what can you do?",
-            "Hey Sigma, help"
+            "Hey Jarvis, what can you do?",
+            "Hey Jarvis, help"
         ])
     ]
     

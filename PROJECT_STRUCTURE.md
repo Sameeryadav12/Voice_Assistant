@@ -1,6 +1,6 @@
 # 📁 Project Structure
 
-This document provides a detailed overview of the Sigma Voice Assistant project structure and organization.
+This document provides a detailed overview of the Jarvis Voice Assistant project structure and organization.
 
 ## 🏗️ Directory Structure
 

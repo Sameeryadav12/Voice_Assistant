@@ -1,6 +1,6 @@
 # 🏗️ Architecture Overview
 
-This document provides a high-level overview of the Sigma Voice Assistant architecture and design decisions.
+This document provides a high-level overview of the Jarvis Voice Assistant architecture and design decisions.
 
 ## 📊 System Architecture
 

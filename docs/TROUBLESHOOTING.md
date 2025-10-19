@@ -1,6 +1,6 @@
-# 🔧 Troubleshooting Guide - Sigma Voice Assistant
+# 🔧 Troubleshooting Guide - Jarvis Voice Assistant
 
-This comprehensive guide helps you solve common issues with the Sigma Voice Assistant. Follow the solutions step by step for the best results.
+This comprehensive guide helps you solve common issues with the Jarvis Voice Assistant. Follow the solutions step by step for the best results.
 
 ---
 
@@ -22,7 +22,7 @@ This comprehensive guide helps you solve common issues with the Sigma Voice Assi
 ### Most Common Issues (90% of problems)
 
 1. **Microphone too quiet** → Increase microphone boost to +20dB or +30dB
-2. **Not saying wake word** → Always start with "Hey Sigma"
+2. **Not saying wake word** → Always start with "Hey Jarvis"
 3. **Background noise** → Reduce noise or use push-to-talk mode
 4. **Internet connection** → Check internet for Google speech recognition
 
@@ -92,17 +92,17 @@ python tests/test_speech_direct.py
 - Message: "Wake word not detected in: [your text]"
 
 **Solutions:**
-1. **Always start with "Hey Sigma"**
+1. **Always start with "Hey Jarvis"**
 2. **Speak clearly and loudly**
 3. **Try alternatives:**
-   - "Sigma"
+   - "Jarvis"
    - "Hey Assistant"
    - "Assistant"
 4. **Pause briefly** after wake word
 
 **Example:**
 ```
-✅ "Hey Sigma" [pause] "what time is it?"
+✅ "Hey Jarvis" [pause] "what time is it?"
 ❌ "what time is it?" (missing wake word)
 ```
 
@@ -553,7 +553,7 @@ def check_memory():
 | `"No default input device"` | Microphone not detected | Check microphone connection |
 | `"Audio too quiet"` | Microphone volume too low | Increase microphone boost |
 | `"Google couldn't understand audio"` | Speech not clear | Speak louder, reduce noise |
-| `"Wake word not detected"` | Missing "Hey Sigma" | Always start with wake word |
+| `"Wake word not detected"` | Missing "Hey Jarvis" | Always start with wake word |
 | `"Network error"` | Internet connection issue | Check internet connection |
 | `"Module not found"` | Missing dependency | Install required packages |
 | `"Permission denied"` | Access rights issue | Run as administrator |
@@ -600,7 +600,7 @@ def check_memory():
 ### When Everything is Working:
 - **Microphone levels:** 10,000+ when speaking
 - **Speech recognition:** Clear text output
-- **Wake word detection:** "Hey Sigma" recognized
+- **Wake word detection:** "Hey Jarvis" recognized
 - **Response time:** < 2 seconds
 - **UI responsiveness:** Smooth and fast
 - **Memory usage:** < 200MB

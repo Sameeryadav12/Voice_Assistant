@@ -34,28 +34,28 @@ class HelpSkill(BaseSkill):
     def execute(self, context: SkillContext) -> SkillResult:
         """Execute the help skill."""
         help_message = """
-I'm Sigma Voice Assistant! Here's what I can do:
+I'm Jarvis Voice Assistant! Here's what I can do:
 
 🗓️ **Reminders & Scheduling:**
-- "Hey Sigma, remind me to call John at 3pm"
-- "Hey Sigma, set a reminder for 10 minutes"
-- "Hey Sigma, what reminders do I have?"
+- "Hey Jarvis, remind me to call John at 3pm"
+- "Hey Jarvis, set a reminder for 10 minutes"
+- "Hey Jarvis, what reminders do I have?"
 
 📁 **File Management:**
-- "Hey Sigma, search for my documents"
-- "Hey Sigma, find files with 'report' in the name"
-- "Hey Sigma, open my downloads folder"
+- "Hey Jarvis, search for my documents"
+- "Hey Jarvis, find files with 'report' in the name"
+- "Hey Jarvis, open my downloads folder"
 
 🚀 **Application Control:**
-- "Hey Sigma, open calculator"
-- "Hey Sigma, launch notepad"
-- "Hey Sigma, start Chrome"
+- "Hey Jarvis, open calculator"
+- "Hey Jarvis, launch notepad"
+- "Hey Jarvis, start Chrome"
 
 ⚙️ **System Control:**
-- "Hey Sigma, what time is it?"
-- "Hey Sigma, show system information"
+- "Hey Jarvis, what time is it?"
+- "Hey Jarvis, show system information"
 
-Just start any command with "Hey Sigma" and I'll help you!
+Just start any command with "Hey Jarvis" and I'll help you!
         """
         
         return SkillResult(

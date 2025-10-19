@@ -1,6 +1,6 @@
 # 📚 Documentation
 
-Welcome to the Sigma Voice Assistant documentation! This directory contains comprehensive guides and references for users and developers.
+Welcome to the Jarvis Voice Assistant documentation! This directory contains comprehensive guides and references for users and developers.
 
 ## 📖 User Documentation
 

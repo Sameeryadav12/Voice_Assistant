@@ -1,6 +1,6 @@
-# ⚡ Performance Guide - Sigma Voice Assistant
+# ⚡ Performance Guide - Jarvis Voice Assistant
 
-This guide covers performance optimization, monitoring, and best practices for the Sigma Voice Assistant.
+This guide covers performance optimization, monitoring, and best practices for the Jarvis Voice Assistant.
 
 ---
 
@@ -598,13 +598,13 @@ class PerformanceBenchmark:
 ```python
 def load_test_voice_assistant():
     """Load test the voice assistant"""
-    assistant = SigmaVoiceAssistant()
+    assistant = JarvisVoiceAssistant()
     
     # Test with multiple concurrent requests
     import threading
     
     def test_command():
-        response = assistant.process_command("Hey Sigma, what time is it?")
+        response = assistant.process_command("Hey Jarvis, what time is it?")
         return response
     
     # Run 10 concurrent tests
@@ -715,7 +715,7 @@ class AutoOptimizer:
 
 ## 📚 Conclusion
 
-Performance optimization is an ongoing process. Regular monitoring, profiling, and optimization will ensure the Sigma Voice Assistant remains responsive and efficient.
+Performance optimization is an ongoing process. Regular monitoring, profiling, and optimization will ensure the Jarvis Voice Assistant remains responsive and efficient.
 
 **Key Takeaways:**
 - **Monitor performance metrics** regularly

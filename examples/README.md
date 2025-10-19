@@ -1,6 +1,6 @@
 # 🎯 Examples
 
-This directory contains example scripts and demonstrations for the Sigma Voice Assistant.
+This directory contains example scripts and demonstrations for the Jarvis Voice Assistant.
 
 ## 📁 Available Examples
 
@@ -22,7 +22,7 @@ python examples/run_demo.py
 
 ## 📚 Usage
 
-These examples demonstrate different ways to use the Sigma Voice Assistant:
+These examples demonstrate different ways to use the Jarvis Voice Assistant:
 
 1. **Keyboard Mode** - Type commands instead of speaking
 2. **Demo Mode** - Automated demonstration of features
@@ -44,4 +44,4 @@ For more information, see:
 
 ---
 
-*These examples are designed to help you get started with the Sigma Voice Assistant quickly and easily.*
+*These examples are designed to help you get started with the Jarvis Voice Assistant quickly and easily.*

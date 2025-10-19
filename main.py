@@ -1,5 +1,5 @@
 """
-Sigma Voice Assistant - Main Application
+Jarvis Voice Assistant - Main Application
 A sophisticated voice assistant demonstrating advanced data structures and algorithms.
 """
 
@@ -42,7 +42,7 @@ from skills.app_skill import AppLauncherSkill, SystemControlSkill
 from skills.info_skill import InfoSkill
 
 
-class SigmaVoiceAssistant:
+class JarvisVoiceAssistant:
     """
     Main voice assistant application integrating all components.
     Demonstrates system architecture and component integration.
@@ -238,7 +238,7 @@ class SigmaVoiceAssistant:
         """Generate and speak response."""
         try:
             # Update UI
-            self._update_ui_conversation(f"Sigma: {message}")
+            self._update_ui_conversation(f"Jarvis: {message}")
             
             # Speak response
             self.audio_output.speak(message)
@@ -259,7 +259,7 @@ class SigmaVoiceAssistant:
         
         # Create main window
         self.root = ctk.CTk()
-        self.root.title("Sigma Voice Assistant")
+        self.root.title("Jarvis Voice Assistant")
         self.root.geometry("800x600")
         self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
         
@@ -270,7 +270,7 @@ class SigmaVoiceAssistant:
         # Title
         title_label = ctk.CTkLabel(
             main_frame, 
-            text="Sigma Voice Assistant", 
+            text="Jarvis Voice Assistant", 
             font=ctk.CTkFont(size=24, weight="bold")
         )
         title_label.pack(pady=(10, 20))
@@ -366,15 +366,15 @@ class SigmaVoiceAssistant:
         greetings = [
             "Hello! How can I help you today? I'm ready to assist with tasks, reminders, and more! 😊",
             "Hi there! What would you like me to help you with today? I'm here and listening! 🎯",
-            "Good day! I'm Sigma, your personal assistant. How can I make your day better? ✨",
+            "Good day! I'm Jarvis, your personal assistant. How can I make your day better? ✨",
             "Hello! I'm here to help you stay organized and get things done. What can I do for you? 💪",
-            "Hi! Ready to tackle some tasks together? Just say 'Hey Sigma' and let me know what you need! 🚀",
+            "Hi! Ready to tackle some tasks together? Just say 'Hey Jarvis' and let me know what you need! 🚀",
             "Good to see you! I can help with scheduling, files, apps, and much more. What's on your mind? 🤔",
             "Hello there! I'm powered by advanced AI and ready to assist. How can I help you today? 🧠"
         ]
         
         greeting = random.choice(greetings)
-        self._update_ui_conversation(f"Sigma: {greeting}")
+        self._update_ui_conversation(f"Jarvis: {greeting}")
         
         # Also speak the greeting
         try:
@@ -424,8 +424,8 @@ class SigmaVoiceAssistant:
             # Update UI
             self.is_running = True
             self.start_button.configure(text="Stop Listening")
-            self._update_ui_status("Listening for 'Hey Sigma'...")
-            self._update_ui_conversation("Sigma Voice Assistant started. Say 'Hey Sigma' to begin.")
+            self._update_ui_status("Listening for 'Hey Jarvis'...")
+            self._update_ui_conversation("Jarvis Voice Assistant started. Say 'Hey Jarvis' to begin.")
             
             # Start stats update thread
             self._start_stats_thread()
@@ -444,7 +444,7 @@ class SigmaVoiceAssistant:
             self.is_running = False
             self.start_button.configure(text="Start Listening")
             self._update_ui_status("Stopped")
-            self._update_ui_conversation("Sigma Voice Assistant stopped.")
+            self._update_ui_conversation("Jarvis Voice Assistant stopped.")
             
         except Exception as e:
             print(f"Error stopping assistant: {e}")
@@ -452,7 +452,7 @@ class SigmaVoiceAssistant:
             self.is_running = False
             self.start_button.configure(text="Start Listening")
             self._update_ui_status("Stopped")
-            self._update_ui_conversation("Sigma Voice Assistant stopped.")
+            self._update_ui_conversation("Jarvis Voice Assistant stopped.")
     
     def _start_stats_thread(self):
         """Start statistics update thread."""
@@ -537,7 +537,7 @@ class SigmaVoiceAssistant:
         """Run the voice assistant application."""
         try:
             self._update_ui_status("Ready to start")
-            self._update_ui_conversation("Welcome to Sigma Voice Assistant!\nClick 'Start Listening' to begin.")
+            self._update_ui_conversation("Welcome to Jarvis Voice Assistant!\nClick 'Start Listening' to begin.")
             
             # Add greeting when starting
             self._add_greeting()
@@ -549,7 +549,7 @@ class SigmaVoiceAssistant:
 
 def main():
     """Main entry point."""
-    print("Starting Sigma Voice Assistant...")
+    print("Starting Jarvis Voice Assistant...")
     print("This application demonstrates advanced data structures and algorithms:")
     print("- Trie-based keyword matching")
     print("- Finite state machine for dialogue management")
@@ -561,7 +561,7 @@ def main():
     print()
     
     try:
-        app = SigmaVoiceAssistant()
+        app = JarvisVoiceAssistant()
         app.run()
     except KeyboardInterrupt:
         print("\nShutting down...")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sigma Voice Assistant - Setup Script
+Jarvis Voice Assistant - Setup Script
 A sophisticated voice-controlled assistant with modern UI and advanced NLP.
 """
 
@@ -28,7 +28,7 @@ def read_version():
 setup(
     name="sigma-voice-assistant",
     version=read_version(),
-    author="Sigma Voice Assistant Team",
+    author="Jarvis Voice Assistant Team",
     author_email="contact@sigma-voice-assistant.com",
     description="A sophisticated voice-controlled assistant with modern UI and advanced NLP",
     long_description=read_readme(),

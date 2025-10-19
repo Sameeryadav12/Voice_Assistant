@@ -1,4 +1,4 @@
-# Development Dependencies for Sigma Voice Assistant
+# Development Dependencies for Jarvis Voice Assistant
 # Install with: pip install -r requirements-dev.txt
 
 # Testing

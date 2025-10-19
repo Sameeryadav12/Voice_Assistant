@@ -20,7 +20,7 @@ class VoiceCalibrator:
     
     def __init__(self):
         print("="*70)
-        print("VOICE CALIBRATION - Teaching Sigma YOUR Voice!")
+        print("VOICE CALIBRATION - Teaching Jarvis YOUR Voice!")
         print("="*70)
         print()
         print("This tool will:")
@@ -95,8 +95,8 @@ class VoiceCalibrator:
         print()
         
         test_phrases = [
-            "Hey Sigma",
-            "Sigma",
+            "Hey Jarvis",
+            "Jarvis",
             "What time is it",
             "Open calculator",
             "Set a reminder"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sigma Voice Assistant - Keyboard Mode Example
+Jarvis Voice Assistant - Keyboard Mode Example
 A simple example showing how to use the voice assistant in keyboard-only mode.
 """
 
@@ -10,12 +10,12 @@ import os
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from main_hybrid import SigmaVoiceAssistant
+from main_hybrid import JarvisVoiceAssistant
 
 def main():
     """Run the keyboard mode example"""
     print("=" * 60)
-    print("Sigma Voice Assistant - Keyboard Mode Example")
+    print("Jarvis Voice Assistant - Keyboard Mode Example")
     print("=" * 60)
     print("This example demonstrates keyboard-only mode.")
     print("Type commands instead of speaking them.")
@@ -23,7 +23,7 @@ def main():
     print("=" * 60)
     
     # Create assistant instance
-    assistant = SigmaVoiceAssistant()
+    assistant = JarvisVoiceAssistant()
     
     try:
         # Run the assistant

@@ -1,6 +1,6 @@
 # 🧪 Tests
 
-This directory contains test files and utilities for the Sigma Voice Assistant.
+This directory contains test files and utilities for the Jarvis Voice Assistant.
 
 ## 📁 Test Files
 
@@ -97,4 +97,4 @@ For more information, see:
 
 ---
 
-*These tests help ensure the Sigma Voice Assistant works correctly on your system.*
+*These tests help ensure the Jarvis Voice Assistant works correctly on your system.*

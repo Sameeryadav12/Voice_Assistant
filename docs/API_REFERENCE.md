@@ -1,6 +1,6 @@
-# 🔧 API Reference - Sigma Voice Assistant
+# 🔧 API Reference - Jarvis Voice Assistant
 
-This document provides technical details about the Sigma Voice Assistant architecture, APIs, and implementation.
+This document provides technical details about the Jarvis Voice Assistant architecture, APIs, and implementation.
 
 ---
 
@@ -508,23 +508,23 @@ class Config:
 ### Exception Hierarchy
 
 ```python
-class SigmaError(Exception):
-    """Base exception for Sigma Voice Assistant"""
+class JarvisError(Exception):
+    """Base exception for Jarvis Voice Assistant"""
     pass
 
-class AudioError(SigmaError):
+class AudioError(JarvisError):
     """Audio processing errors"""
     pass
 
-class RecognitionError(SigmaError):
+class RecognitionError(JarvisError):
     """Speech recognition errors"""
     pass
 
-class SkillError(SigmaError):
+class SkillError(JarvisError):
     """Skill execution errors"""
     pass
 
-class UIError(SigmaError):
+class UIError(JarvisError):
     """UI-related errors"""
     pass
 ```
@@ -665,8 +665,8 @@ def test_voice_activity_detection():
 
 ```python
 def test_full_pipeline():
-    assistant = SigmaVoiceAssistant()
-    response = assistant.process_command("Hey Sigma, what time is it?")
+    assistant = JarvisVoiceAssistant()
+    response = assistant.process_command("Hey Jarvis, what time is it?")
     assert "time" in response.lower()
 ```
 
@@ -674,7 +674,7 @@ def test_full_pipeline():
 
 ## 📖 Conclusion
 
-This API reference provides comprehensive technical documentation for the Sigma Voice Assistant. The system is designed with modularity, extensibility, and performance in mind.
+This API reference provides comprehensive technical documentation for the Jarvis Voice Assistant. The system is designed with modularity, extensibility, and performance in mind.
 
 **Key Features:**
 - **Modular Architecture** - Easy to extend and modify

@@ -1,4 +1,4 @@
-# 🎤 Sigma Voice Assistant - Professional Edition
+# 🎤 Jarvis Voice Assistant - Professional Edition
 
 <div align="center">
 
@@ -86,7 +86,7 @@ python main_professional_ui.py
 
 #### Voice Mode (Push-to-Talk)
 1. **Hold** the green "🎤 HOLD TO SPEAK" button
-2. **Speak** your command: "Hey Sigma, what time is it?"
+2. **Speak** your command: "Hey Jarvis, what time is it?"
 3. **Release** the button when done
 4. Watch the response appear as a chat bubble!
 
@@ -108,29 +108,29 @@ Click any quick action button for instant commands:
 
 ```bash
 # Time & Information
-Hey Sigma, what time is it?
-Hey Sigma, what's the date?
-Hey Sigma, show system information
+Hey Jarvis, what time is it?
+Hey Jarvis, what's the date?
+Hey Jarvis, show system information
 
 # Reminders
-Hey Sigma, set a reminder for 5 minutes
-Hey Sigma, remind me to call John in 10 minutes
-Hey Sigma, what reminders do I have?
+Hey Jarvis, set a reminder for 5 minutes
+Hey Jarvis, remind me to call John in 10 minutes
+Hey Jarvis, what reminders do I have?
 
 # Applications
-Hey Sigma, open calculator
-Hey Sigma, launch notepad
-Hey Sigma, open chrome
-Hey Sigma, start command prompt
+Hey Jarvis, open calculator
+Hey Jarvis, launch notepad
+Hey Jarvis, open chrome
+Hey Jarvis, start command prompt
 
 # File Operations
-Hey Sigma, search for documents
-Hey Sigma, find files with test in the name
-Hey Sigma, search for reports
+Hey Jarvis, search for documents
+Hey Jarvis, find files with test in the name
+Hey Jarvis, search for reports
 
 # Help
-Hey Sigma, what can you do?
-Hey Sigma, help
+Hey Jarvis, what can you do?
+Hey Jarvis, help
 ```
 
 ---
@@ -226,7 +226,7 @@ sigma-voice-assistant/
 
 ### Wake Word Detection
 - **Multiple Variations** - Handles different pronunciations
-- **Accent Support** - Recognizes "Hey Sigma", "asigma", "hair sigma", etc.
+- **Accent Support** - Recognizes "Hey Jarvis", "asigma", "hair sigma", etc.
 - **Trie-based Matching** - Fast O(m) keyword detection
 
 ### Intent Classification

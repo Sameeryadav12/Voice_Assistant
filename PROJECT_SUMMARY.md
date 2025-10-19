@@ -1,8 +1,8 @@
-# 🎤 Sigma Voice Assistant - Project Summary
+# 🎤 Jarvis Voice Assistant - Project Summary
 
 ## 📊 Project Overview
 
-**Sigma Voice Assistant** is a sophisticated, modern voice-controlled assistant built with Python, featuring advanced data structures, natural language processing, and a beautiful professional UI. This project demonstrates the integration of multiple technologies to create a practical, real-world application.
+**Jarvis Voice Assistant** is a sophisticated, modern voice-controlled assistant built with Python, featuring advanced data structures, natural language processing, and a beautiful professional UI. This project demonstrates the integration of multiple technologies to create a practical, real-world application.
 
 ---
 
@@ -87,7 +87,7 @@ Microphone → PyAudio → VAD → Buffer → Resample → STT → NLP → Respo
 - **Context Awareness** - Dialogue state management
 
 ### Wake Word Detection
-- **Multiple Variations** - "Hey Sigma", "Sigma", "Assistant"
+- **Multiple Variations** - "Hey Jarvis", "Jarvis", "Assistant"
 - **Accent Support** - Handles different pronunciations
 - **Trie-based Matching** - Fast O(m) keyword detection
 - **Noise Filtering** - Ignores background noise
@@ -171,7 +171,7 @@ sigma-voice-assistant/
 
 ### Voice Control
 - **Push-to-Talk** - Hold button to speak, release when done
-- **Wake Word Detection** - "Hey Sigma" activation
+- **Wake Word Detection** - "Hey Jarvis" activation
 - **Multiple Recognition Engines** - Google (primary), Sphinx (fallback)
 - **Voice Activity Detection** - Smart speech detection
 - **Noise Filtering** - Ignores background noise
@@ -314,13 +314,13 @@ black --check .
 ## 🎯 Use Cases
 
 ### Personal Assistant
-- **Time & Date** - "Hey Sigma, what time is it?"
-- **Reminders** - "Hey Sigma, remind me to call John in 10 minutes"
-- **System Info** - "Hey Sigma, show system information"
-- **File Search** - "Hey Sigma, find my documents"
+- **Time & Date** - "Hey Jarvis, what time is it?"
+- **Reminders** - "Hey Jarvis, remind me to call John in 10 minutes"
+- **System Info** - "Hey Jarvis, show system information"
+- **File Search** - "Hey Jarvis, find my documents"
 
 ### Productivity
-- **App Launcher** - "Hey Sigma, open calculator"
+- **App Launcher** - "Hey Jarvis, open calculator"
 - **Quick Actions** - One-click common commands
 - **Voice Commands** - Hands-free operation
 - **Multi-tasking** - Voice control while working
@@ -454,7 +454,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🎉 Conclusion
 
-**Sigma Voice Assistant** represents a successful integration of advanced computer science concepts, modern UI design, and practical application development. The project demonstrates:
+**Jarvis Voice Assistant** represents a successful integration of advanced computer science concepts, modern UI design, and practical application development. The project demonstrates:
 
 - **Technical Excellence** - Advanced algorithms and data structures
 - **User Experience** - Intuitive, professional interface

@@ -385,7 +385,7 @@ if __name__ == "__main__":
     print("\nTesting speech synthesis...")
     
     # Test basic speech
-    handler.speak("Hello! I am Sigma, your voice assistant.")
+    handler.speak("Hello! I am Jarvis, your voice assistant.")
     
     # Test emotional speech
     time.sleep(2)

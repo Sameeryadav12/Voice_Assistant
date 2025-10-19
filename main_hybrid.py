@@ -1,5 +1,5 @@
 """
-Sigma Voice Assistant - Hybrid Mode
+Jarvis Voice Assistant - Hybrid Mode
 This version combines keyboard input with simulated voice recognition for testing.
 """
 
@@ -41,13 +41,13 @@ from skills.info_skill import InfoSkill
 from audio.output_handler import AudioOutputHandler, TTSConfig, VoiceGender, SpeechRate
 
 
-class SigmaVoiceAssistantHybrid:
+class JarvisVoiceAssistantHybrid:
     """
     Hybrid voice assistant that combines keyboard input with voice simulation.
     """
     
     def __init__(self):
-        print("Starting Sigma Voice Assistant (Hybrid Mode)...")
+        print("Starting Jarvis Voice Assistant (Hybrid Mode)...")
         
         # Initialize core components
         self.keyword_matcher = KeywordMatcher()
@@ -111,13 +111,13 @@ class SigmaVoiceAssistantHybrid:
         
         # Create main window
         self.root = ctk.CTk()
-        self.root.title("Sigma Voice Assistant (Hybrid Mode)")
+        self.root.title("Jarvis Voice Assistant (Hybrid Mode)")
         self.root.geometry("900x700")
         
         # Main title
         title_label = ctk.CTkLabel(
             self.root, 
-            text="Sigma Voice Assistant", 
+            text="Jarvis Voice Assistant", 
             font=ctk.CTkFont(size=24, weight="bold")
         )
         title_label.pack(pady=20)
@@ -154,10 +154,10 @@ class SigmaVoiceAssistantHybrid:
         
         # Quick command buttons
         commands = [
-            ("What can you do?", "Hey Sigma, what can you do?"),
-            ("Open Calculator", "Hey Sigma, open calculator"),
-            ("Set Reminder", "Hey Sigma, set a reminder for 5 minutes"),
-            ("What time is it?", "Hey Sigma, what time is it?")
+            ("What can you do?", "Hey Jarvis, what can you do?"),
+            ("Open Calculator", "Hey Jarvis, open calculator"),
+            ("Set Reminder", "Hey Jarvis, set a reminder for 5 minutes"),
+            ("What time is it?", "Hey Jarvis, what time is it?")
         ]
         
         for i, (btn_text, command) in enumerate(commands):
@@ -179,7 +179,7 @@ class SigmaVoiceAssistantHybrid:
         
         self.input_entry = ctk.CTkEntry(
             input_frame, 
-            placeholder_text="Type 'Hey Sigma, what can you do?' or any command...",
+            placeholder_text="Type 'Hey Jarvis, what can you do?' or any command...",
             height=40,
             font=ctk.CTkFont(size=14)
         )
@@ -244,7 +244,7 @@ class SigmaVoiceAssistantHybrid:
         self.stats_label.pack(pady=(0, 10))
         
         # Add welcome message
-        self._update_conversation("Welcome to Sigma Voice Assistant!")
+        self._update_conversation("Welcome to Jarvis Voice Assistant!")
         self._update_conversation("This is hybrid mode - you can type commands or use the quick buttons above.")
         self._update_conversation("Try clicking 'What can you do?' or type your own command!")
         
@@ -281,12 +281,12 @@ class SigmaVoiceAssistantHybrid:
             
             # Check for wake word
             if not self.keyword_matcher.detect_wake_word(text):
-                self._respond("Please say 'Hey Sigma' first to activate the assistant.")
+                self._respond("Please say 'Hey Jarvis' first to activate the assistant.")
                 return
             
             # Clean text (remove wake word)
             clean_text = text.lower()
-            for wake_word in ["hey sigma", "sigma", "assistant"]:
+            for wake_word in ["hey jarvis", "jarvis", "assistant"]:
                 clean_text = clean_text.replace(wake_word, "").strip()
             
             # Remove leading punctuation
@@ -331,7 +331,7 @@ class SigmaVoiceAssistantHybrid:
     
     def _respond(self, text: str):
         """Generate and display response."""
-        self._update_conversation(f"Sigma: {text}")
+        self._update_conversation(f"Jarvis: {text}")
         
         # Update cache
         self.cache_manager.cache_speech_result("hybrid", text, 1.0)
@@ -367,18 +367,18 @@ class SigmaVoiceAssistantHybrid:
     def _show_help(self):
         """Show help information."""
         help_text = """
-Sigma Voice Assistant - Available Commands:
+Jarvis Voice Assistant - Available Commands:
 
 Wake Word Commands:
-- "Hey Sigma, what can you do?"
-- "Hey Sigma, what time is it?"
-- "Hey Sigma, set a reminder for 5 minutes"
-- "Hey Sigma, search for files"
-- "Hey Sigma, open calculator"
-- "Hey Sigma, what reminders do I have?"
+- "Hey Jarvis, what can you do?"
+- "Hey Jarvis, what time is it?"
+- "Hey Jarvis, set a reminder for 5 minutes"
+- "Hey Jarvis, search for files"
+- "Hey Jarvis, open calculator"
+- "Hey Jarvis, what reminders do I have?"
 
 Tips:
-- Always start with "Hey Sigma"
+- Always start with "Hey Jarvis"
 - Use the quick command buttons above
 - Type commands in the text field below
         """
@@ -398,7 +398,7 @@ Tips:
 def main():
     """Main entry point."""
     try:
-        app = SigmaVoiceAssistantHybrid()
+        app = JarvisVoiceAssistantHybrid()
         app.run()
     except KeyboardInterrupt:
         print("\nApplication interrupted by user")
