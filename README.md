@@ -359,9 +359,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 **Support & Contact**
 
-- **Issues** - [GitHub Issues](https://github.com/yourusername/jarvis-voice-assistant/issues)
-- **Discussions** - [GitHub Discussions](https://github.com/yourusername/jarvis-voice-assistant/discussions)
-- **Email** - support@jarvis-assistant.com
+- **Issues** - [GitHub Issues](https://github.com/Sameeryadav12/Voice_Assistant/issues)
+- **Discussions** - [GitHub Discussions](https://github.com/Sameeryadav12/Voice_Assistant/discussions)
+- **Email** - ysameer0303@gmail.com
 - **Documentation** - [Full Documentation](docs/)
 
 ---
