@@ -22,7 +22,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y portaudio19-dev python3-dev libasound2-dev
-        sudo apt-get install -y ffmpeg
+        sudo apt-get install -y ffmpeg libsndfile1-dev libasound2-dev
+        sudo apt-get install -y build-essential libportaudio2 libportaudiocpp0 portaudio19-dev
+        sudo apt-get install -y pulseaudio pulseaudio-utils
     
     - name: Install core dependencies only
       run: |
@@ -45,7 +47,7 @@ jobs:
         pip install matplotlib
         pip install pandas
         pip install speechrecognition
-        pip install pyaudio || echo "PyAudio installation failed - continuing without audio support"
+        pip install pyaudio || pip install pyaudio --no-cache-dir || pip install pyaudio-binary || echo "PyAudio installation failed - continuing without audio support"
         pip install webrtcvad || echo "WebRTC VAD installation failed - continuing without VAD support"
         pip install pydub || echo "PyDub installation failed - continuing without audio processing"
         pip install pyttsx3 || echo "PyTTSx3 installation failed - continuing without TTS support"
