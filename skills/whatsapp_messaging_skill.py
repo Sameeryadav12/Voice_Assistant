@@ -449,6 +449,3 @@ if __name__ == "__main__":
     )
     
     result = skill.execute(context)
-    print(f"Success: {result.success}")
-    print(f"Message: {result.message}")
-    print(f"Data: {result.data}")
