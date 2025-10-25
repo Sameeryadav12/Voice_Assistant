@@ -56,7 +56,8 @@ setup(
         "Source": "https://github.com/yourusername/jarvis-voice-assistant",
         "Documentation": "https://github.com/yourusername/jarvis-voice-assistant/tree/main/docs",
     },
-    packages=find_packages(),
+    packages=find_packages(include=['core', 'skills', 'audio', 'nlp', 'ui']),
+    py_modules=['main', 'main_professional_ui', 'main_pushtotalk', 'main_hybrid'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: End Users/Desktop",
