@@ -14,8 +14,33 @@ def read_readme():
 
 # Read requirements
 def read_requirements():
-    with open("requirements.txt", "r", encoding="utf-8") as fh:
-        return [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+    try:
+        with open("requirements.txt", "r", encoding="utf-8") as fh:
+            return [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+    except FileNotFoundError:
+        # Fallback requirements for build environments
+        return [
+            "customtkinter>=5.2.0",
+            "speechrecognition>=3.10.0",
+            "pyaudio>=0.2.11",
+            "requests>=2.31.0",
+            "pyautogui>=0.9.54",
+            "nltk>=3.8.1",
+            "scikit-learn>=1.3.0",
+            "numpy>=1.24.0",
+            "psutil>=5.9.0",
+            "webrtcvad>=2.0.10",
+            "pydub>=0.25.1",
+            "pygetwindow>=0.0.9",
+            "pymsgbox>=1.0.9",
+            "pyperclip>=1.8.2",
+            "pyttsx3>=2.90",
+            "keyboard>=0.13.5",
+            "mouse>=0.7.1",
+            "pillow>=10.0.0",
+            "matplotlib>=3.7.0",
+            "pandas>=2.0.0"
+        ]
 
 setup(
     name="jarvis-voice-assistant",
