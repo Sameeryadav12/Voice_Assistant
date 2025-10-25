@@ -276,7 +276,6 @@ class WhatsAppMessagingSkill(BaseSkill):
             pyautogui.press('enter')
             
         except Exception as e:
-            print(f"Error searching for person in WhatsApp: {e}")
             # Fallback: just type the name in the current window
             try:
                 import pyautogui
