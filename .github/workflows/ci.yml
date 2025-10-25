@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.11'
     
     - name: Install core dependencies only
       run: |
@@ -43,6 +43,8 @@ jobs:
         pip install webrtcvad
         pip install pydub
         pip install pyttsx3
+        pip install setuptools
+        pip install wheel
     
     - name: Test basic functionality
       run: |
@@ -73,7 +75,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.11'
     
     - name: Install build dependencies
       run: |
