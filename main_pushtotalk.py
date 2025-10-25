@@ -200,7 +200,8 @@ class PushToTalkAssistant:
             self.root.after(0, lambda: self._update_conversation("❌ Timeout - no speech detected"))
             self.root.after(0, lambda: self.status_label.configure(text="Ready - try again!"))
         except Exception as e:
-            self.root.after(0, lambda: self._update_conversation(f"❌ Error: {e}"))
+            error_msg = str(e)
+            self.root.after(0, lambda: self._update_conversation(f"❌ Error: {error_msg}"))
             self.root.after(0, lambda: self.status_label.configure(text="Ready"))
     
     def _process_audio(self, audio):

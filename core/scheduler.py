@@ -82,8 +82,8 @@ class PriorityScheduler:
         self.running = False
         self.task_registry: Dict[str, ScheduledTask] = {}
         self.task_dependencies: Dict[str, List[str]] = defaultdict(list)
-        self.completed_tasks: Set[str] = set()
-        self.failed_tasks: Set[str] = set()
+        self.completed_tasks: set[str] = set()
+        self.failed_tasks: set[str] = set()
         self.resource_pools: Dict[str, int] = defaultdict(int)
         self._start_workers()
     

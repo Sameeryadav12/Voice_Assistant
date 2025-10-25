@@ -707,7 +707,8 @@ class JarvisVoiceAssistantPro:
         
         except Exception as e:
             print(f"Recording error: {e}")
-            self.root.after(0, lambda: self._add_conversation_bubble(f"❌ Error: {str(e)}", False))
+            error_msg = str(e)
+            self.root.after(0, lambda: self._add_conversation_bubble(f"❌ Error: {error_msg}", False))
             self.root.after(0, lambda: self.ui_update_queue.put(("status", "idle")))
     
     def _process_audio(self, audio):
