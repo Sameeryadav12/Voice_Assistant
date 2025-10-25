@@ -22,7 +22,7 @@ class FileSearchSkill(BaseSkill):
         super().__init__(
             name="file_search",
             description="Search and manage files using advanced algorithms",
-            priority=SkillPriority.HIGH
+            priority=SkillPriority.CRITICAL
         )
         self.fs_graph = fs_graph
         self.triggers = ["find", "search", "file", "locate", "where is"]
@@ -44,7 +44,26 @@ class FileSearchSkill(BaseSkill):
         """Check if this skill can handle file operations."""
         user_input = context.user_input.lower()
         
-        file_keywords = ["find", "search", "file", "locate", "where is", "open file"]
+        # More flexible file keywords
+        file_keywords = [
+            "find", "search", "file", "locate", "where is", "open file",
+            "show files", "list files", "browse", "explore", "look for",
+            "find files", "search files", "locate files", "file search",
+            "open", "show me files", "display files", "file explorer",
+            "open file", "open files", "file named", "file called"
+        ]
+        
+        # Exclude web-related commands
+        web_keywords = [
+            "python tutorials", "youtube", "images of cats", "browse the web",
+            "browse web", "search for", "open youtube", "search images", 
+            "web search", "internet search", "google", "wikipedia", "online"
+        ]
+        
+        # Check if it's a web command
+        if any(web_keyword in user_input for web_keyword in web_keywords):
+            return False
+            
         return any(keyword in user_input for keyword in file_keywords)
     
     def execute(self, context: SkillContext) -> SkillResult:
@@ -53,12 +72,12 @@ class FileSearchSkill(BaseSkill):
             user_input = context.user_input.lower()
             
             # Determine operation type
-            if any(keyword in user_input for keyword in ["find", "search", "locate", "where is"]):
-                return self._handle_file_search(context)
-            elif "open file" in user_input or "open" in user_input:
-                return self._handle_file_open(context)
-            elif "list files" in user_input or "show files" in user_input:
+            if any(keyword in user_input for keyword in ["list files", "show files", "files in", "directory", "folder"]):
                 return self._handle_file_list(context)
+            elif "open file" in user_input or ("open" in user_input and any(ext in user_input for ext in [".py", ".txt", ".doc", ".pdf", ".jpg", ".png", ".mp4", ".mp3"])):
+                return self._handle_file_open(context)
+            elif any(keyword in user_input for keyword in ["find", "search", "locate", "where is"]):
+                return self._handle_file_search(context)
             else:
                 return self._handle_file_search(context)  # Default to search
         
@@ -242,13 +261,13 @@ class FileSearchSkill(BaseSkill):
             if directories:
                 response += "Directories:\n"
                 for dir_info in directories[:10]:  # Limit to 10
-                    response += f"  📁 {dir_info['name']}\n"
+                    response += f"  [DIR] {dir_info['name']}\n"
             
             if files:
                 response += "Files:\n"
                 for file_info in files[:10]:  # Limit to 10
                     size_str = self._format_file_size(file_info['size'])
-                    response += f"  📄 {file_info['name']} ({size_str})\n"
+                    response += f"  [FILE] {file_info['name']} ({size_str})\n"
             
             if len(files) + len(directories) > 20:
                 response += f"... and {len(files) + len(directories) - 20} more items"
@@ -324,7 +343,11 @@ class FileSearchSkill(BaseSkill):
         if "in " in user_input_lower:
             parts = user_input_lower.split("in ", 1)
             if len(parts) > 1:
-                return parts[1].strip()
+                directory = parts[1].strip()
+                # Handle special cases
+                if directory in ["current directory", "current folder", "this directory", "this folder"]:
+                    return os.getcwd()  # Return actual current directory
+                return directory
         
         return None
     
@@ -402,7 +425,12 @@ class FileManagementSkill(BaseSkill):
     def can_handle(self, context: SkillContext) -> bool:
         """Check if this skill can handle file management."""
         user_input = context.user_input.lower()
-        management_keywords = ["copy", "move", "delete", "rename", "create", "folder", "directory"]
+        # More flexible management keywords
+        management_keywords = [
+            "copy", "move", "delete", "rename", "create", "folder", "directory",
+            "duplicate", "remove", "trash", "new folder", "make folder",
+            "file management", "organize files", "manage files", "file operations"
+        ]
         return any(keyword in user_input for keyword in management_keywords)
     
     def execute(self, context: SkillContext) -> SkillResult:

@@ -55,6 +55,41 @@ I'm Jarvis Voice Assistant! Here's what I can do:
 - "Hey Jarvis, what time is it?"
 - "Hey Jarvis, show system information"
 
+🌤️ **Weather & News:**
+- "Hey Jarvis, what's the weather?"
+- "Hey Jarvis, weather in London"
+- "Hey Jarvis, give me the news"
+- "Hey Jarvis, tech news"
+
+📝 **Tasks & Notes:**
+- "Hey Jarvis, take a note: buy groceries"
+- "Hey Jarvis, add task: finish report"
+- "Hey Jarvis, show my tasks"
+- "Hey Jarvis, mark task 1 as done"
+- "Hey Jarvis, what are my notes?"
+
+🌐 **Web & Search:**
+- "Hey Jarvis, search for Python tutorials"
+- "Hey Jarvis, open YouTube"
+- "Hey Jarvis, Wikipedia Albert Einstein"
+- "Hey Jarvis, search images of sunset"
+
+🎵 **Music & Media:**
+- "Hey Jarvis, play Bohemian Rhapsody"
+- "Hey Jarvis, volume up/down"
+- "Hey Jarvis, pause music"
+- "Hey Jarvis, open Spotify"
+
+🧠 **Conversation Memory:**
+- "Hey Jarvis, do you remember what we talked about?"
+- "Hey Jarvis, what did I ask earlier?"
+- "Hey Jarvis, conversation history"
+
+🌍 **Translation:**
+- "Hey Jarvis, translate hello to Spanish"
+- "Hey Jarvis, how do you say thank you in French?"
+- "Hey Jarvis, teach me basic German"
+
 Just start any command with "Hey Jarvis" and I'll help you!
         """
         

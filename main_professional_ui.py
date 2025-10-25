@@ -18,6 +18,12 @@ import math
 # Add the project root to the Python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+# Import UI components
+from ui.theme_manager import theme_manager, ThemeType
+from ui.animated_status import AnimatedStatusIndicator
+from ui.progress_widget import ProgressBarWidget
+from ui.skill_widget import SkillWidget
+
 # Import core components
 from core.trie import KeywordMatcher
 from core.state_machine import DialogueStateMachine, EventType, StateType
@@ -39,6 +45,14 @@ from skills.file_skill import FileSearchSkill, FileManagementSkill
 from skills.app_skill import AppLauncherSkill, SystemControlSkill
 from skills.info_skill import InfoSkill
 from skills.help_skill import HelpSkill
+from skills.weather_news_skill import WeatherNewsSkill
+from skills.todo_notes_skill import TodoNotesSkill
+from skills.web_browser_skill import WebBrowserSkill
+from skills.music_media_skill import MusicMediaSkill
+from skills.conversation_memory_skill import ConversationMemorySkill
+from skills.translation_skill import TranslationSkill
+from skills.whatsapp_messaging_skill import WhatsAppMessagingSkill
+from skills.calendar_email_skill import CalendarEmailSkill
 
 
 # Modern Color Palette
@@ -237,17 +251,28 @@ class JarvisVoiceAssistantPro:
         self.skill_manager = SkillManager()
         self.skill_registry = SkillRegistry(self.skill_manager)
         
-        # Register skills
+        # Register skills - CRITICAL priority skills first
         skills = [
-            ReminderSkill(self.scheduler),
-            RecurringReminderSkill(self.scheduler),
-            FileSearchSkill(self.fs_graph),
+            FileSearchSkill(self.fs_graph),  # CRITICAL priority
+            TodoNotesSkill(),  # CRITICAL priority
+            WebBrowserSkill(),  # CRITICAL priority
+            TranslationSkill(),  # CRITICAL priority
             FileManagementSkill(),
             AppLauncherSkill(self.fs_graph),
             SystemControlSkill(),
+            ReminderSkill(self.scheduler),
+            RecurringReminderSkill(self.scheduler),
             InfoSkill(),
-            HelpSkill()
+            HelpSkill(),
+            WeatherNewsSkill(),
+            MusicMediaSkill(),
+            WhatsAppMessagingSkill(),
+            CalendarEmailSkill(),
         ]
+        
+        # Store reference to conversation memory for integration
+        self.conversation_memory = ConversationMemorySkill()
+        skills.append(self.conversation_memory)
         
         for skill in skills:
             self.skill_manager.register_skill(skill)
@@ -276,7 +301,7 @@ class JarvisVoiceAssistantPro:
             
             # Clean text (remove wake word)
             clean_text = text.lower()
-            for wake_word in ["hey sigma", "sigma", "assistant"]:
+            for wake_word in ["hey jarvis", "jarvis", "assistant"]:
                 clean_text = clean_text.replace(wake_word, "").strip()
             clean_text = clean_text.lstrip(',').lstrip('.').lstrip('!').lstrip('?').strip()
             
@@ -309,6 +334,9 @@ class JarvisVoiceAssistantPro:
             # Execute appropriate skill
             result = self.skill_manager.execute_best_skill(context)
             
+            # Store user input for conversation memory
+            self._last_user_input = clean_text
+            
             # Generate response
             if result.success:
                 self._respond(result.message)
@@ -332,13 +360,19 @@ class JarvisVoiceAssistantPro:
                 'response': message
             })
             
+            # Store in conversation memory if available
+            if hasattr(self, 'conversation_memory') and hasattr(self, '_last_user_input'):
+                self.conversation_memory.add_conversation_turn(
+                    self._last_user_input, message, "unknown", {}
+                )
+            
         except Exception as e:
             print(f"Error generating response: {e}")
             
     def setup_ui(self):
         """Setup the modern professional user interface"""
-        # Set appearance mode and color theme
-        ctk.set_appearance_mode("dark")
+        # Set appearance mode and color theme using theme manager
+        theme_manager.set_theme(ThemeType.PROFESSIONAL_DARK)
         ctk.set_default_color_theme("blue")
         
         # Create main window
@@ -389,11 +423,30 @@ class JarvisVoiceAssistantPro:
         )
         title_label.pack(side="left")
         
-        # Right side - Status indicator
+        # Right side - Theme selector and Status indicator
         right_frame = ctk.CTkFrame(top_bar, fg_color="transparent")
         right_frame.pack(side="right", padx=20, pady=15)
         
-        self.status_indicator = StatusIndicator(right_frame)
+        # Theme selector
+        theme_label = ctk.CTkLabel(
+            right_frame,
+            text="Theme:",
+            font=ctk.CTkFont(size=12),
+            text_color=Colors.TEXT_SECONDARY
+        )
+        theme_label.pack(side="left", padx=(0, 5))
+        
+        self.theme_selector = ctk.CTkOptionMenu(
+            right_frame,
+            values=list(theme_manager.get_available_themes().values()),
+            command=self._on_theme_change,
+            width=120,
+            height=30
+        )
+        self.theme_selector.pack(side="left", padx=(0, 15))
+        self.theme_selector.set(theme_manager.get_current_theme()["name"])
+        
+        self.status_indicator = AnimatedStatusIndicator(right_frame, width=30, height=30)
         self.status_indicator.pack(side="left", padx=(0, 10))
         
         self.status_text = ctk.CTkLabel(
@@ -487,6 +540,12 @@ class JarvisVoiceAssistantPro:
         )
         mode_label.pack()
         
+        # Skill widgets
+        skill_widget = SkillWidget(control_panel, width=320, height=150)
+        skill_widget.pack(pady=(10, 15))
+        skill_widget.set_skill_callback(self._on_skill_command)
+        self.skill_widget = skill_widget
+        
         # Text input section - COMPACT BUT BETTER!
         input_label = ctk.CTkLabel(
             control_panel,
@@ -528,38 +587,6 @@ class JarvisVoiceAssistantPro:
         divider = ctk.CTkFrame(control_panel, height=2, fg_color=Colors.BORDER)
         divider.pack(fill="x", padx=20, pady=10)
         
-        # Quick actions - BETTER STYLING!
-        actions_label = ctk.CTkLabel(
-            control_panel,
-            text="Quick Actions",
-            font=ctk.CTkFont(size=14, weight="bold"),
-            text_color=Colors.TEXT_PRIMARY
-        )
-        actions_label.pack(pady=(10, 8))
-        
-        quick_actions = [
-            ("What time is it?", "⏰"),
-            ("System info", "💻"),
-            ("Set reminder", "⏲️"),
-            ("Open calculator", "🔢"),
-        ]
-        
-        for action, emoji in quick_actions:
-            btn = ctk.CTkButton(
-                control_panel,
-                text=f"{emoji} {action}",
-                width=280,
-                height=38,
-                corner_radius=12,
-                fg_color=Colors.BG_LIGHT,
-                hover_color=Colors.PRIMARY_LIGHT,
-                text_color=Colors.TEXT_PRIMARY,
-                font=ctk.CTkFont(size=12, weight="bold"),
-                anchor="w",
-                command=lambda a=action: self._quick_action(a)
-            )
-            btn.pack(pady=2)
-        
         # Settings button (at bottom)
         settings_btn = AnimatedButton(
             control_panel,
@@ -587,6 +614,10 @@ class JarvisVoiceAssistantPro:
             text_color=Colors.TEXT_DIM
         )
         self.stats_label.pack(side="left", padx=20)
+        
+        # Progress bar
+        self.progress_bar = ProgressBarWidget(bottom_bar)
+        self.progress_bar.pack(side="left", padx=20)
         
         # Version info
         version_label = ctk.CTkLabel(
@@ -822,6 +853,61 @@ class JarvisVoiceAssistantPro:
         skill_count = len(self.skill_manager.skills)
         self.stats_label.configure(text=f"{status_map.get(status, 'Unknown')} | Skills: {skill_count} | Cache: {cache_size} items")
         
+    def _on_theme_change(self, selected_theme):
+        """Handle theme change with smooth transition"""
+        try:
+            # Find the theme type from the selected name
+            for theme_type, theme_name in theme_manager.get_available_themes().items():
+                if theme_name == selected_theme:
+                    # Set theme without immediate UI update to prevent crashes
+                    theme_manager.set_theme(theme_type)
+                    # Schedule UI update for next frame to make it smooth
+                    self.root.after(50, self._apply_theme_colors_safe)
+                    break
+        except Exception as e:
+            print(f"Error changing theme: {e}")
+    
+    def _apply_theme_colors_safe(self):
+        """Apply current theme colors safely"""
+        try:
+            colors = theme_manager.get_current_colors()
+            # Only update main window background for now to prevent crashes
+            self.root.configure(fg_color=colors["bg_primary"])
+            # Update theme selector text color
+            if hasattr(self, 'theme_selector'):
+                self.theme_selector.configure(fg_color=colors["bg_secondary"])
+        except Exception as e:
+            print(f"Error applying theme colors: {e}")
+    
+    def show_progress(self, message: str = "Processing..."):
+        """Show progress bar with message"""
+        try:
+            self.progress_bar.show(message)
+        except Exception as e:
+            print(f"Error showing progress: {e}")
+    
+    def hide_progress(self):
+        """Hide progress bar"""
+        try:
+            self.progress_bar.hide()
+        except Exception as e:
+            print(f"Error hiding progress: {e}")
+    
+    def update_progress(self, progress: int, message: Optional[str] = None):
+        """Update progress bar value"""
+        try:
+            self.progress_bar.set_progress(progress, message)
+        except Exception as e:
+            print(f"Error updating progress: {e}")
+    
+    def _on_skill_command(self, command: str):
+        """Handle skill widget button clicks"""
+        try:
+            # Process the command as if it was voice input
+            self._process_user_input(command, 1.0, {})
+        except Exception as e:
+            print(f"Error processing skill command: {e}")
+        
     def _on_closing(self):
         """Handle application closing"""
         try:
@@ -851,7 +937,7 @@ def main():
     print("\nFeatures:")
     print("- Modern animated UI")
     print("- Voice and text input")
-    print("- 8 intelligent skills")
+    print("- 16 intelligent skills")
     print("- Advanced NLP and ML")
     print("- Real-time status updates")
     print("\nStarting application...\n")

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "website",
+    "query": "YouTube",
+    "url": "https://www.youtube.com",
+    "timestamp": "2025-10-19T14:22:22.199472"
+  },
+  {
+    "type": "website",
+    "query": "https://main.py",
+    "url": "https://main.py",
+    "timestamp": "2025-10-25T13:21:40.747638"
+  },
+  {
+    "type": "website",
+    "query": "https://main.py",
+    "url": "https://main.py",
+    "timestamp": "2025-10-25T13:35:52.533903"
+  },
+  {
+    "type": "website",
+    "query": "https://main.py",
+    "url": "https://main.py",
+    "timestamp": "2025-10-25T14:14:15.137897"
+  },
+  {
+    "type": "google_search",
+    "query": "python tutorials",
+    "url": "https://www.google.com/search?q=python%20tutorials",
+    "timestamp": "2025-10-25T14:36:02.185403"
+  },
+  {
+    "type": "google_search",
+    "query": "python tutorials",
+    "url": "https://www.google.com/search?q=python%20tutorials",
+    "timestamp": "2025-10-25T18:42:29.547853"
+  },
+  {
+    "type": "website",
+    "query": "YouTube",
+    "url": "https://www.youtube.com",
+    "timestamp": "2025-10-25T18:42:51.057168"
+  },
+  {
+    "type": "image_search",
+    "query": "cats",
+    "url": "https://www.google.com/search?tbm=isch&q=cats",
+    "timestamp": "2025-10-25T18:43:09.789850"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:44:18.778713"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:45:04.169494"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:46:00.535124"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:48:35.806557"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:52:02.769354"
+  },
+  {
+    "type": "website",
+    "query": "Google",
+    "url": "https://www.google.com",
+    "timestamp": "2025-10-25T18:52:10.412007"
+  }
+]

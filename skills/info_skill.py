@@ -29,8 +29,8 @@ class InfoSkill(BaseSkill):
         """Check if this skill can handle information queries."""
         user_input = context.user_input.lower()
         
-        # Time queries
-        time_keywords = ["time", "hour", "clock", "what time"]
+        # Time queries - more flexible
+        time_keywords = ["time", "hour", "clock", "what time", "what's the time", "current time", "tell me the time"]
         if any(keyword in user_input for keyword in time_keywords):
             return True
         

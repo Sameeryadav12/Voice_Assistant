@@ -1,0 +1,702 @@
+[
+  {
+    "timestamp": "2025-10-25T12:01:24.604501",
+    "user_input": "hey jarvis, what's the weather?",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:01:34.982642",
+    "user_input": "hey jarvis, open whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:01:51.225826",
+    "user_input": "hey jarvis, launch whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:02:05.134465",
+    "user_input": "hey jarvis, start whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:02:26.421373",
+    "user_input": "hey jarvis, show my contacts",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:02:39.850574",
+    "user_input": "hey jarvis, show contacts",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:02:50.303213",
+    "user_input": "hey jarvis, list contacts",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:08:31.217319",
+    "user_input": "hey jarvis, show message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:08:43.821337",
+    "user_input": "hey jarvis, message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:08:54.477826",
+    "user_input": "hey jarvis, send a message",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:09:06.794946",
+    "user_input": "hey jarvis, send message to someone",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:09:27.356024",
+    "user_input": "hey jarvis, text someone",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:09:40.101696",
+    "user_input": "hey jarvis, message someone",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:09:53.385631",
+    "user_input": "hey jarvis, add contact john with phone +1234567890",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:10:04.399669",
+    "user_input": "hey jarvis, add contact with phone",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:10:12.949006",
+    "user_input": "hey jarvis, save contact with phone",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:30:04.741066",
+    "user_input": "hey jarvis, show message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:30:13.932277",
+    "user_input": "hey jarvis, message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:30:22.156475",
+    "user_input": "hey jarvis, open whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:30:35.613891",
+    "user_input": "hey jarvis, launch whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:30:43.646902",
+    "user_input": "hey jarvis, start whatsapp",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:37:25.665670",
+    "user_input": "hey jarvis, show message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 24\u00b0C (76\u00b0F) - Light rain shower\nFeels like: 26\u00b0C (79\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 47%\nWind Speed: 17 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:37:46.208192",
+    "user_input": "hey jarvis, open whatsapp",
+    "assistant_response": "WhatsApp desktop app not found. Opening WhatsApp Web for you to send messages.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:37:57.288956",
+    "user_input": "hey jarvis, launch whatsapp",
+    "assistant_response": "WhatsApp desktop app not found. Opening WhatsApp Web for you to send messages.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:50:18.530610",
+    "user_input": "hey jarvis, open whatsapp\"",
+    "assistant_response": "Opening WhatsApp desktop app for you to send messages.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:50:31.890836",
+    "user_input": "hey jarvis, send message to nikhil",
+    "assistant_response": "Opening WhatsApp desktop app. Search for 'Nikhil' to send your message.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:54:59.537678",
+    "user_input": "\"hey jarvis, show message templates\"",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 25\u00b0C (77\u00b0F) - Light rain shower\nFeels like: 28\u00b0C (83\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 41%\nWind Speed: 10 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:55:07.720575",
+    "user_input": "hey jarvis, message templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 25\u00b0C (77\u00b0F) - Light rain shower\nFeels like: 28\u00b0C (83\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 41%\nWind Speed: 10 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:55:14.594370",
+    "user_input": "hey jarvis, show templates",
+    "assistant_response": "\ud83c\udf24\ufe0f Weather for Adelaide, Australia:\n\nCurrent: 25\u00b0C (77\u00b0F) - Light rain shower\nFeels like: 28\u00b0C (83\u00b0F)\nToday's Range: 14\u00b0C to 21\u00b0C (57\u00b0F to 70\u00b0F)\nHumidity: 41%\nWind Speed: 10 km/h",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:55:22.480273",
+    "user_input": "hey jarvis, send message to nikhil",
+    "assistant_response": "Opening WhatsApp desktop app. Search for 'Nikhil' to send your message.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T12:55:34.374533",
+    "user_input": "hey jarvis, send message to john",
+    "assistant_response": "Opening WhatsApp desktop app. Search for 'John' to send your message.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:00:43.646187",
+    "user_input": "hey jarvis, show message templates",
+    "assistant_response": "Here are your message templates:\ngreeting: Hello! How are you doing?\nmeeting: Hi! Can we schedule a meeting for tomorrow?\nthanks: Thank you for your help!\nreminder: Don't forget about our appointment today.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:00:56.320412",
+    "user_input": "hey jarvis, message templates",
+    "assistant_response": "Here are your message templates:\ngreeting: Hello! How are you doing?\nmeeting: Hi! Can we schedule a meeting for tomorrow?\nthanks: Thank you for your help!\nreminder: Don't forget about our appointment today.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:01:08.386808",
+    "user_input": "hey jarvis, send message to nikhil",
+    "assistant_response": "Opening WhatsApp desktop app. Search for 'Nikhil' to send your message.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:06:09.733178",
+    "user_input": "hey jarvis, show my calendar",
+    "assistant_response": "Here are your calendar events:\n\u2022 Team Meeting on 2024-01-15 at 10:00\n\u2022 Project Deadline on 2024-01-20 at 17:00",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:06:18.776716",
+    "user_input": "hey jarvis, show today's schedule",
+    "assistant_response": "Today is Saturday, October 25, 2025",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:06:59.115321",
+    "user_input": "hey jarvis, compose an email",
+    "assistant_response": "Opening Gmail compose for you to write an email.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:12:30.862698",
+    "user_input": "hey jarvis, check my emails",
+    "assistant_response": "Recent emails:\n\u2022 To: john@example.com - Meeting Follow-up (2024-01-10)",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:20:51.164203",
+    "user_input": "hey jarvis, find python files",
+    "assistant_response": "I couldn't find any files matching 'python files'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:20:59.037051",
+    "user_input": "hey jarvis, search for documents",
+    "assistant_response": "I couldn't find any files matching 'documents'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:21:05.049979",
+    "user_input": "hey jarvis, show files in current directory",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:21:16.967925",
+    "user_input": "hey jarvis, create folder test_folder",
+    "assistant_response": "Created folder 'test_folder' in D:\\Projects\\voice_assistant",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:21:40.748812",
+    "user_input": "hey jarvis, open file main.py",
+    "assistant_response": "\ud83c\udf10 Opening https://main.py...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:21:58.680579",
+    "user_input": "hey jarvis, open calculator",
+    "assistant_response": "Opened calculator",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:07.732229",
+    "user_input": "hey jarvis, launch notepad",
+    "assistant_response": "Opened notepad",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:14.960647",
+    "user_input": "hey jarvis, start chrome",
+    "assistant_response": "Opened Google Chrome",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:21.909961",
+    "user_input": "hey jarvis, show running apps",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:34.101639",
+    "user_input": "hey jarvis, close calculator",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:44.029438",
+    "user_input": "hey jarvis, play bohemian rhapsody",
+    "assistant_response": "\ud83c\udfb5 Searching YouTube for 'bohemian rhapsody'...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:22:53.851652",
+    "user_input": "hey jarvis, play music on spotify",
+    "assistant_response": "\ud83c\udfb5 Opening 'on spotify' on Spotify...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:23:07.708285",
+    "user_input": "hey jarvis, volume up",
+    "assistant_response": "\ud83d\udd0a Volume increased",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:23:16.787967",
+    "user_input": "hey jarvis, pause music",
+    "assistant_response": "\u23f8\ufe0f Media paused/resumed",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:23:29.128744",
+    "user_input": "hey jarvis, next track",
+    "assistant_response": "\u23ed\ufe0f Next track",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:34:46.456602",
+    "user_input": "hey jarvis, find python files",
+    "assistant_response": "I couldn't find any files matching 'python files'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:34:53.815939",
+    "user_input": "\"hey jarvis, search for documents",
+    "assistant_response": "I couldn't find any files matching 'documents'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:35:08.180592",
+    "user_input": "hey jarvis, show running apps",
+    "assistant_response": "Currently running applications:\n1.  (PID: 236)\n2. Registry (PID: 280)\n3. lsass.exe (PID: 1444)\n4. svchost.exe (PID: 1676)\n5. WUDFHost.exe (PID: 1760)\n6. svchost.exe (PID: 1824)\n7. NVDisplay.Container.exe (PID: 1872)\n8. svchost.exe (PID: 2460)\n9. arwsrvc.exe (PID: 2760)\n10. svchost.exe (PID: 3132)\n... and 100 more processes",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:35:27.597194",
+    "user_input": "hey jarvis, show files in current directory",
+    "assistant_response": "Currently running applications:\n1. System Idle Process (PID: 0)\n2. Cursor.exe (PID: 210980)\n3. Cursor.exe (PID: 160940)\n4. WmiPrvSE.exe (PID: 249804)\n5. python.exe (PID: 248680)\n6. System (PID: 4)\n7. Cursor.exe (PID: 210044)\n8. svchost.exe (PID: 4764)\n9. dwm.exe (PID: 214576)\n10. bdssvc.exe (PID: 5080)\n... and 113 more processes",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T13:35:52.536487",
+    "user_input": "hey jarvis, open file main.py",
+    "assistant_response": "\ud83c\udf10 Opening https://main.py...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:14:05.326811",
+    "user_input": "hey jarvis, show files in current directory",
+    "assistant_response": "Files in D:\\Projects\\voice_assistant:\nDirectories:\n  [DIR] .git\n  [DIR] .github\n  [DIR] __pycache__\n  [DIR] audio\n  [DIR] core\n  [DIR] data\n  [DIR] docs\n  [DIR] examples\n  [DIR] nlp\n  [DIR] skills\nFiles:\n  [FILE] .gitignore (2.8 KB)\n  [FILE] ARCHITECTURE.md (5.1 KB)\n  [FILE] CHANGELOG.md (8.1 KB)\n  [FILE] CONTRIBUTING.md (11.1 KB)\n  [FILE] LICENSE (1.1 KB)\n  [FILE] main.py (21.7 KB)\n  [FILE] main_hybrid.py (14.2 KB)\n  [FILE] main_professional_ui.py (33.6 KB)\n  [FILE] main_pushtotalk.py (11.8 KB)\n  [FILE] PROJECT_STRUCTURE.md (9.4 KB)\n... and 12 more items",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:14:15.138807",
+    "user_input": "hey jarvis, open file main.py",
+    "assistant_response": "\ud83c\udf10 Opening https://main.py...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:14:29.067801",
+    "user_input": "hey jarvis, show running apps",
+    "assistant_response": "Currently running applications:\n1.  (PID: 236)\n2. Registry (PID: 280)\n3. svchost.exe (PID: 1676)\n4. svchost.exe (PID: 1824)\n5. NVDisplay.Container.exe (PID: 1872)\n6. svchost.exe (PID: 3236)\n7. MemCompression (PID: 3436)\n8. svchost.exe (PID: 3992)\n9. svchost.exe (PID: 4304)\n10. svchost.exe (PID: 4324)\n... and 82 more processes",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:19:50.981019",
+    "user_input": "hey jarvis, search for python tutorials",
+    "assistant_response": "I couldn't find any files matching 'python tutorials'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:23:10.533818",
+    "user_input": "hey jarvis, open youtube",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, open youtube'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:23:16.294391",
+    "user_input": "hey jarvis, search images of cats",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, search images of cats'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:23:24.090699",
+    "user_input": "hey jarvis, wikipedia artificial intelligence",
+    "assistant_response": "\ud83d\udcd6 Opening Wikipedia page for 'artificial intelligence'...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:23:35.608384",
+    "user_input": "hey jarvis, browse the web",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, browse the web'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:23:50.605096",
+    "user_input": "hey jarvis, take a note buy groceries",
+    "assistant_response": "\u2705 Note saved: 'buy groceries'\nCategory: personal",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:24:01.033063",
+    "user_input": "hey jarvis, add task finish project report",
+    "assistant_response": "\u2705 Task added: 'finish project report'\nPriority: MEDIUM\nCategory: work",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:24:09.130853",
+    "user_input": "hey jarvis, show my tasks",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:24:16.858823",
+    "user_input": "hey jarvis, show my notes",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:24:29.327450",
+    "user_input": "hey jarvis, mark task 1 as done",
+    "assistant_response": "\u2705 Task completed: 'finish project report'\nGreat job! \ud83c\udf89\n\nAll tasks done! You're awesome! \ud83c\udf1f",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:24:47.281322",
+    "user_input": "hey jarvis, translate hello to spanish",
+    "assistant_response": "\ud83c\udf0d Translation to Spanish:\n\nOriginal: 'hello'\nTranslation: ''AUTO' IS AN INVALID SOURCE LANGUAGE . EXAMPLE: LANGPAIR=EN|IT USING 2 LETTER ISO OR RFC3066 LIKE ZH-CN. ALMOST ALL LANGUAGES SUPPORTED BUT SOME MAY HAVE NO CONTENT'",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:25:06.736216",
+    "user_input": "hey jarvis, how do you say thank you in french",
+    "assistant_response": "\ud83c\udf0d 'Thank You' in French: 'Merci'",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:25:17.135894",
+    "user_input": "hey jarvis, teach me german",
+    "assistant_response": "\ud83d\udcda Basic German Phrases:\n\n\u2022 Hello: Hallo\n\u2022 Thank You: Danke\n\u2022 Goodbye: Auf Wiedersehen\n\u2022 Yes: Ja\n\u2022 No: Nein\n\nAsk me 'how do you say [phrase] in german' to learn more!",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:25:26.251287",
+    "user_input": "hey jarvis, what is goodbye in japanese",
+    "assistant_response": "\ud83c\udf0d 'Goodbye' in Japanese: '\u3055\u3088\u3046\u306a\u3089'\n(Pronunciation: Romanized as shown)",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:25:32.820350",
+    "user_input": "hey jarvis, convert this to italian",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:39:51.865932",
+    "user_input": "hey jarvis, search for python tutorials",
+    "assistant_response": "I couldn't find any files matching 'python tutorials'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:40:30.526934",
+    "user_input": "hey jarvis, open youtube",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, open youtube'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:40:41.438225",
+    "user_input": "hey jarvis, search images of cats",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, search images of cats'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:40:47.423564",
+    "user_input": "hey jarvis, browse the web",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, browse the web'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:41:08.003299",
+    "user_input": "hey jarvis, take a note buy groceries\"",
+    "assistant_response": "\u2705 Note saved: 'buy groceries\"'\nCategory: personal",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:41:14.788515",
+    "user_input": "hey jarvis, add task finish project report",
+    "assistant_response": "\u2705 Task added: 'finish project report'\nPriority: MEDIUM\nCategory: work",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:41:23.078464",
+    "user_input": "hey jarvis, show my tasks",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:43:22.794064",
+    "user_input": "hey jarvis, show my notes",
+    "assistant_response": "Here are some applications I can launch:\n1. calculator\n2. chrome\n3. cmd\n4. command prompt\n5. control panel\n6. device manager\n7. edge\n8. explorer\n9. file explorer\n10. firefox\n11. google chrome\n12. microsoft edge\n13. notepad\n14. paint\n15. powershell\n... and 4 more applications",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:43:31.773972",
+    "user_input": "hey jarvis, mark task 1 as done",
+    "assistant_response": "Task #1 'finish project report' is already completed! \u2705",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:49:37.973695",
+    "user_input": "hey jarvis, search for python tutorials",
+    "assistant_response": "I couldn't find any files matching 'python tutorials'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:49:49.026682",
+    "user_input": "hey jarvis, open youtube\"",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, open youtube\"'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:49:54.247898",
+    "user_input": "hey jarvis, search images of cats\"",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, search images of cats\"'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T14:50:00.423439",
+    "user_input": "hey jarvis, browse the web\"",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, browse the web\"'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:42:29.549111",
+    "user_input": "hey jarvis, search for python tutorials",
+    "assistant_response": "Searching Google for: 'python tutorials'\nOpening in your browser...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:42:51.059094",
+    "user_input": "hey jarvis, open youtube",
+    "assistant_response": "Opening YouTube...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:43:09.791335",
+    "user_input": "hey jarvis, search images of cats",
+    "assistant_response": "Searching images for: 'cats'\nOpening Google Images...",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:43:18.777554",
+    "user_input": "hey jarvis, browse the web",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:43:22.609139",
+    "user_input": "hey jarvis, browse the web",
+    "assistant_response": "I'm sorry, I couldn't help with that. Could you please try rephrasing?",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:45:04.171580",
+    "user_input": "hey jarvis, browse the web",
+    "assistant_response": "Opening web browser with Google homepage for you to browse the web!",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:45:11.892328",
+    "user_input": "hey jarvis, browse web",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, browse web'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:45:18.165605",
+    "user_input": "hey jarvis, browse web",
+    "assistant_response": "I couldn't find any files matching 'hey jarvis, browse web'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:48:29.962682",
+    "user_input": "browse web",
+    "assistant_response": "I couldn't find any files matching 'browse web'.",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T18:48:35.808086",
+    "user_input": "browse the web",
+    "assistant_response": "Opening web browser with Google homepage for you to browse the web!",
+    "intent": "unknown",
+    "entities": {}
+  },
+  {
+    "timestamp": "2025-10-25T19:47:40.964671",
+    "user_input": "what's the time",
+    "assistant_response": "The current time is 07:47 PM",
+    "intent": "unknown",
+    "entities": {}
+  }
+]

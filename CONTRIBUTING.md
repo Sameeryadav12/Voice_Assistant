@@ -1,262 +1,200 @@
 # 🤝 Contributing to Jarvis Voice Assistant
 
-Thank you for your interest in contributing to Jarvis Voice Assistant! This guide will help you get started with development and understand our contribution process.
+Thank you for your interest in contributing to Jarvis Voice Assistant! We welcome contributions from the community and appreciate your help in making this project better.
 
-## 📋 Table of Contents
+## 📋 **Table of Contents**
 
+- [Code of Conduct](#-code-of-conduct)
 - [Getting Started](#-getting-started)
+- [How to Contribute](#-how-to-contribute)
 - [Development Setup](#-development-setup)
-- [Code Style](#-code-style)
-- [Testing](#-testing)
+- [Coding Standards](#-coding-standards)
 - [Pull Request Process](#-pull-request-process)
-- [Issue Guidelines](#-issue-guidelines)
+- [Issue Reporting](#-issue-reporting)
 - [Feature Requests](#-feature-requests)
-- [Documentation](#-documentation)
 
 ---
 
-## 🚀 Getting Started
+## 📜 **Code of Conduct**
 
-### Prerequisites
+This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [conduct@jarvis-assistant.com](mailto:conduct@jarvis-assistant.com).
 
+### **Our Pledge**
+- Be respectful and inclusive
+- Welcome newcomers and help them learn
+- Focus on what's best for the community
+- Show empathy towards other community members
+
+---
+
+## 🚀 **Getting Started**
+
+### **Prerequisites**
 - Python 3.8 or higher
 - Git
-- Basic understanding of Python, audio processing, and UI development
-- Familiarity with voice assistants and NLP concepts
+- A GitHub account
+- Basic understanding of Python and voice assistant concepts
 
-### Development Environment
-
-1. **Fork the repository**
+### **Fork and Clone**
+1. **Fork** the repository on GitHub
+2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/yourusername/sigma-voice-assistant.git
-   cd sigma-voice-assistant
+   git clone https://github.com/yourusername/jarvis-voice-assistant.git
+   cd jarvis-voice-assistant
    ```
-
-2. **Create development branch**
+3. **Add upstream** remote:
    ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **Set up virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Linux/Mac
-   # or
-   .\venv\Scripts\Activate.ps1  # Windows
-   ```
-
-4. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   pip install -r requirements-dev.txt  # Development dependencies
+   git remote add upstream https://github.com/originalusername/jarvis-voice-assistant.git
    ```
 
 ---
 
-## 🛠️ Development Setup
+## 🔧 **How to Contribute**
 
-### Project Structure
+### **Types of Contributions**
+- **Bug Fixes** - Fix existing issues
+- **New Features** - Add new skills or capabilities
+- **Documentation** - Improve docs, comments, or README
+- **Testing** - Add or improve tests
+- **UI/UX** - Enhance the user interface
+- **Performance** - Optimize code and improve speed
 
-```
-sigma-voice-assistant/
-├── 📁 audio/                  # Audio processing
-├── 📁 core/                   # Core algorithms
-├── 📁 nlp/                    # Natural language processing
-├── 📁 skills/                 # Skill implementations
-├── 📁 docs/                   # Documentation
-├── 📁 tests/                  # Test files
-├── 📁 examples/               # Example scripts
-├── 🎮 main_professional_ui.py # Main application
-├── 📋 requirements.txt        # Dependencies
-├── 📋 requirements-dev.txt    # Dev dependencies
-└── 📖 README.md              # Project overview
-```
+### **Contribution Process**
+1. **Check Issues** - Look for existing issues or create new ones
+2. **Create Branch** - Create a feature branch from `main`
+3. **Make Changes** - Implement your changes
+4. **Test** - Ensure all tests pass
+5. **Commit** - Write clear commit messages
+6. **Push** - Push to your fork
+7. **Pull Request** - Create a PR with detailed description
 
-### Development Dependencies
+---
 
-Create `requirements-dev.txt`:
+## 🛠️ **Development Setup**
 
-```txt
-# Testing
-pytest>=7.0.0
-pytest-cov>=4.0.0
-pytest-mock>=3.10.0
-
-# Code Quality
-black>=22.0.0
-flake8>=5.0.0
-mypy>=1.0.0
-isort>=5.10.0
-
-# Documentation
-sphinx>=5.0.0
-sphinx-rtd-theme>=1.0.0
-
-# Development Tools
-pre-commit>=2.20.0
-jupyter>=1.0.0
-```
-
-### Pre-commit Hooks
-
-Set up pre-commit hooks for code quality:
-
+### **Environment Setup**
 ```bash
-pip install pre-commit
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+
+# Install pre-commit hooks
 pre-commit install
 ```
 
-This will automatically run:
-- Black (code formatting)
-- Flake8 (linting)
-- isort (import sorting)
-- MyPy (type checking)
-
----
-
-## 📝 Code Style
-
-### Python Style Guide
-
-We follow PEP 8 with some modifications:
-
-```python
-# Use type hints
-def process_audio(audio_data: bytes, sample_rate: int) -> str:
-    """Process audio data and return text.
-    
-    Args:
-        audio_data: Raw audio bytes
-        sample_rate: Sample rate in Hz
-        
-    Returns:
-        Recognized text
-        
-    Raises:
-        AudioError: If audio processing fails
-    """
-    # Implementation here
-    pass
-
-# Use descriptive variable names
-user_input = "Hey Jarvis, what time is it?"
-current_time = datetime.now()
-
-# Use constants for magic numbers
-DEFAULT_SAMPLE_RATE = 16000
-MAX_AUDIO_LENGTH = 10  # seconds
-```
-
-### Naming Conventions
-
-- **Classes**: PascalCase (`VoiceAssistant`, `AudioProcessor`)
-- **Functions/Methods**: snake_case (`process_audio`, `get_current_time`)
-- **Variables**: snake_case (`user_input`, `audio_data`)
-- **Constants**: UPPER_SNAKE_CASE (`DEFAULT_SAMPLE_RATE`, `MAX_RETRIES`)
-- **Private methods**: Leading underscore (`_internal_method`)
-
-### Documentation
-
-Use Google-style docstrings:
-
-```python
-def recognize_speech(audio_data: bytes, language: str = "en-US") -> str:
-    """Recognize speech from audio data.
-    
-    Args:
-        audio_data: Raw audio bytes from microphone
-        language: Language code for recognition (default: "en-US")
-        
-    Returns:
-        Recognized text string
-        
-    Raises:
-        RecognitionError: If speech recognition fails
-        AudioError: If audio data is invalid
-        
-    Example:
-        >>> audio = get_audio_from_mic()
-        >>> text = recognize_speech(audio)
-        >>> print(text)
-        "Hello world"
-    """
-    pass
-```
-
----
-
-## 🧪 Testing
-
-### Running Tests
-
+### **Running Tests**
 ```bash
 # Run all tests
 pytest
 
-# Run with coverage
-pytest --cov=sigma_voice_assistant
-
 # Run specific test file
-pytest tests/test_audio_processing.py
+pytest tests/test_basic.py
 
-# Run with verbose output
-pytest -v
+# Run with coverage
+pytest --cov=.
+
+# Run linting
+flake8 .
+black --check .
 ```
 
-### Writing Tests
+### **Running the Application**
+```bash
+# Main application
+python main_professional_ui.py
 
-Create test files in the `tests/` directory:
-
-```python
-# tests/test_audio_processing.py
-import pytest
-from audio.input_handler import AudioProcessor
-
-class TestAudioProcessor:
-    def test_resample_audio(self):
-        """Test audio resampling functionality."""
-        processor = AudioProcessor()
-        # Test implementation
-        
-    def test_voice_activity_detection(self):
-        """Test voice activity detection."""
-        processor = AudioProcessor()
-        # Test implementation
-        
-    @pytest.mark.parametrize("sample_rate,expected", [
-        (44100, 16000),
-        (48000, 16000),
-        (16000, 16000),
-    ])
-    def test_resample_rates(self, sample_rate, expected):
-        """Test resampling with different input rates."""
-        processor = AudioProcessor()
-        result = processor.resample_audio(b"test", sample_rate, 16000)
-        assert result is not None
+# Alternative entry points
+python main.py
+python main_pushtotalk.py
+python main_hybrid.py
 ```
-
-### Test Categories
-
-- **Unit Tests** - Test individual functions and methods
-- **Integration Tests** - Test component interactions
-- **UI Tests** - Test user interface functionality
-- **Performance Tests** - Test system performance
-- **Audio Tests** - Test audio processing pipeline
 
 ---
 
-## 🔄 Pull Request Process
+## 📝 **Coding Standards**
 
-### Before Submitting
+### **Python Style Guide**
+- Follow **PEP 8** style guidelines
+- Use **Black** for code formatting
+- Use **flake8** for linting
+- Maximum line length: **88 characters**
+- Use **type hints** where appropriate
 
-1. **Update documentation** for any new features
-2. **Add tests** for new functionality
-3. **Run all tests** to ensure nothing is broken
-4. **Update CHANGELOG.md** with your changes
-5. **Check code style** with pre-commit hooks
+### **Code Structure**
+- **Functions** - Keep functions small and focused
+- **Classes** - Use clear, descriptive names
+- **Comments** - Write clear, helpful comments
+- **Docstrings** - Use Google-style docstrings
 
-### PR Template
+### **Example Code Style**
+```python
+def process_voice_input(self, audio_data: bytes) -> str:
+    """
+    Process voice input and return transcribed text.
+    
+    Args:
+        audio_data: Raw audio data from microphone
+        
+    Returns:
+        Transcribed text string
+        
+    Raises:
+        SpeechRecognitionError: If audio cannot be processed
+    """
+    try:
+        # Process audio data
+        text = self.speech_recognizer.recognize_google(audio_data)
+        return text.strip()
+    except Exception as e:
+        raise SpeechRecognitionError(f"Failed to process audio: {e}")
+```
 
+### **Commit Message Format**
+```
+type(scope): brief description
+
+Detailed description of changes
+
+Fixes #123
+```
+
+**Types:**
+- `feat` - New feature
+- `fix` - Bug fix
+- `docs` - Documentation changes
+- `style` - Code style changes
+- `refactor` - Code refactoring
+- `test` - Test additions/changes
+- `chore` - Maintenance tasks
+
+**Examples:**
+```
+feat(voice): add noise cancellation for better recognition
+fix(ui): resolve theme switching crash issue
+docs(readme): update installation instructions
+```
+
+---
+
+## 🔄 **Pull Request Process**
+
+### **Before Submitting**
+- [ ] **Tests Pass** - All tests must pass
+- [ ] **Code Style** - Follows project style guidelines
+- [ ] **Documentation** - Updated relevant documentation
+- [ ] **No Conflicts** - Resolved merge conflicts
+- [ ] **Single Focus** - PR addresses one issue/feature
+
+### **PR Template**
 ```markdown
 ## Description
 Brief description of changes
@@ -266,220 +204,182 @@ Brief description of changes
 - [ ] New feature
 - [ ] Breaking change
 - [ ] Documentation update
-- [ ] Performance improvement
 
 ## Testing
-- [ ] Unit tests pass
-- [ ] Integration tests pass
+- [ ] Tests pass locally
+- [ ] New tests added for new functionality
 - [ ] Manual testing completed
-- [ ] UI tested on different screen sizes
 
 ## Checklist
 - [ ] Code follows style guidelines
 - [ ] Self-review completed
 - [ ] Documentation updated
-- [ ] No breaking changes (or documented)
+- [ ] No new warnings introduced
 ```
 
-### Review Process
-
-1. **Automated checks** must pass
-2. **Code review** by maintainers
-3. **Testing** on different platforms
-4. **Documentation** review
-5. **Approval** and merge
+### **Review Process**
+1. **Automated Checks** - CI/CD pipeline runs
+2. **Code Review** - Maintainers review code
+3. **Testing** - Manual testing if needed
+4. **Approval** - At least one approval required
+5. **Merge** - Squash and merge to main
 
 ---
 
-## 🐛 Issue Guidelines
+## 🐛 **Issue Reporting**
 
-### Bug Reports
+### **Bug Reports**
+When reporting bugs, please include:
 
-Use the bug report template:
+1. **Clear Title** - Brief description of the issue
+2. **Steps to Reproduce** - Detailed steps to reproduce
+3. **Expected Behavior** - What should happen
+4. **Actual Behavior** - What actually happens
+5. **Environment** - OS, Python version, etc.
+6. **Screenshots** - If applicable
+7. **Logs** - Error messages or logs
 
+### **Issue Template**
 ```markdown
-## Bug Description
-Clear description of the bug
+**Bug Description**
+A clear description of what the bug is.
 
-## Steps to Reproduce
+**To Reproduce**
+Steps to reproduce the behavior:
 1. Go to '...'
-2. Click on '...'
-3. See error
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## Expected Behavior
-What should happen
+**Expected Behavior**
+What you expected to happen.
 
-## Actual Behavior
-What actually happens
+**Screenshots**
+If applicable, add screenshots.
 
-## Environment
-- OS: [e.g., Windows 10, macOS 12]
-- Python: [e.g., 3.9.7]
-- Version: [e.g., 1.0.0]
+**Environment**
+- OS: [e.g. Windows 10]
+- Python Version: [e.g. 3.9.0]
+- Jarvis Version: [e.g. 1.0.0]
 
-## Additional Context
-Any other relevant information
+**Additional Context**
+Any other context about the problem.
 ```
 
-### Feature Requests
+---
 
-Use the feature request template:
+## 💡 **Feature Requests**
 
+### **Feature Request Guidelines**
+- **Check Existing Issues** - Search for similar requests
+- **Clear Description** - Explain the feature clearly
+- **Use Cases** - Provide real-world use cases
+- **Mockups** - Include UI mockups if applicable
+- **Implementation Ideas** - Suggest implementation approach
+
+### **Feature Request Template**
 ```markdown
-## Feature Description
-Clear description of the feature
+**Feature Description**
+A clear description of the feature you'd like to see.
 
-## Use Case
-Why is this feature needed?
+**Use Case**
+Describe the problem this feature would solve.
 
-## Proposed Solution
-How should this work?
+**Proposed Solution**
+Describe your proposed solution.
 
-## Alternatives
-Other solutions considered
+**Alternatives**
+Describe any alternative solutions you've considered.
 
-## Additional Context
-Any other relevant information
+**Additional Context**
+Any other context or screenshots about the feature request.
 ```
 
 ---
 
-## 🎯 Feature Requests
+## 🧪 **Testing Guidelines**
 
-### Areas for Contribution
+### **Test Types**
+- **Unit Tests** - Test individual functions/classes
+- **Integration Tests** - Test skill interactions
+- **UI Tests** - Test user interface components
+- **Voice Tests** - Test voice recognition functionality
 
-- **New Skills** - Add new voice commands
-- **UI Improvements** - Enhance user interface
-- **Audio Processing** - Improve speech recognition
-- **Performance** - Optimize system performance
-- **Documentation** - Improve guides and references
-- **Testing** - Add more test coverage
-- **Platform Support** - Add support for new platforms
-
-### Skill Development
-
-To add a new skill:
-
-1. **Create skill file** in `skills/` directory
-2. **Inherit from BaseSkill**
-3. **Implement required methods**
-4. **Add tests**
-5. **Update documentation**
-
+### **Writing Tests**
 ```python
-# skills/weather_skill.py
-from skills.base_skill import BaseSkill
+import pytest
+from skills.weather_news_skill import WeatherNewsSkill
 
-class WeatherSkill(BaseSkill):
-    def __init__(self):
-        super().__init__("weather")
-        self.keywords = ["weather", "temperature", "forecast"]
-        self.description = "Get weather information"
+class TestWeatherNewsSkill:
+    def test_weather_keywords_detection(self):
+        """Test that weather keywords are properly detected."""
+        skill = WeatherNewsSkill()
+        context = SkillContext("what's the weather today")
+        
+        assert skill.can_handle(context) == True
     
-    def execute(self, intent: str, entities: dict) -> str:
-        # Implementation here
-        return "Weather information here"
+    def test_weather_api_call(self):
+        """Test weather API call functionality."""
+        skill = WeatherNewsSkill()
+        result = skill._get_weather("New York")
+        
+        assert result.success == True
+        assert "temperature" in result.data
 ```
 
 ---
 
-## 📚 Documentation
+## 📚 **Documentation Guidelines**
 
-### Documentation Standards
+### **Code Documentation**
+- **Docstrings** - Use Google-style docstrings
+- **Comments** - Explain complex logic
+- **Type Hints** - Use type annotations
+- **Examples** - Include usage examples
 
-- **User-facing docs** - Clear, simple language
-- **Technical docs** - Detailed, accurate
-- **Code comments** - Explain complex logic
-- **Examples** - Show how to use features
-
-### Documentation Types
-
-- **User Guide** - How to use the application
-- **API Reference** - Technical documentation
-- **Developer Guide** - How to contribute
-- **Troubleshooting** - Common problems and solutions
-
-### Updating Documentation
-
-1. **Identify** what needs updating
-2. **Write** clear, accurate content
-3. **Test** examples and code snippets
-4. **Review** for clarity and completeness
-5. **Update** related documentation
+### **README Updates**
+- **Installation** - Keep installation steps current
+- **Usage** - Update usage examples
+- **Features** - Add new features to feature list
+- **Screenshots** - Update screenshots for UI changes
 
 ---
 
-## 🏷️ Release Process
+## 🏷️ **Release Process**
 
-### Version Numbering
-
-We use semantic versioning (MAJOR.MINOR.PATCH):
-
+### **Version Numbering**
+We use [Semantic Versioning](https://semver.org/):
 - **MAJOR** - Breaking changes
-- **MINOR** - New features, backward compatible
-- **PATCH** - Bug fixes, backward compatible
+- **MINOR** - New features (backward compatible)
+- **PATCH** - Bug fixes (backward compatible)
 
-### Release Checklist
-
-- [ ] All tests pass
-- [ ] Documentation updated
-- [ ] CHANGELOG.md updated
-- [ ] Version numbers updated
-- [ ] Release notes prepared
-- [ ] Tag created
-- [ ] Release published
+### **Release Checklist**
+- [ ] **Tests Pass** - All tests must pass
+- [ ] **Documentation Updated** - README and docs updated
+- [ ] **Version Bumped** - Version number updated
+- [ ] **Changelog Updated** - CHANGELOG.md updated
+- [ ] **Tag Created** - Git tag created for release
 
 ---
 
-## 🤔 Questions?
+## 🤔 **Questions?**
 
-### Getting Help
+If you have questions about contributing:
 
-- **GitHub Discussions** - Ask questions and share ideas
-- **GitHub Issues** - Report bugs and request features
-- **Discord** - Real-time chat (if available)
-- **Email** - Contact maintainers directly
-
-### Resources
-
-- [Python Style Guide](https://pep8.org/)
-- [GitHub Flow](https://guides.github.com/introduction/flow/)
-- [Semantic Versioning](https://semver.org/)
-- [Contributing to Open Source](https://opensource.guide/how-to-contribute/)
+- **GitHub Discussions** - Use GitHub Discussions for general questions
+- **Issues** - Create an issue for specific problems
+- **Email** - Contact us at [contributors@jarvis-assistant.com](mailto:contributors@jarvis-assistant.com)
 
 ---
 
-## 🙏 Recognition
-
-### Contributors
-
-We recognize all contributors in:
-- **README.md** - Contributor list
-- **CHANGELOG.md** - Release notes
-- **GitHub** - Contributor graphs
-
-### Types of Contributions
-
-- **Code** - Bug fixes, features, improvements
-- **Documentation** - Guides, references, examples
-- **Testing** - Test cases, bug reports
-- **Design** - UI/UX improvements
-- **Community** - Helping other users
-
----
-
-## 📄 License
-
-By contributing to Jarvis Voice Assistant, you agree that your contributions will be licensed under the MIT License.
-
----
-
-## 🎉 Thank You!
+## 🙏 **Thank You**
 
 Thank you for contributing to Jarvis Voice Assistant! Your contributions help make this project better for everyone.
 
-**Happy coding!** 🚀
-
 ---
 
-*For questions about contributing, please open a GitHub issue or start a discussion.*
+<div align="center">
+
+**Happy Contributing! 🚀**
+
+</div>

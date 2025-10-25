@@ -101,7 +101,14 @@ class AppLauncherSkill(BaseSkill):
         """Check if this skill can handle app launching."""
         user_input = context.user_input.lower()
         
-        launch_keywords = ["open", "launch", "start", "run", "app", "application", "program"]
+        # More flexible launch keywords
+        launch_keywords = [
+            "open", "launch", "start", "run", "app", "application", "program",
+            "show", "display", "execute", "begin", "initiate", "activate",
+            "open app", "launch app", "start app", "run app", "open program",
+            "launch program", "start program", "run program", "open application",
+            "launch application", "start application", "run application"
+        ]
         return any(keyword in user_input for keyword in launch_keywords)
     
     def execute(self, context: SkillContext) -> SkillResult:
@@ -110,12 +117,12 @@ class AppLauncherSkill(BaseSkill):
             user_input = context.user_input.lower()
             
             # Determine operation type
-            if any(keyword in user_input for keyword in ["list", "show", "what apps", "available"]):
+            if any(keyword in user_input for keyword in ["running", "active", "current", "show running"]):
+                return self._handle_list_running_apps(context)
+            elif any(keyword in user_input for keyword in ["list", "show", "what apps", "available"]):
                 return self._handle_list_apps(context)
             elif any(keyword in user_input for keyword in ["close", "quit", "exit", "stop"]):
                 return self._handle_close_app(context)
-            elif any(keyword in user_input for keyword in ["running", "active", "current"]):
-                return self._handle_list_running_apps(context)
             else:
                 return self._handle_launch_app(context)
         
@@ -448,7 +455,12 @@ class SystemControlSkill(BaseSkill):
     def can_handle(self, context: SkillContext) -> bool:
         """Check if this skill can handle system control."""
         user_input = context.user_input.lower()
-        system_keywords = ["shutdown", "restart", "sleep", "lock", "logout", "hibernate", "power"]
+        # More flexible system keywords
+        system_keywords = [
+            "shutdown", "restart", "sleep", "lock", "logout", "hibernate", "power",
+            "power off", "power down", "turn off", "reboot", "suspend", "lock screen",
+            "screen lock", "sign out", "log out", "system control", "power management"
+        ]
         return any(keyword in user_input for keyword in system_keywords)
     
     def execute(self, context: SkillContext) -> SkillResult:

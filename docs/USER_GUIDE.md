@@ -1,337 +1,372 @@
-# 📖 Jarvis Voice Assistant - User Guide
+# 📖 User Guide
 
-## Welcome to Jarvis Voice Assistant!
+Welcome to the Jarvis Voice Assistant! This comprehensive guide will help you get started and make the most of your voice assistant.
 
-This comprehensive guide will help you get the most out of your voice assistant. Whether you're a beginner or an advanced user, you'll find everything you need here.
+## 🚀 **Getting Started**
 
----
+### **First Launch**
+1. **Run the Application**: Double-click `RUN_ME.bat` or run `python main_professional_ui.py`
+2. **Microphone Setup**: Allow microphone access when prompted
+3. **Voice Calibration**: The assistant will automatically calibrate your microphone
+4. **Ready to Use**: You'll see the main interface with a green "Hold to Speak" button
 
-## 🚀 Getting Started
+### **Basic Usage**
+1. **Hold the Green Button**: Press and hold the green button to speak
+2. **Speak Clearly**: Say your command clearly and at normal volume
+3. **Release the Button**: Let go when you're done speaking
+4. **Wait for Response**: Jarvis will process and respond to your command
 
-### First Time Setup
+## 🎤 **Voice Commands**
 
-1. **Install the application** (see [Installation Guide](INSTALLATION.md))
-2. **Run the professional UI:**
-   ```bash
-   python main_professional_ui.py
-   ```
-3. **Test your microphone** (optional):
-   ```bash
-   python tests/test_microphone_volume.py
-   ```
+### **Wake Words**
+Jarvis responds to these wake words:
+- **"Hey Jarvis"** - Primary wake word
+- **"Jarvis"** - Alternative wake word
+- **"Assistant"** - Alternative wake word
 
-### Understanding the Interface
-
-The professional UI has two main panels:
-
-#### Left Panel - Conversation
-- **Chat bubbles** show your conversation with Jarvis
-- **Auto-scrolling** - automatically shows new messages
-- **Clear button** - start fresh conversation
-
-#### Right Panel - Controls
-- **🎤 HOLD TO SPEAK** - Green button for voice commands
-- **Text input** - Type commands directly
-- **Quick Actions** - One-click common commands
-- **Settings** - Adjust voice and volume
-
----
-
-## 🎤 Voice Commands
-
-### How to Use Voice Mode
-
-1. **Hold** the green "🎤 HOLD TO SPEAK" button
-2. **Speak clearly** your command
-3. **Release** the button when done
-4. **Wait** for Jarvis to process and respond
-
-### Wake Words
-
-Always start your commands with one of these:
-- "Hey Jarvis"
-- "Jarvis"
-- "Assistant"
-
-**Examples:**
-- ✅ "Hey Jarvis, what time is it?"
-- ✅ "Jarvis, open calculator"
-- ❌ "What time is it?" (missing wake word)
-
----
-
-## ⌨️ Text Commands
-
-### How to Use Text Mode
-
-1. **Click** in the text input field
-2. **Type** your command
-3. **Press Enter** or click "📤 Send"
-4. **Get instant response**
-
-**Example:**
+### **Command Structure**
 ```
-Type: Hey Jarvis, what time is it?
-Press: Enter
-Result: Current time displayed
+[Wake Word] + [Command]
+Example: "Hey Jarvis, what's the weather?"
 ```
 
+## 🌐 **Web Browser Commands**
+
+### **Search Commands**
+- `"Hey Jarvis, search for [query]"` - Google search
+- `"Hey Jarvis, search images of [query]"` - Google Images search
+- `"Hey Jarvis, browse the web"` - Open Google homepage
+
+### **Website Commands**
+- `"Hey Jarvis, open YouTube"` - Open YouTube
+- `"Hey Jarvis, open [website name]"` - Open specific website
+- `"Hey Jarvis, go to [URL]"` - Navigate to specific URL
+
+### **Examples**
+```
+"Hey Jarvis, search for Python tutorials"
+"Hey Jarvis, open YouTube"
+"Hey Jarvis, search images of cats"
+"Hey Jarvis, browse the web"
+```
+
+## 📁 **File Management Commands**
+
+### **File Search Commands**
+- `"Hey Jarvis, find [file type] files"` - Search for specific file types
+- `"Hey Jarvis, search for [filename]"` - Search for specific files
+- `"Hey Jarvis, locate [file]"` - Find file location
+
+### **Directory Commands**
+- `"Hey Jarvis, show files in current directory"` - List current directory
+- `"Hey Jarvis, show files in [folder]"` - List specific folder
+- `"Hey Jarvis, open file [filename]"` - Open specific file
+
+### **File Operations**
+- `"Hey Jarvis, create folder [name]"` - Create new folder
+- `"Hey Jarvis, copy [file] to [location]"` - Copy file
+- `"Hey Jarvis, move [file] to [location]"` - Move file
+
+### **Examples**
+```
+"Hey Jarvis, find python files"
+"Hey Jarvis, show files in current directory"
+"Hey Jarvis, open file main.py"
+"Hey Jarvis, create folder test_folder"
+```
+
+## 🚀 **Application Commands**
+
+### **Launch Commands**
+- `"Hey Jarvis, open [app name]"` - Launch application
+- `"Hey Jarvis, start [app name]"` - Start application
+- `"Hey Jarvis, launch [app name]"` - Launch application
+
+### **Process Management**
+- `"Hey Jarvis, show running apps"` - List running applications
+- `"Hey Jarvis, close [app name]"` - Close application
+- `"Hey Jarvis, quit [app name]"` - Quit application
+
+### **Examples**
+```
+"Hey Jarvis, open calculator"
+"Hey Jarvis, launch notepad"
+"Hey Jarvis, show running apps"
+"Hey Jarvis, close calculator"
+```
+
+## 🎵 **Music & Media Commands**
+
+### **Playback Commands**
+- `"Hey Jarvis, play [song name]"` - Play specific song
+- `"Hey Jarvis, play music"` - Start music playback
+- `"Hey Jarvis, pause music"` - Pause playback
+- `"Hey Jarvis, resume music"` - Resume playback
+- `"Hey Jarvis, stop music"` - Stop playback
+
+### **Volume Commands**
+- `"Hey Jarvis, volume up"` - Increase volume
+- `"Hey Jarvis, volume down"` - Decrease volume
+- `"Hey Jarvis, mute"` - Mute audio
+- `"Hey Jarvis, unmute"` - Unmute audio
+
+### **Media Control**
+- `"Hey Jarvis, next track"` - Skip to next song
+- `"Hey Jarvis, previous track"` - Go to previous song
+- `"Hey Jarvis, play on Spotify"` - Open Spotify
+
+### **Examples**
+```
+"Hey Jarvis, play bohemian rhapsody"
+"Hey Jarvis, volume up"
+"Hey Jarvis, pause music"
+"Hey Jarvis, next track"
+```
+
+## 💬 **WhatsApp Commands**
+
+### **Opening WhatsApp**
+- `"Hey Jarvis, open WhatsApp"` - Open WhatsApp desktop app
+- `"Hey Jarvis, launch WhatsApp"` - Launch WhatsApp
+- `"Hey Jarvis, start WhatsApp"` - Start WhatsApp
+
+### **Messaging Commands**
+- `"Hey Jarvis, send message to [name]"` - Send message to contact
+- `"Hey Jarvis, text [name]"` - Send text message
+- `"Hey Jarvis, message [name]"` - Send message
+
+### **Template Commands**
+- `"Hey Jarvis, show message templates"` - List saved templates
+- `"Hey Jarvis, message templates"` - Show templates
+
+### **Examples**
+```
+"Hey Jarvis, open WhatsApp"
+"Hey Jarvis, send message to John"
+"Hey Jarvis, show message templates"
+```
+
+## 🌤️ **Weather & News Commands**
+
+### **Weather Commands**
+- `"Hey Jarvis, what's the weather"` - Current weather
+- `"Hey Jarvis, weather in [city]"` - Weather for specific city
+- `"Hey Jarvis, current weather"` - Current weather
+- `"Hey Jarvis, weather today"` - Today's weather
+
+### **News Commands**
+- `"Hey Jarvis, show news"` - Latest news headlines
+- `"Hey Jarvis, latest news"` - Recent news
+- `"Hey Jarvis, top stories"` - Top news stories
+
+### **Examples**
+```
+"Hey Jarvis, what's the weather"
+"Hey Jarvis, weather in New York"
+"Hey Jarvis, show news"
+```
+
+## 📝 **Todo & Notes Commands**
+
+### **Note Commands**
+- `"Hey Jarvis, take a note [content]"` - Create note
+- `"Hey Jarvis, write down [content]"` - Write note
+- `"Hey Jarvis, remember [content]"` - Save note
+- `"Hey Jarvis, show my notes"` - List notes
+
+### **Task Commands**
+- `"Hey Jarvis, add task [description]"` - Add task
+- `"Hey Jarvis, create task [description]"` - Create task
+- `"Hey Jarvis, show my tasks"` - List tasks
+- `"Hey Jarvis, mark task [id] as done"` - Complete task
+- `"Hey Jarvis, delete task [id]"` - Remove task
+
+### **Examples**
+```
+"Hey Jarvis, take a note buy groceries"
+"Hey Jarvis, add task finish project report"
+"Hey Jarvis, show my tasks"
+"Hey Jarvis, mark task 1 as done"
+```
+
+## 🌍 **Translation Commands**
+
+### **Translation Commands**
+- `"Hey Jarvis, translate [text] to [language]"` - Translate text
+- `"Hey Jarvis, how do you say [phrase] in [language]"` - Common phrases
+- `"Hey Jarvis, what is [word] in [language]"` - Word translation
+
+### **Supported Languages**
+- Spanish, French, German, Italian
+- Japanese, Korean, Chinese
+- Portuguese, Russian, Arabic
+- And many more!
+
+### **Examples**
+```
+"Hey Jarvis, translate hello to Spanish"
+"Hey Jarvis, how do you say thank you in French"
+"Hey Jarvis, what is goodbye in Japanese"
+```
+
+## ℹ️ **Information Commands**
+
+### **Time & Date Commands**
+- `"Hey Jarvis, what time is it"` - Current time
+- `"Hey Jarvis, what's the date"` - Current date
+- `"Hey Jarvis, what day is it"` - Current day
+
+### **System Commands**
+- `"Hey Jarvis, system information"` - System details
+- `"Hey Jarvis, show system info"` - System information
+
+### **Examples**
+```
+"Hey Jarvis, what time is it"
+"Hey Jarvis, what's the date"
+"Hey Jarvis, system information"
+```
+
+## ❓ **Help Commands**
+
+### **Help Commands**
+- `"Hey Jarvis, help"` - Show available commands
+- `"Hey Jarvis, what can you do"` - List capabilities
+- `"Hey Jarvis, show commands"` - Display command list
+
+### **Examples**
+```
+"Hey Jarvis, help"
+"Hey Jarvis, what can you do"
+"Hey Jarvis, show commands"
+```
+
+## 🎨 **UI Features**
+
+### **Theme Switching**
+- Click the **Theme Button** in the top-right corner
+- Choose from multiple themes:
+  - Professional Dark (default)
+  - Professional Light
+  - Cyber Punk
+  - Ocean Blue
+
+### **Skill Buttons**
+- **Quick Access**: Click skill buttons for instant access
+- **Visual Feedback**: Buttons show activity status
+- **Hover Effects**: Interactive button animations
+
+### **Status Indicators**
+- **Listening**: Green animated indicator when ready
+- **Processing**: Blue indicator when processing
+- **Speaking**: Orange indicator when responding
+
+## ⚙️ **Settings & Configuration**
+
+### **Microphone Settings**
+- **Automatic Calibration**: Runs on startup
+- **Volume Adjustment**: Use system volume controls
+- **Noise Reduction**: Built-in noise filtering
+
+### **Voice Settings**
+- **Speech Rate**: Adjustable speaking speed
+- **Voice Selection**: Multiple voice options
+- **Language**: Set preferred language
+
+### **Skill Settings**
+- **Priority Levels**: Adjust skill execution priority
+- **Custom Commands**: Add your own commands
+- **Skill Management**: Enable/disable specific skills
+
+## 🔧 **Troubleshooting**
+
+### **Common Issues**
+
+#### **Voice Recognition Not Working**
+- **Check Microphone**: Ensure microphone is connected and working
+- **Speak Clearly**: Speak at normal volume and pace
+- **Background Noise**: Reduce background noise
+- **Restart Application**: Close and reopen the application
+
+#### **Commands Not Recognized**
+- **Use Wake Word**: Always start with "Hey Jarvis"
+- **Speak Clearly**: Enunciate words clearly
+- **Check Command**: Verify the command is supported
+- **Try Rephrasing**: Use alternative phrasings
+
+#### **Application Crashes**
+- **Check Dependencies**: Ensure all requirements are installed
+- **Update Python**: Use Python 3.8 or higher
+- **Restart Computer**: Restart if issues persist
+- **Check Logs**: Look for error messages in the console
+
+#### **Performance Issues**
+- **Close Other Apps**: Free up system resources
+- **Check Internet**: Ensure stable internet connection
+- **Update Dependencies**: Update all packages
+- **Restart Application**: Close and reopen
+
+### **Error Messages**
+
+#### **"I couldn't help with that"**
+- The command wasn't recognized
+- Try rephrasing the command
+- Check if the skill is enabled
+
+#### **"Sorry, I encountered an error"**
+- There was a technical issue
+- Try the command again
+- Check the console for error details
+
+#### **"Microphone not detected"**
+- Check microphone connection
+- Allow microphone access
+- Restart the application
+
+## 📊 **Performance Tips**
+
+### **Optimal Usage**
+1. **Clear Speech**: Speak clearly and at normal volume
+2. **Proper Distance**: Stay 1-2 feet from microphone
+3. **Quiet Environment**: Use in quiet surroundings
+4. **Stable Internet**: Ensure good internet connection
+
+### **System Requirements**
+- **Python**: 3.8 or higher
+- **RAM**: 4GB minimum, 8GB recommended
+- **Storage**: 1GB free space
+- **OS**: Windows 10/11, macOS, or Linux
+
+### **Best Practices**
+1. **Regular Updates**: Keep the application updated
+2. **Clean Installation**: Reinstall if issues persist
+3. **Backup Data**: Backup notes and tasks regularly
+4. **Report Issues**: Report bugs and issues
+
+## 🆘 **Support & Help**
+
+### **Getting Help**
+- **Documentation**: Check this user guide
+- **GitHub Issues**: Report bugs and request features
+- **Community**: Join discussions and get help
+- **Email**: Contact support for urgent issues
+
+### **Resources**
+- **README**: Project overview and installation
+- **API Reference**: Technical documentation
+- **Contributing**: How to contribute to the project
+- **Changelog**: Version history and updates
+
+### **Contact Information**
+- **GitHub**: [Project Repository](https://github.com/yourusername/jarvis-voice-assistant)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/jarvis-voice-assistant/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/jarvis-voice-assistant/discussions)
+- **Email**: support@jarvis-assistant.com
+
 ---
 
-## ⚡ Quick Actions
+<div align="center">
 
-Click any quick action button for instant commands:
+**Happy Voice Assisting! 🎤✨**
 
-| Button | Command | Description |
-|--------|---------|-------------|
-| ⏰ **What time is it?** | `Hey Jarvis, what time is it?` | Get current time |
-| 💻 **System info** | `Hey Jarvis, show system information` | View system details |
-| ⏲️ **Set reminder** | `Hey Jarvis, set a reminder for 5 minutes` | Create reminder |
-| 🔢 **Open calculator** | `Hey Jarvis, open calculator` | Launch calculator |
-
----
-
-## 🎯 Available Commands
-
-### Time & Information
-
-| Command | Example | Response |
-|---------|---------|----------|
-| Get current time | "Hey Jarvis, what time is it?" | "The current time is 2:30 PM" |
-| Get current date | "Hey Jarvis, what's the date?" | "Today is October 18, 2025" |
-| System information | "Hey Jarvis, show system information" | CPU, memory, disk details |
-
-### Reminders
-
-| Command | Example | Response |
-|---------|---------|----------|
-| Set reminder | "Hey Jarvis, set a reminder for 5 minutes" | "Reminder set for 2:35 PM" |
-| Set reminder with message | "Hey Jarvis, remind me to call John in 10 minutes" | "Reminder set: Call John at 2:40 PM" |
-| List reminders | "Hey Jarvis, what reminders do I have?" | Shows upcoming reminders |
-
-### Applications
-
-| Command | Example | Response |
-|---------|---------|----------|
-| Open calculator | "Hey Jarvis, open calculator" | "Opened calculator" |
-| Launch notepad | "Hey Jarvis, launch notepad" | "Opened notepad" |
-| Open browser | "Hey Jarvis, open chrome" | "Opened Chrome browser" |
-| Start command prompt | "Hey Jarvis, start cmd" | "Opened command prompt" |
-
-### File Operations
-
-| Command | Example | Response |
-|---------|---------|----------|
-| Search files | "Hey Jarvis, search for documents" | Lists matching files |
-| Find specific files | "Hey Jarvis, find files with test in the name" | Shows test files |
-| Search by content | "Hey Jarvis, search for reports" | Finds files containing "reports" |
-
-### Help & Information
-
-| Command | Example | Response |
-|---------|---------|----------|
-| Show capabilities | "Hey Jarvis, what can you do?" | Lists all available commands |
-| Get help | "Hey Jarvis, help" | Shows help information |
-
----
-
-## 🎨 Interface Guide
-
-### Status Indicator
-
-The pulsing dot in the top-right shows Jarvis's current state:
-
-| Color | State | Description |
-|-------|-------|-------------|
-| ⚪ Gray | Idle | Ready to receive commands |
-| 🟢 Green | Listening | Recording your voice |
-| 🟡 Yellow | Processing | Understanding your command |
-| 🔵 Blue | Speaking | Generating response |
-| 🔴 Red | Error | Something went wrong |
-
-### Chat Bubbles
-
-- **Purple bubbles** (right side) - Your messages
-- **Gray bubbles** (left side) - Jarvis's responses
-- **Auto-scrolling** - Always shows latest messages
-- **Timestamps** - Each message is timestamped
-
-### Quick Actions
-
-- **One-click commands** - No need to type or speak
-- **Hover effects** - Visual feedback when hovering
-- **Instant execution** - Commands run immediately
-
----
-
-## ⚙️ Settings
-
-### Accessing Settings
-
-1. Click **"⚙️ Settings"** at the bottom of the control panel
-2. Adjust the sliders as needed
-3. Click **"Apply Settings"** to save
-
-### Available Settings
-
-| Setting | Range | Default | Description |
-|---------|-------|---------|-------------|
-| Speech Rate | 50-400 WPM | 200 | How fast Jarvis speaks |
-| Volume | 0-100% | 80% | Audio output volume |
-
----
-
-## 🔧 Troubleshooting
-
-### Voice Recognition Issues
-
-**Problem:** Jarvis doesn't understand me
-- **Solution:** Speak more clearly and slowly
-- **Try:** "Hey Jarvis" + pause + your command
-- **Check:** Microphone is working and not muted
-
-**Problem:** Wrong words recognized
-- **Solution:** This is normal with accents - try rephrasing
-- **Alternative:** Use text mode for important commands
-
-**Problem:** "Network error" message
-- **Solution:** Check your internet connection
-- **Alternative:** Use keyboard mode (works offline)
-
-### Interface Issues
-
-**Problem:** Buttons not responding
-- **Solution:** Restart the application
-- **Check:** Make sure you're clicking the right button
-
-**Problem:** Conversation not scrolling
-- **Solution:** This should auto-scroll - if not, restart the app
-
-**Problem:** Text input too small
-- **Solution:** The text input is designed to be compact but usable
-
-### Performance Issues
-
-**Problem:** Slow response
-- **Solution:** Close other applications
-- **Check:** Available memory and CPU usage
-
-**Problem:** Application crashes
-- **Solution:** Restart the application
-- **Check:** All dependencies are installed correctly
-
----
-
-## 💡 Tips & Tricks
-
-### Voice Commands
-
-1. **Speak clearly** - Enunciate each word
-2. **Use wake words** - Always start with "Hey Jarvis"
-3. **Pause briefly** - Wait a moment after "Hey Jarvis"
-4. **Hold button firmly** - Don't release too early
-5. **Speak at normal volume** - Not too loud or quiet
-
-### Text Commands
-
-1. **Use complete sentences** - "Hey Jarvis, what time is it?"
-2. **Be specific** - "Hey Jarvis, open calculator" not just "calculator"
-3. **Check spelling** - Make sure words are spelled correctly
-4. **Use Enter key** - Faster than clicking Send button
-
-### Quick Actions
-
-1. **Use frequently** - They're faster than typing
-2. **Customize** - Add your own quick actions (advanced)
-3. **Hover to preview** - See what each button does
-
----
-
-## 🎯 Best Practices
-
-### For Voice Commands
-
-- **Practice with simple commands** first
-- **Use consistent phrasing** - "Hey Jarvis" + command
-- **Speak in quiet environment** for better recognition
-- **Hold the button** until you finish speaking
-
-### For Text Commands
-
-- **Use the same format** as voice commands
-- **Include wake words** even in text
-- **Be specific** about what you want
-- **Use proper grammar** for better understanding
-
-### General Usage
-
-- **Start simple** - Try basic commands first
-- **Explore features** - Try different types of commands
-- **Use quick actions** - They're designed for common tasks
-- **Check status** - Watch the status indicator for feedback
-
----
-
-## 📚 Advanced Usage
-
-### Custom Commands
-
-While you can't create custom commands yet, you can:
-- **Use natural language** - Jarvis understands various phrasings
-- **Combine commands** - "Hey Jarvis, what time is it and open calculator"
-- **Ask for help** - "Hey Jarvis, what can you do?"
-
-### Keyboard Shortcuts
-
-- **Enter** - Send text command
-- **Escape** - Cancel current operation (if applicable)
-- **Tab** - Navigate between elements
-
-### Multiple Modes
-
-You can switch between modes anytime:
-- **Voice mode** - Hold green button to speak
-- **Text mode** - Type in the text field
-- **Quick actions** - Click buttons for instant commands
-
----
-
-## 🆘 Getting Help
-
-### Built-in Help
-
-- **"Hey Jarvis, help"** - Shows available commands
-- **"Hey Jarvis, what can you do?"** - Lists capabilities
-- **Settings panel** - Adjust voice and volume
-
-### Documentation
-
-- **[Troubleshooting Guide](TROUBLESHOOTING.md)** - Common problems and solutions
-- **[API Reference](API_REFERENCE.md)** - Technical documentation
-- **[Performance Guide](PERFORMANCE.md)** - Optimization tips
-
-### Support
-
-- **GitHub Issues** - Report bugs and request features
-- **GitHub Discussions** - Ask questions and share tips
-- **Documentation** - Comprehensive guides and references
-
----
-
-## 🎉 Conclusion
-
-You now have everything you need to use Jarvis Voice Assistant effectively! 
-
-**Remember:**
-- Start with simple commands
-- Use the wake word "Hey Jarvis"
-- Try both voice and text modes
-- Use quick actions for common tasks
-- Check the status indicator for feedback
-
-**Happy voice commanding!** 🎤✨
-
----
-
-*For technical details, see [API Reference](API_REFERENCE.md)*
-*For troubleshooting, see [Troubleshooting Guide](TROUBLESHOOTING.md)*
+</div>

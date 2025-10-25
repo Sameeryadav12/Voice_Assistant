@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "to": "john@example.com",
+      "subject": "Meeting Follow-up",
+      "body": "Thank you for the productive meeting today.",
+      "date": "2024-01-10",
+      "status": "sent"
+    }
+  ]
+}

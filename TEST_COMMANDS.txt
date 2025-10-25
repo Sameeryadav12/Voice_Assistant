@@ -1,0 +1,121 @@
+================================================================================
+TEST COMMANDS FOR YOUR VOICE ASSISTANT
+================================================================================
+
+The hybrid mode window should now be open!
+Try these commands in the text field (type and press Enter):
+
+================================================================================
+✓ COMMANDS THAT SHOULD NOW WORK (Fixed!)
+================================================================================
+
+TIME & INFO (NEW - Just Added!):
+---------------------------------
+Hey Sigma, what time is it?
+Hey Sigma, what's the date?
+Hey Sigma, show system information
+
+
+FILE SEARCH (FIXED!):
+----------------------
+Hey Sigma, search for my documents
+Hey Sigma, find files with report in the name
+Hey Sigma, find test
+
+
+REMINDERS (Should work):
+------------------------
+Hey Sigma, set a reminder for 5 minutes
+Hey Sigma, remind me to call John in 10 minutes
+Hey Sigma, what reminders do I have?
+
+
+APPLICATIONS (Already Working):
+--------------------------------
+Hey Sigma, open calculator
+Hey Sigma, launch notepad  
+Hey Sigma, open chrome
+Hey Sigma, start cmd
+
+
+HELP:
+-----
+Hey Sigma, what can you do?
+Hey Sigma, help
+
+================================================================================
+FIXES APPLIED IN THIS UPDATE
+================================================================================
+
+Fix 1: Created InfoSkill
+   - Now handles time queries
+   - Now handles date queries  
+   - Now handles system information
+
+Fix 2: Fixed File Search Query Extraction
+   - Removes leading commas from wake word removal
+   - Better pattern matching for "find files with X in the name"
+   - Better extraction of search terms
+
+Fix 3: Fixed Wake Word Removal  
+   - Properly removes punctuation after wake word
+   - No more leading commas in commands
+
+Fix 4: Registered InfoSkill
+   - Added to main.py
+   - Added to main_hybrid.py
+   - Now available in both modes
+
+================================================================================
+TEST THESE IN ORDER
+================================================================================
+
+1. Hey Sigma, what time is it?
+   Expected: "The current time is [time]"
+
+2. Hey Sigma, what's the date?
+   Expected: "Today is [date]"
+
+3. Hey Sigma, open calculator
+   Expected: "Opened calculator"
+   
+
+4. Hey Sigma, search for test
+   Expected: Files found or "I couldn't find any files"
+
+5. Hey Sigma, set a reminder for 2 minutes
+   Expected: "Reminder set for [time]" or error message with details
+
+6. Hey Sigma, what can you do?
+   Expected: List of all capabilities
+
+================================================================================
+IF SOMETHING STILL DOESN'T WORK
+================================================================================
+
+Look at the PowerShell terminal window for error messages.
+It will show detailed logs like:
+
+[RECORDING LOOP] - Audio capture logs
+[SPEECH RECOG] - Speech recognition logs
+[AUDIO CALLBACK] - Callback logs
+
+Any errors will show the exact problem!
+
+================================================================================
+REMINDER ABOUT VOICE MODE
+================================================================================
+
+To use VOICE instead of keyboard:
+1. Fix your microphone volume first (see FINAL_STEPS.txt)
+2. Run: python test_microphone_volume.py
+3. Get levels above 10,000
+4. Then run: python main.py
+5. Click "Start Listening"
+6. Speak the commands!
+
+For now, keyboard mode (hybrid) is perfect for testing!
+
+================================================================================
+
+

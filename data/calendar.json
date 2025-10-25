@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Team Meeting",
+      "date": "2024-01-15",
+      "time": "10:00",
+      "duration": 60,
+      "description": "Weekly team standup meeting"
+    },
+    {
+      "id": 2,
+      "title": "Project Deadline",
+      "date": "2024-01-20",
+      "time": "17:00",
+      "duration": 0,
+      "description": "Submit project deliverables"
+    }
+  ]
+}

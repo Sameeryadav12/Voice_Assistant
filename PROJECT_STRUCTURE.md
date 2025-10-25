@@ -2,234 +2,325 @@
 
 This document provides a detailed overview of the Jarvis Voice Assistant project structure and organization.
 
-## 🏗️ Directory Structure
+## 🏗️ **Directory Structure**
 
 ```
-sigma-voice-assistant/
-├── 📁 .github/                 # GitHub workflows and templates
-│   ├── workflows/             # CI/CD pipelines
-│   │   ├── python-app.yml    # Main CI workflow
-│   │   └── release.yml       # Release workflow
-│   └── ISSUE_TEMPLATE/       # Issue and PR templates
-│       ├── bug_report.md     # Bug report template
-│       └── feature_request.md # Feature request template
-├── 📁 audio/                  # Audio processing components
-│   ├── input_handler.py      # Audio capture & VAD
-│   └── output_handler.py     # Text-to-speech
-├── 📁 core/                   # Core algorithms and data structures
-│   ├── trie.py               # Keyword matching (O(m))
-│   ├── state_machine.py      # Dialogue management
-│   ├── scheduler.py          # Task scheduling (Priority Heap)
-│   ├── cache.py              # LRU cache implementation
-│   └── graph_search.py       # Graph algorithms for file search
-├── 📁 docs/                   # Documentation
-│   ├── README.md             # Documentation index
-│   ├── USER_GUIDE.md         # Complete user guide
-│   ├── API_REFERENCE.md      # Technical documentation
-│   ├── TROUBLESHOOTING.md    # Problem solving guide
-│   ├── PERFORMANCE.md        # Optimization guide
-│   └── CONTRIBUTING.md       # Development guidelines
-├── 📁 examples/               # Example scripts and demos
-│   ├── README.md             # Examples documentation
-│   ├── main_keyboard.py      # Keyboard-only example
-│   └── run_demo.py           # Demo script
-├── 📁 nlp/                    # Natural language processing
-│   ├── speech_to_text.py     # Speech recognition
-│   ├── intent_classifier.py  # Intent classification (ML)
-│   └── text_processor.py     # Text preprocessing
-├── 📁 skills/                 # Skill implementations
-│   ├── base_skill.py         # Abstract skill framework
-│   ├── reminder_skill.py     # Reminders & scheduling
-│   ├── file_skill.py         # File operations
-│   ├── app_skill.py          # Application control
-│   ├── info_skill.py         # Time, date, system info
-│   └── help_skill.py         # Help system
-├── 📁 tests/                  # Testing utilities
-│   ├── README.md             # Testing documentation
-│   ├── test_microphone_volume.py
-│   ├── test_speech_recognition.py
-│   ├── test_audio_pipeline.py
-│   ├── select_microphone.py
-│   └── voice_calibration.py
-├── 🎮 main_professional_ui.py # Main application (Recommended)
-├── 🎮 main_pushtotalk.py     # Push-to-talk mode
-├── 🎮 main_hybrid.py         # Keyboard-only mode
-├── 🎮 main.py                # Original voice-only mode
-├── 📋 requirements.txt       # Production dependencies
-├── 📋 requirements-dev.txt   # Development dependencies
-├── 📖 README.md              # Project overview
-├── 📝 CHANGELOG.md           # Version history
-├── 📄 LICENSE                # MIT License
-├── 🔧 .gitignore             # Git ignore rules
-├── 🏗️ setup.py               # Python package setup
-├── 🏗️ ARCHITECTURE.md        # Architecture overview
-├── 🤝 CONTRIBUTING.md        # Contribution guidelines
-└── 📊 PROJECT_STRUCTURE.md   # This file
+jarvis-voice-assistant/
+├── 📁 .github/                          # GitHub configuration
+│   └── 📁 workflows/                    # GitHub Actions workflows
+│       └── 📄 ci.yml                    # CI/CD pipeline configuration
+├── 📁 audio/                            # Audio processing modules
+│   ├── 📄 __init__.py                   # Audio package initialization
+│   ├── 📄 input_handler.py              # Voice input handling
+│   └── 📄 output_handler.py             # Text-to-speech output
+├── 📁 core/                             # Core system components
+│   ├── 📄 __init__.py                   # Core package initialization
+│   ├── 📄 cache.py                      # Caching system
+│   ├── 📄 graph_search.py               # File system graph search
+│   ├── 📄 scheduler.py                  # Task scheduling
+│   ├── 📄 state_machine.py              # State management
+│   └── 📄 trie.py                       # Trie data structure
+├── 📁 docs/                             # Documentation
+│   ├── 📁 screenshots/                  # UI screenshots
+│   ├── 📁 demo/                         # Demo videos and examples
+│   ├── 📄 API_REFERENCE.md              # API documentation
+│   ├── 📄 CONTRIBUTING.md               # Contribution guidelines
+│   ├── 📄 PERFORMANCE.md                # Performance optimization guide
+│   ├── 📄 TROUBLESHOOTING.md            # Troubleshooting guide
+│   └── 📄 USER_GUIDE.md                 # User manual
+├── 📁 examples/                         # Example usage
+│   ├── 📄 main_keyboard.py              # Keyboard input example
+│   ├── 📄 run_demo.py                   # Demo runner
+│   └── 📄 README.md                     # Examples documentation
+├── 📁 nlp/                              # Natural language processing
+│   ├── 📄 __init__.py                   # NLP package initialization
+│   ├── 📄 intent_classifier.py          # Intent recognition
+│   ├── 📄 speech_to_text.py             # Speech recognition
+│   └── 📄 text_processor.py             # Text processing
+├── 📁 skills/                           # Modular skill system
+│   ├── 📄 __init__.py                   # Skills package initialization
+│   ├── 📄 base_skill.py                 # Base skill class
+│   ├── 📄 file_skill.py                 # File operations
+│   ├── 📄 app_skill.py                  # Application control
+│   ├── 📄 weather_news_skill.py         # Weather & news
+│   ├── 📄 todo_notes_skill.py           # Task management
+│   ├── 📄 web_browser_skill.py          # Web browsing
+│   ├── 📄 music_media_skill.py          # Media control
+│   ├── 📄 whatsapp_messaging_skill.py   # WhatsApp integration
+│   ├── 📄 calendar_email_skill.py       # Calendar & email
+│   ├── 📄 translation_skill.py          # Language translation
+│   ├── 📄 conversation_memory_skill.py  # Memory system
+│   ├── 📄 info_skill.py                 # System information
+│   └── 📄 help_skill.py                 # Help & support
+├── 📁 tests/                            # Test suite
+│   ├── 📄 __init__.py                   # Tests package initialization
+│   ├── 📄 test_basic.py                 # Basic functionality tests
+│   ├── 📄 test_speech_recognition.py    # Speech recognition tests
+│   ├── 📄 test_voice_assistant_microphone.py # Microphone tests
+│   ├── 📄 test_microphone_devices.py    # Microphone device tests
+│   ├── 📄 test_microphone_volume.py     # Microphone volume tests
+│   ├── 📄 test_simple.py                # Simple functionality tests
+│   ├── 📄 test_minimal.py               # Minimal functionality tests
+│   ├── 📄 test_ultra_simple.py          # Ultra-simple tests
+│   ├── 📄 test_super_simple.py          # Super-simple tests
+│   ├── 📄 test_direct_recognition.py    # Direct recognition tests
+│   ├── 📄 test_speech_direct.py         # Direct speech tests
+│   ├── 📄 test_stereo_mix.py            # Stereo mix tests
+│   ├── 📄 test_all_microphones.py       # All microphones tests
+│   ├── 📄 test_microphone_volume.py     # Microphone volume tests
+│   ├── 📄 test_speech_recognition.py    # Speech recognition tests
+│   ├── 📄 test_voice_assistant_microphone.py # Voice assistant microphone tests
+│   ├── 📄 train_my_voice.py             # Voice training
+│   ├── 📄 train_voice_auto.py           # Automatic voice training
+│   ├── 📄 voice_calibration.py          # Voice calibration
+│   ├── 📄 check_microphone_volume.py    # Microphone volume check
+│   ├── 📄 fix_microphone_windows.py     # Windows microphone fix
+│   ├── 📄 select_microphone.py          # Microphone selection
+│   └── 📄 README.md                     # Test documentation
+├── 📁 ui/                               # User interface components
+│   ├── 📄 __init__.py                   # UI package initialization
+│   ├── 📄 theme_manager.py              # Theme management
+│   ├── 📄 animated_status.py            # Status indicators
+│   ├── 📄 progress_widget.py            # Progress bars
+│   └── 📄 skill_widget.py               # Skill buttons
+├── 📁 venv/                             # Virtual environment
+│   ├── 📁 Include/                      # Python includes
+│   ├── 📁 Lib/                          # Python libraries
+│   ├── 📁 Scripts/                      # Python scripts
+│   └── 📄 pyvenv.cfg                    # Virtual environment config
+├── 📄 .gitignore                        # Git ignore rules
+├── 📄 ARCHITECTURE.md                   # System architecture
+├── 📄 CHANGELOG.md                      # Version history
+├── 📄 CONTRIBUTING.md                   # Contribution guidelines
+├── 📄 LICENSE                           # MIT License
+├── 📄 PROJECT_STRUCTURE.md              # This file
+├── 📄 PROJECT_SUMMARY.md                # Project overview
+├── 📄 README.md                         # Main documentation
+├── 📄 RUN_ME.bat                        # Windows batch runner
+├── 📄 TEST_COMMANDS.txt                 # Test commands list
+├── 📄 main.py                           # Basic entry point
+├── 📄 main_hybrid.py                    # Hybrid entry point
+├── 📄 main_professional_ui.py           # Professional UI entry point
+├── 📄 main_pushtotalk.py                # Push-to-talk entry point
+├── 📄 pytest.ini                       # Pytest configuration
+├── 📄 requirements.txt                  # Python dependencies
+├── 📄 requirements-dev.txt              # Development dependencies
+└── 📄 setup.py                          # Package setup
 ```
 
-## 🧩 Component Overview
+## 📋 **File Descriptions**
 
-### Core Application Files
+### **Root Level Files**
 
-| File | Purpose | Description |
-|------|---------|-------------|
-| `main_professional_ui.py` | **Main Application** | Modern UI with push-to-talk |
-| `main_pushtotalk.py` | **Push-to-Talk Mode** | Precise voice control |
-| `main_hybrid.py` | **Keyboard Mode** | Type commands instead of speaking |
-| `main.py` | **Original Mode** | Continuous listening mode |
+#### **Main Entry Points**
+- **`main_professional_ui.py`**: Main application with professional UI
+- **`main.py`**: Basic application entry point
+- **`main_pushtotalk.py`**: Push-to-talk interface
+- **`main_hybrid.py`**: Hybrid interface combining multiple modes
 
-### Core Algorithms (`core/`)
+#### **Configuration Files**
+- **`requirements.txt`**: Production dependencies
+- **`requirements-dev.txt`**: Development dependencies
+- **`setup.py`**: Package setup and distribution
+- **`pytest.ini`**: Pytest configuration
+- **`.gitignore`**: Git ignore rules
 
-| File | Data Structure | Complexity | Purpose |
-|------|----------------|------------|---------|
-| `trie.py` | Trie | O(m) | Wake word detection |
-| `scheduler.py` | Priority Heap | O(log n) | Task scheduling |
-| `cache.py` | LRU Cache | O(1) | Performance optimization |
-| `state_machine.py` | FSM | O(1) | Dialogue management |
-| `graph_search.py` | Graph | O(V+E) | File system search |
+#### **Documentation Files**
+- **`README.md`**: Main project documentation
+- **`LICENSE`**: MIT License
+- **`CONTRIBUTING.md`**: Contribution guidelines
+- **`CHANGELOG.md`**: Version history
+- **`ARCHITECTURE.md`**: System architecture
+- **`PROJECT_STRUCTURE.md`**: This file
+- **`PROJECT_SUMMARY.md`**: Project overview
 
-### Audio Processing (`audio/`)
+#### **Utility Files**
+- **`RUN_ME.bat`**: Windows batch file for easy execution
+- **`TEST_COMMANDS.txt`**: List of test commands
 
-| File | Purpose | Technology |
-|------|---------|------------|
-| `input_handler.py` | Audio capture | PyAudio + WebRTC VAD |
-| `output_handler.py` | Text-to-speech | TTS engines |
+### **Core Components (`core/`)**
 
-### Natural Language Processing (`nlp/`)
+#### **System Core**
+- **`cache.py`**: Caching system for performance optimization
+- **`graph_search.py`**: File system graph search implementation
+- **`scheduler.py`**: Task scheduling and management
+- **`state_machine.py`**: State machine for dialogue management
+- **`trie.py`**: Trie data structure for efficient text matching
 
-| File | Purpose | Technology |
-|------|---------|------------|
-| `speech_to_text.py` | Speech recognition | Google API + Sphinx |
-| `intent_classifier.py` | Intent detection | scikit-learn + NLTK |
-| `text_processor.py` | Text preprocessing | NLTK + regex |
+### **Audio Processing (`audio/`)**
 
-### Skills System (`skills/`)
+#### **Voice Input/Output**
+- **`input_handler.py`**: Voice input processing and recognition
+- **`output_handler.py`**: Text-to-speech output handling
 
-| File | Skill | Commands |
-|------|-------|----------|
-| `base_skill.py` | Framework | Abstract base class |
-| `info_skill.py` | Time & Date | "what time is it?" |
-| `reminder_skill.py` | Reminders | "set a reminder" |
-| `file_skill.py` | File Search | "find files" |
-| `app_skill.py` | App Launcher | "open calculator" |
-| `help_skill.py` | Help System | "what can you do?" |
+### **Natural Language Processing (`nlp/`)**
 
-## 📚 Documentation Structure
+#### **Language Processing**
+- **`intent_classifier.py`**: Intent recognition and classification
+- **`speech_to_text.py`**: Speech recognition implementation
+- **`text_processor.py`**: Text preprocessing and normalization
 
-### User Documentation
-- **README.md** - Project overview and quick start
-- **docs/USER_GUIDE.md** - Complete user manual
-- **docs/TROUBLESHOOTING.md** - Problem solving guide
+### **Skills System (`skills/`)**
 
-### Developer Documentation
-- **docs/API_REFERENCE.md** - Technical documentation
-- **docs/PERFORMANCE.md** - Optimization guide
-- **docs/CONTRIBUTING.md** - Development guidelines
-- **ARCHITECTURE.md** - System architecture overview
+#### **Base Skill**
+- **`base_skill.py`**: Abstract base class for all skills
 
-### Project Documentation
-- **CHANGELOG.md** - Version history
-- **PROJECT_STRUCTURE.md** - This file
-- **LICENSE** - MIT License
+#### **System Skills**
+- **`file_skill.py`**: File operations and management
+- **`app_skill.py`**: Application launching and control
 
-## 🧪 Testing Structure
+#### **Communication Skills**
+- **`whatsapp_messaging_skill.py`**: WhatsApp integration
+- **`calendar_email_skill.py`**: Calendar and email management
 
-### Test Categories
-- **Audio Tests** - Microphone and audio processing
-- **Speech Tests** - Speech recognition accuracy
-- **UI Tests** - User interface functionality
-- **Performance Tests** - System performance
-- **Integration Tests** - Component interactions
+#### **Information Skills**
+- **`weather_news_skill.py`**: Weather and news data
+- **`translation_skill.py`**: Language translation
+- **`info_skill.py`**: System information
 
-### Test Files
-- `test_microphone_volume.py` - Audio level testing
-- `test_speech_recognition.py` - Speech recognition testing
-- `test_audio_pipeline.py` - Audio processing pipeline
-- `select_microphone.py` - Microphone selection utility
-- `voice_calibration.py` - Voice training utility
+#### **Productivity Skills**
+- **`todo_notes_skill.py`**: Task and note management
+- **`conversation_memory_skill.py`**: Conversation history
 
-## 🎯 Examples Structure
+#### **Media Skills**
+- **`music_media_skill.py`**: Music and media control
+- **`web_browser_skill.py`**: Web browsing and search
 
-### Example Scripts
-- `main_keyboard.py` - Keyboard-only mode example
-- `run_demo.py` - Feature demonstration script
+#### **Support Skills**
+- **`help_skill.py`**: Help and support system
 
-## 🔧 Configuration Files
+### **User Interface (`ui/`)**
 
-### Dependencies
-- `requirements.txt` - Production dependencies
-- `requirements-dev.txt` - Development dependencies
+#### **UI Components**
+- **`theme_manager.py`**: Theme management and switching
+- **`animated_status.py`**: Animated status indicators
+- **`progress_widget.py`**: Progress bar widgets
+- **`skill_widget.py`**: Interactive skill buttons
 
-### Project Setup
-- `setup.py` - Python package configuration
-- `.gitignore` - Git ignore rules
-- `LICENSE` - MIT License
+### **Testing (`tests/`)**
 
-### GitHub Integration
-- `.github/workflows/` - CI/CD pipelines
-- `.github/ISSUE_TEMPLATE/` - Issue templates
-- `.github/pull_request_template.md` - PR template
+#### **Core Tests**
+- **`test_basic.py`**: Basic functionality tests
+- **`test_speech_recognition.py`**: Speech recognition tests
+- **`test_voice_assistant_microphone.py`**: Microphone tests
 
-## 📊 File Statistics
+#### **Microphone Tests**
+- **`test_microphone_devices.py`**: Microphone device tests
+- **`test_microphone_volume.py`**: Microphone volume tests
+- **`test_all_microphones.py`**: All microphones tests
+- **`check_microphone_volume.py`**: Microphone volume check
+- **`fix_microphone_windows.py`**: Windows microphone fix
+- **`select_microphone.py`**: Microphone selection
 
-### Code Files
-- **Python Files**: 25+ core files
+#### **Voice Training**
+- **`train_my_voice.py`**: Voice training implementation
+- **`train_voice_auto.py`**: Automatic voice training
+- **`voice_calibration.py`**: Voice calibration
+
+#### **Simple Tests**
+- **`test_simple.py`**: Simple functionality tests
+- **`test_minimal.py`**: Minimal functionality tests
+- **`test_ultra_simple.py`**: Ultra-simple tests
+- **`test_super_simple.py`**: Super-simple tests
+
+#### **Direct Tests**
+- **`test_direct_recognition.py`**: Direct recognition tests
+- **`test_speech_direct.py`**: Direct speech tests
+- **`test_stereo_mix.py`**: Stereo mix tests
+
+### **Documentation (`docs/`)**
+
+#### **User Documentation**
+- **`USER_GUIDE.md`**: Comprehensive user manual
+- **`TROUBLESHOOTING.md`**: Common issues and solutions
+- **`PERFORMANCE.md`**: Performance optimization guide
+
+#### **Developer Documentation**
+- **`API_REFERENCE.md`**: Technical API documentation
+- **`CONTRIBUTING.md`**: Contribution guidelines
+
+#### **Media**
+- **`screenshots/`**: UI screenshots
+- **`demo/`**: Demo videos and examples
+
+### **Examples (`examples/`)**
+
+#### **Usage Examples**
+- **`main_keyboard.py`**: Keyboard input example
+- **`run_demo.py`**: Demo runner
+- **`README.md`**: Examples documentation
+
+### **GitHub Configuration (`.github/`)**
+
+#### **Workflows**
+- **`workflows/ci.yml`**: CI/CD pipeline configuration
+
+## 🔧 **Development Structure**
+
+### **Package Organization**
+- **`__init__.py`**: Package initialization files
+- **`__pycache__/`**: Python bytecode cache
+- **`venv/`**: Virtual environment
+
+### **Dependencies**
+- **`requirements.txt`**: Production dependencies
+- **`requirements-dev.txt`**: Development dependencies
+- **`setup.py`**: Package setup and distribution
+
+### **Configuration**
+- **`pytest.ini`**: Pytest configuration
+- **`.gitignore`**: Git ignore rules
+- **`pyvenv.cfg`**: Virtual environment configuration
+
+## 📊 **File Statistics**
+
+### **Code Distribution**
+- **Python Files**: 50+ files
 - **Documentation**: 10+ markdown files
-- **Tests**: 10+ test files
-- **Examples**: 2+ example scripts
 - **Configuration**: 5+ config files
+- **Tests**: 20+ test files
 
-### Lines of Code
-- **Total**: 6,500+ lines
-- **Core Logic**: 3,000+ lines
-- **UI Code**: 1,500+ lines
-- **Documentation**: 2,000+ lines
+### **Size Distribution**
+- **Core Components**: ~2,000 lines
+- **Skills**: ~3,000 lines
+- **UI Components**: ~1,000 lines
+- **Tests**: ~2,000 lines
+- **Documentation**: ~5,000 lines
 
-## 🎯 Design Principles
+## 🎯 **Best Practices**
 
-### Modularity
-- **Separate concerns** - Each module has a specific purpose
-- **Loose coupling** - Components interact through well-defined interfaces
-- **High cohesion** - Related functionality is grouped together
+### **File Naming**
+- **Snake Case**: Use snake_case for Python files
+- **Descriptive Names**: Use descriptive file names
+- **Consistent Naming**: Maintain consistent naming conventions
 
-### Extensibility
-- **Plugin architecture** - Easy to add new skills
-- **Configuration-driven** - Settings can be modified without code changes
-- **API-based** - Clear interfaces for integration
+### **Directory Organization**
+- **Logical Grouping**: Group related files together
+- **Clear Structure**: Maintain clear directory structure
+- **Separation of Concerns**: Separate different concerns
 
-### Performance
-- **Efficient algorithms** - O(1), O(log n), O(m) complexities
-- **Caching** - LRU cache for frequently accessed data
-- **Lazy loading** - Load components only when needed
+### **Documentation**
+- **README Files**: Include README files in each directory
+- **Inline Comments**: Add inline comments for complex code
+- **Docstrings**: Use docstrings for functions and classes
 
-### Maintainability
-- **Clear structure** - Logical organization of files
-- **Comprehensive documentation** - Every component is documented
-- **Testing** - Comprehensive test coverage
-- **Code quality** - Linting, formatting, type hints
+## 🔄 **Maintenance**
 
-## 🚀 Getting Started
+### **Regular Updates**
+- **Dependencies**: Keep dependencies updated
+- **Documentation**: Update documentation regularly
+- **Tests**: Maintain test coverage
+- **Code Quality**: Ensure code quality standards
 
-### For Users
-1. **Read README.md** - Project overview
-2. **Follow installation guide** - Setup instructions
-3. **Try examples** - Run example scripts
-4. **Read user guide** - Complete usage instructions
-
-### For Developers
-1. **Read CONTRIBUTING.md** - Development guidelines
-2. **Set up development environment** - Install dependencies
-3. **Read API reference** - Technical documentation
-4. **Run tests** - Verify everything works
-5. **Start contributing** - Pick an issue or feature
-
-### For Contributors
-1. **Fork repository** - Create your own copy
-2. **Create feature branch** - Work on your changes
-3. **Follow coding standards** - Use provided guidelines
-4. **Write tests** - Ensure your code works
-5. **Submit pull request** - Share your changes
+### **File Management**
+- **Cleanup**: Remove unused files
+- **Organization**: Keep files organized
+- **Backup**: Regular backup of important files
 
 ---
 
-*This structure is designed to be intuitive, maintainable, and scalable. Each component has a clear purpose and well-defined interfaces.*
+<div align="center">
+
+**For more information, see the [README](README.md) and [Architecture](ARCHITECTURE.md)**
+
+</div>

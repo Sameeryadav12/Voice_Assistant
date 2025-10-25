@@ -1,628 +1,389 @@
-# 🔧 Troubleshooting Guide - Jarvis Voice Assistant
+# 🔧 Troubleshooting Guide
 
-This comprehensive guide helps you solve common issues with the Jarvis Voice Assistant. Follow the solutions step by step for the best results.
+This guide helps you resolve common issues with the Jarvis Voice Assistant.
 
----
+## 🚨 **Quick Fixes**
 
-## 📋 Table of Contents
+### **Application Won't Start**
+1. **Check Python Version**: Ensure Python 3.8+ is installed
+2. **Install Dependencies**: Run `pip install -r requirements.txt`
+3. **Check Permissions**: Run as administrator if needed
+4. **Restart Computer**: Sometimes a restart helps
 
-- [Quick Fixes](#-quick-fixes)
-- [Voice Recognition Issues](#-voice-recognition-issues)
-- [Audio Problems](#-audio-problems)
-- [UI Issues](#-ui-issues)
-- [Performance Problems](#-performance-problems)
-- [Installation Issues](#-installation-issues)
-- [Platform-Specific Issues](#-platform-specific-issues)
-- [Advanced Troubleshooting](#-advanced-troubleshooting)
+### **Voice Recognition Not Working**
+1. **Check Microphone**: Ensure microphone is connected and working
+2. **Allow Microphone Access**: Grant permission when prompted
+3. **Speak Clearly**: Speak at normal volume and pace
+4. **Reduce Background Noise**: Use in quiet environment
 
----
+### **Commands Not Recognized**
+1. **Use Wake Word**: Always start with "Hey Jarvis"
+2. **Speak Clearly**: Enunciate words clearly
+3. **Check Command**: Verify the command is supported
+4. **Try Rephrasing**: Use alternative phrasings
 
-## 🚀 Quick Fixes
+## 🐛 **Common Issues**
 
-### Most Common Issues (90% of problems)
+### **Issue: "ModuleNotFoundError"**
+**Symptoms**: Application crashes with import errors
 
-1. **Microphone too quiet** → Increase microphone boost to +20dB or +30dB
-2. **Not saying wake word** → Always start with "Hey Jarvis"
-3. **Background noise** → Reduce noise or use push-to-talk mode
-4. **Internet connection** → Check internet for Google speech recognition
-
-### Quick Test Commands
-
-```bash
-# Test microphone volume
-python tests/test_microphone_volume.py
-
-# Test speech recognition
-python tests/test_speech_recognition.py
-
-# Use keyboard mode (no microphone needed)
-python main_hybrid.py
-```
-
----
-
-## 🎤 Voice Recognition Issues
-
-### Problem: "Couldn't understand audio" or "Network error"
-
-**Symptoms:**
-- Audio levels are good (10,000+)
-- System captures audio
-- But shows "Google couldn't understand audio" or "Network error"
-
-**Solutions:**
-
-#### Step 1: Check Internet Connection
-```bash
-# Test internet connectivity
-ping google.com
-```
-
-#### Step 2: Verify Speech Recognition
-```bash
-# Test with simple command
-python tests/test_speech_direct.py
-```
-
-#### Step 3: Try Alternative Recognition
-- Use push-to-talk mode: `python main_professional_ui.py`
-- Use keyboard mode: `python main_hybrid.py`
-
-#### Step 4: Check Firewall
-- Allow Python through Windows Firewall
-- Check antivirus isn't blocking network access
-
-### Problem: Wrong words recognized
-
-**Symptoms:**
-- System says words you didn't speak
-- Detects "uh", "what", "but" from silence
-
-**Solutions:**
-1. **Speak more clearly** - Enunciate each word
-2. **Reduce background noise** - Close windows, turn off fans
-3. **Use push-to-talk mode** - Hold button while speaking
-4. **Check microphone quality** - Try different microphone
-5. **Speak at normal pace** - Not too fast or slow
-
-### Problem: Wake word not detected
-
-**Symptoms:**
-- Speech recognized but nothing happens
-- Message: "Wake word not detected in: [your text]"
-
-**Solutions:**
-1. **Always start with "Hey Jarvis"**
-2. **Speak clearly and loudly**
-3. **Try alternatives:**
-   - "Jarvis"
-   - "Hey Assistant"
-   - "Assistant"
-4. **Pause briefly** after wake word
-
-**Example:**
-```
-✅ "Hey Jarvis" [pause] "what time is it?"
-❌ "what time is it?" (missing wake word)
-```
-
----
-
-## 🎵 Audio Problems
-
-### Problem: Microphone not detected
-
-**Symptoms:**
-- Error: "No default input device"
-- Error: "Failed to start audio recording"
-- Error: "No microphone found"
-
-**Solutions:**
-
-#### Step 1: Check Hardware
-1. **Verify microphone is plugged in**
-2. **Check microphone is not muted**
-3. **Try different USB port** (for USB microphones)
-4. **Test microphone in other applications**
-
-#### Step 2: Windows Sound Settings
-1. **Right-click speaker icon** (taskbar)
-2. **Click "Open Sound settings"**
-3. **Scroll to "Input" section**
-4. **Select your microphone** from dropdown
-5. **Test microphone** - speak and watch blue bar
-
-#### Step 3: Device Manager
-1. **Open Device Manager**
-2. **Expand "Audio inputs and outputs"**
-3. **Right-click microphone** → "Enable device"
-4. **Update drivers** if needed
-
-### Problem: Audio level too low
-
-**Symptoms:**
-- Test shows level: 1-1000 (need 10,000+)
-- Message: "ALMOST SILENT" or "TOO QUIET"
-- Assistant captures audio but doesn't recognize speech
-
-**Solutions (Do ALL steps):**
-
-#### Step A: Basic Volume
-1. **Right-click speaker icon** (taskbar)
-2. **Click "Open Sound settings"**
-3. **Scroll to "Input" section**
-4. **Move volume slider to 100%**
-5. **Speak** - you should see blue bar moving significantly
-
-#### Step B: Microphone Boost (CRITICAL)
-1. **In Sound settings, click "Device properties"**
-2. **Click "Additional device properties"**
-3. **Go to "Levels" tab**
-4. **Set Microphone: 100**
-5. **Set Microphone Boost: +20dB or +30dB**
-6. **Click OK**
-7. **Click OK again**
-
-#### Step C: Advanced Settings
-1. **In "Additional device properties"**
-2. **Go to "Advanced" tab**
-3. **Uncheck "Allow applications to take exclusive control"**
-4. **Set Default Format to "1 channel, 16 bit, 16000 Hz"**
-5. **Click OK**
-
-#### Step D: Verify Fix
-```bash
-python tests/test_microphone_volume.py
-```
-**Expected:** Levels above 10,000 when speaking
-
-### Problem: Audio feedback or echo
-
-**Symptoms:**
-- Echo or feedback when speaking
-- Microphone picks up speaker output
-
-**Solutions:**
-1. **Use headphones** instead of speakers
-2. **Reduce speaker volume**
-3. **Move microphone away from speakers**
-4. **Use push-to-talk mode** to control when listening
-
----
-
-## 🖥️ UI Issues
-
-### Problem: Interface looks broken or distorted
-
-**Symptoms:**
-- Buttons not displaying correctly
-- Colors look wrong
-- Layout is broken
-
-**Solutions:**
-
-#### Step 1: Update CustomTkinter
-```bash
-pip install --upgrade customtkinter
-```
-
-#### Step 2: Check Python Version
-```bash
-python --version
-# Should be 3.8 or higher
-```
-
-#### Step 3: Clear Cache
-```bash
-# Clear Python cache
-find . -type d -name "__pycache__" -delete
-find . -name "*.pyc" -delete
-```
-
-#### Step 4: Reinstall Dependencies
-```bash
-pip uninstall customtkinter
-pip install customtkinter
-```
-
-### Problem: Buttons not responding
-
-**Symptoms:**
-- Clicking buttons does nothing
-- UI freezes or becomes unresponsive
-
-**Solutions:**
-1. **Restart the application**
-2. **Check for error messages** in console
-3. **Use keyboard mode** as backup: `python main_hybrid.py`
-4. **Update graphics drivers**
-
-### Problem: Conversation not scrolling
-
-**Symptoms:**
-- New messages appear but don't auto-scroll
-- Have to manually scroll to see responses
-
-**Solutions:**
-1. **Restart the application** - this should auto-scroll
-2. **Check if scroll bar is visible**
-3. **Try clicking in conversation area**
-4. **Use keyboard mode** if UI issues persist
-
----
-
-## ⚡ Performance Problems
-
-### Problem: Slow response or lag
-
-**Symptoms:**
-- Takes long time to respond to commands
-- UI is slow or unresponsive
-- High CPU or memory usage
-
-**Solutions:**
-
-#### Step 1: Check System Resources
-```bash
-# Check memory usage
-python -c "import psutil; print(f'Memory: {psutil.virtual_memory().percent}%')"
-
-# Check CPU usage
-python -c "import psutil; print(f'CPU: {psutil.cpu_percent()}%')"
-```
-
-#### Step 2: Close Other Applications
-- Close unnecessary programs
-- Free up memory and CPU
-- Check for background processes
-
-#### Step 3: Optimize Settings
-1. **Reduce audio quality** if needed
-2. **Disable animations** in settings
-3. **Use keyboard mode** for better performance
-
-#### Step 4: Restart Application
-```bash
-# Kill any running instances
-taskkill /f /im python.exe
-
-# Restart
-python main_professional_ui.py
-```
-
-### Problem: High memory usage
-
-**Symptoms:**
-- Memory usage keeps increasing
-- Application becomes slower over time
-- System runs out of memory
-
-**Solutions:**
-1. **Restart application** periodically
-2. **Clear conversation history** (Clear button)
-3. **Close unused applications**
-4. **Check for memory leaks** in logs
-
----
-
-## 📦 Installation Issues
-
-### Problem: "Module not found" errors
-
-**Symptoms:**
-- ImportError: No module named 'customtkinter'
-- ImportError: No module named 'speech_recognition'
-- ImportError: No module named 'numpy'
-
-**Solutions:**
-
-#### Step 1: Check Virtual Environment
-```bash
-# Activate virtual environment
-.\venv\Scripts\Activate.ps1
-
-# Check if packages are installed
-pip list
-```
-
-#### Step 2: Install Missing Packages
-```bash
-# Install all requirements
-pip install -r requirements.txt
-
-# Or install specific package
-pip install customtkinter
-pip install speech_recognition
-pip install numpy
-```
-
-#### Step 3: Check Python Version
-```bash
-python --version
-# Should be 3.8 or higher
-```
-
-### Problem: Permission errors during installation
-
-**Symptoms:**
-- Permission denied errors
-- Access denied when installing packages
-- Administrator required
-
-**Solutions:**
-1. **Run as Administrator**
-2. **Use virtual environment** (recommended)
-3. **Check antivirus** isn't blocking installation
-4. **Try user installation**: `pip install --user package_name`
-
-### Problem: Package installation fails
-
-**Symptoms:**
-- pip install fails with errors
-- Package compilation errors
-- Network timeout errors
-
-**Solutions:**
-
-#### Step 1: Update pip
-```bash
-python -m pip install --upgrade pip
-```
-
-#### Step 2: Use different package source
-```bash
-pip install -i https://pypi.org/simple/ package_name
-```
-
-#### Step 3: Install pre-compiled packages
-```bash
-pip install --only-binary=all package_name
-```
-
----
-
-## 🖥️ Platform-Specific Issues
-
-### Windows Issues
-
-#### Problem: PyAudio installation fails
-**Solution:**
-```bash
-# Install Microsoft Visual C++ Build Tools first
-# Then install PyAudio
-pip install pipwin
-pipwin install pyaudio
-```
-
-#### Problem: Windows Defender blocks Python
-**Solution:**
-1. **Add Python to exclusions** in Windows Defender
-2. **Add project folder** to exclusions
-3. **Allow Python through firewall**
-
-#### Problem: PowerShell execution policy
-**Solution:**
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-### macOS Issues
-
-#### Problem: PortAudio not found
-**Solution:**
-```bash
-# Install PortAudio using Homebrew
-brew install portaudio
-pip install pyaudio
-```
-
-#### Problem: Permission denied for microphone
-**Solution:**
-1. **System Preferences** → **Security & Privacy**
-2. **Privacy** tab → **Microphone**
-3. **Check Python** or **Terminal** in the list
-
-### Linux Issues
-
-#### Problem: Audio system not found
-**Solution:**
-```bash
-# Install ALSA development files
-sudo apt-get install portaudio19-dev python3-pyaudio
-
-# Or for other distributions
-sudo yum install portaudio-devel python3-pyaudio
-```
-
-#### Problem: Permission denied for audio
-**Solution:**
-```bash
-# Add user to audio group
-sudo usermod -a -G audio $USER
-# Log out and back in
-```
-
----
-
-## 🔧 Advanced Troubleshooting
-
-### Debug Mode
-
-Enable debug mode for detailed logging:
-
-```python
-# Add to main_professional_ui.py
-import logging
-logging.basicConfig(level=logging.DEBUG)
-```
-
-### Check System Logs
-
-#### Windows Event Viewer
-1. **Open Event Viewer**
-2. **Windows Logs** → **Application**
-3. **Look for Python errors**
-
-#### Console Output
-Look for these patterns in console:
-
-**Good (Working):**
-```
-[ENHANCE AUDIO] Original audio max level: 15234
-[SPEECH RECOG] Google result: 'hey sigma what time is it'
-[AUDIO CALLBACK] Valid speech detected
-```
-
-**Bad (Too Quiet):**
-```
-[ENHANCE AUDIO] Original audio max level: 1
-[ENHANCE AUDIO] Audio too quiet, rejecting as noise
-[PROCESS BUFFER] Audio rejected as noise
-```
-
-### Performance Profiling
-
-```python
-# Add to main_professional_ui.py
-import cProfile
-import pstats
-
-def profile_performance():
-    profiler = cProfile.Profile()
-    profiler.enable()
-    
-    # Your code here
-    
-    profiler.disable()
-    stats = pstats.Stats(profiler)
-    stats.sort_stats('cumulative')
-    stats.print_stats(10)
-```
-
-### Memory Leak Detection
-
-```python
-# Add to main_professional_ui.py
-import tracemalloc
-
-def check_memory():
-    tracemalloc.start()
-    # Your code here
-    current, peak = tracemalloc.get_traced_memory()
-    print(f"Current memory: {current / 1024 / 1024:.1f} MB")
-    print(f"Peak memory: {peak / 1024 / 1024:.1f} MB")
-    tracemalloc.stop()
-```
-
----
-
-## 🆘 Emergency Fallback
-
-### If Nothing Works
-
-1. **Use keyboard mode:**
+**Solutions**:
+1. **Install Dependencies**:
    ```bash
-   python main_hybrid.py
+   pip install -r requirements.txt
    ```
 
-2. **Use original mode:**
+2. **Check Virtual Environment**:
    ```bash
-   python main.py
+   # Activate virtual environment
+   venv\Scripts\activate  # Windows
+   source venv/bin/activate  # macOS/Linux
    ```
 
-3. **Check system requirements:**
-   - Windows 10/11
-   - Python 3.8+
-   - Working microphone
-   - Internet connection
-   - Speakers for TTS output
+3. **Update pip**:
+   ```bash
+   python -m pip install --upgrade pip
+   ```
 
-### Get Help
+### **Issue: "Microphone not detected"**
+**Symptoms**: No audio input, microphone errors
 
-1. **Check GitHub Issues:** [Report bugs](https://github.com/yourusername/sigma-voice-assistant/issues)
-2. **GitHub Discussions:** [Ask questions](https://github.com/yourusername/sigma-voice-assistant/discussions)
-3. **Documentation:** [Read guides](docs/)
-4. **Community:** [Join discussions](https://github.com/yourusername/sigma-voice-assistant/discussions)
+**Solutions**:
+1. **Check Microphone Connection**:
+   - Ensure microphone is properly connected
+   - Check if microphone is working in other applications
+
+2. **Allow Microphone Access**:
+   - Windows: Go to Settings > Privacy > Microphone
+   - macOS: System Preferences > Security & Privacy > Microphone
+   - Linux: Check audio permissions
+
+3. **Test Microphone**:
+   ```python
+   import speech_recognition as sr
+   r = sr.Recognizer()
+   with sr.Microphone() as source:
+       print("Speak now...")
+       audio = r.listen(source)
+   ```
+
+### **Issue: "I couldn't help with that"**
+**Symptoms**: Commands not being recognized
+
+**Solutions**:
+1. **Check Wake Word**:
+   - Always start with "Hey Jarvis"
+   - Try "Jarvis" or "Assistant"
+
+2. **Speak Clearly**:
+   - Speak at normal volume
+   - Enunciate words clearly
+   - Reduce background noise
+
+3. **Check Command Format**:
+   - Use supported commands
+   - Check spelling and grammar
+   - Try alternative phrasings
+
+### **Issue: "Application crashes on startup"**
+**Symptoms**: Application closes immediately after starting
+
+**Solutions**:
+1. **Check Python Version**:
+   ```bash
+   python --version
+   # Should be 3.8 or higher
+   ```
+
+2. **Install Missing Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   pip install -r requirements-dev.txt
+   ```
+
+3. **Check System Requirements**:
+   - Windows 10/11, macOS 10.14+, or Linux
+   - 4GB RAM minimum
+   - 1GB free disk space
+
+4. **Run in Debug Mode**:
+   ```bash
+   python -u main_professional_ui.py
+   ```
+
+### **Issue: "Theme switching causes crashes"**
+**Symptoms**: Application crashes when changing themes
+
+**Solutions**:
+1. **Update CustomTkinter**:
+   ```bash
+   pip install --upgrade customtkinter
+   ```
+
+2. **Check Theme Files**:
+   - Ensure theme files are not corrupted
+   - Reinstall if necessary
+
+3. **Use Default Theme**:
+   - Start with Professional Dark theme
+   - Change themes gradually
+
+### **Issue: "WhatsApp not opening"**
+**Symptoms**: WhatsApp commands not working
+
+**Solutions**:
+1. **Check WhatsApp Installation**:
+   - Ensure WhatsApp desktop app is installed
+   - Check installation path
+
+2. **Try Alternative Methods**:
+   - Use WhatsApp Web as fallback
+   - Check browser permissions
+
+3. **Update Dependencies**:
+   ```bash
+   pip install --upgrade pyautogui
+   ```
+
+### **Issue: "Weather showing wrong location"**
+**Symptoms**: Weather shows incorrect location
+
+**Solutions**:
+1. **Check Internet Connection**:
+   - Ensure stable internet connection
+   - Check firewall settings
+
+2. **Update Location Services**:
+   - Allow location access
+   - Check IP geolocation
+
+3. **Specify Location**:
+   - Use "weather in [city]" command
+   - Check city name spelling
+
+### **Issue: "File operations not working"**
+**Symptoms**: File commands not executing
+
+**Solutions**:
+1. **Check File Permissions**:
+   - Ensure read/write permissions
+   - Run as administrator if needed
+
+2. **Check File Paths**:
+   - Use correct file paths
+   - Avoid special characters
+
+3. **Update Dependencies**:
+   ```bash
+   pip install --upgrade psutil
+   ```
+
+## 🔍 **Debugging Steps**
+
+### **Step 1: Check Logs**
+1. **Run with Verbose Output**:
+   ```bash
+   python -u main_professional_ui.py
+   ```
+
+2. **Check Console Output**:
+   - Look for error messages
+   - Note any warnings
+
+3. **Check Log Files**:
+   - Look for log files in the project directory
+   - Check system event logs
+
+### **Step 2: Test Components**
+1. **Test Voice Recognition**:
+   ```python
+   import speech_recognition as sr
+   r = sr.Recognizer()
+   with sr.Microphone() as source:
+       print("Speak now...")
+       audio = r.listen(source)
+       text = r.recognize_google(audio)
+       print(f"You said: {text}")
+   ```
+
+2. **Test Text-to-Speech**:
+   ```python
+   import pyttsx3
+   engine = pyttsx3.init()
+   engine.say("Hello, this is a test")
+   engine.runAndWait()
+   ```
+
+3. **Test Skills**:
+   ```python
+   from skills.weather_news_skill import WeatherNewsSkill
+   skill = WeatherNewsSkill()
+   context = SkillContext("what's the weather")
+   result = skill.execute(context)
+   print(result.message)
+   ```
+
+### **Step 3: System Diagnostics**
+1. **Check System Resources**:
+   - CPU usage
+   - Memory usage
+   - Disk space
+
+2. **Check Network Connection**:
+   - Internet connectivity
+   - API access
+   - Firewall settings
+
+3. **Check Audio System**:
+   - Microphone functionality
+   - Speaker functionality
+   - Audio drivers
+
+## 🛠️ **Advanced Troubleshooting**
+
+### **Performance Issues**
+1. **Close Other Applications**:
+   - Free up system resources
+   - Close unnecessary programs
+
+2. **Check System Requirements**:
+   - Ensure minimum requirements are met
+   - Consider upgrading hardware
+
+3. **Optimize Settings**:
+   - Reduce voice recognition sensitivity
+   - Disable unnecessary features
+
+### **Memory Issues**
+1. **Check Memory Usage**:
+   ```python
+   import psutil
+   print(f"Memory usage: {psutil.virtual_memory().percent}%")
+   ```
+
+2. **Restart Application**:
+   - Close and reopen the application
+   - Clear memory cache
+
+3. **Update Dependencies**:
+   - Update all packages
+   - Check for memory leaks
+
+### **Network Issues**
+1. **Check Internet Connection**:
+   ```bash
+   ping google.com
+   ```
+
+2. **Check API Access**:
+   - Test weather API
+   - Test translation API
+   - Check firewall settings
+
+3. **Use Offline Mode**:
+   - Disable internet-dependent features
+   - Use local functionality only
+
+## 📞 **Getting Help**
+
+### **Before Asking for Help**
+1. **Check This Guide**: Look for your issue in this guide
+2. **Search Issues**: Check GitHub issues for similar problems
+3. **Try Solutions**: Attempt the suggested solutions
+4. **Gather Information**: Collect error messages and logs
+
+### **When Reporting Issues**
+1. **Include System Information**:
+   - Operating system and version
+   - Python version
+   - Application version
+
+2. **Describe the Problem**:
+   - What you were trying to do
+   - What happened instead
+   - Error messages received
+
+3. **Include Logs**:
+   - Console output
+   - Error messages
+   - System logs
+
+4. **Provide Steps to Reproduce**:
+   - Detailed steps to reproduce the issue
+   - Expected vs actual behavior
+
+### **Contact Information**
+- **GitHub Issues**: [Report Issues](https://github.com/yourusername/jarvis-voice-assistant/issues)
+- **GitHub Discussions**: [Community Help](https://github.com/yourusername/jarvis-voice-assistant/discussions)
+- **Email**: support@jarvis-assistant.com
+
+## 🔄 **Recovery Options**
+
+### **Reset to Default Settings**
+1. **Delete Configuration Files**:
+   - Remove `config.json`
+   - Remove `settings.json`
+
+2. **Reinstall Dependencies**:
+   ```bash
+   pip uninstall -r requirements.txt -y
+   pip install -r requirements.txt
+   ```
+
+3. **Fresh Installation**:
+   - Delete project directory
+   - Clone repository again
+   - Follow installation guide
+
+### **Backup and Restore**
+1. **Backup Data**:
+   - Save notes and tasks
+   - Export configuration
+   - Backup custom skills
+
+2. **Restore Data**:
+   - Import saved data
+   - Restore configuration
+   - Reinstall custom skills
+
+## 📋 **Prevention Tips**
+
+### **Regular Maintenance**
+1. **Update Dependencies**:
+   - Check for updates monthly
+   - Update Python packages
+   - Keep system updated
+
+2. **Clean Up**:
+   - Remove old log files
+   - Clear temporary files
+   - Clean up unused data
+
+3. **Monitor Performance**:
+   - Check system resources
+   - Monitor application performance
+   - Watch for errors
+
+### **Best Practices**
+1. **Use Virtual Environment**:
+   - Isolate dependencies
+   - Avoid conflicts
+   - Easy cleanup
+
+2. **Regular Backups**:
+   - Backup important data
+   - Save configuration
+   - Keep copies of customizations
+
+3. **Stay Updated**:
+   - Follow project updates
+   - Read release notes
+   - Participate in community
 
 ---
 
-## 📊 Common Error Messages
+<div align="center">
 
-| Error Message | Meaning | Solution |
-|---------------|---------|----------|
-| `"No default input device"` | Microphone not detected | Check microphone connection |
-| `"Audio too quiet"` | Microphone volume too low | Increase microphone boost |
-| `"Google couldn't understand audio"` | Speech not clear | Speak louder, reduce noise |
-| `"Wake word not detected"` | Missing "Hey Jarvis" | Always start with wake word |
-| `"Network error"` | Internet connection issue | Check internet connection |
-| `"Module not found"` | Missing dependency | Install required packages |
-| `"Permission denied"` | Access rights issue | Run as administrator |
+**Need more help? Check the [User Guide](USER_GUIDE.md) or [API Reference](API_REFERENCE.md)**
 
----
-
-## 🎯 Prevention Tips
-
-### Regular Maintenance
-1. **Restart application** daily
-2. **Clear conversation history** weekly
-3. **Update dependencies** monthly
-4. **Check system resources** regularly
-
-### Best Practices
-1. **Use push-to-talk mode** in noisy environments
-2. **Speak clearly and at normal pace**
-3. **Keep microphone clean and positioned correctly**
-4. **Close unnecessary applications**
-5. **Keep system updated**
-
----
-
-## 📈 Performance Optimization
-
-### System Optimization
-1. **Close unnecessary programs**
-2. **Disable startup programs**
-3. **Update graphics drivers**
-4. **Free up disk space**
-5. **Defragment hard drive**
-
-### Application Optimization
-1. **Use keyboard mode** for better performance
-2. **Disable animations** if needed
-3. **Reduce audio quality** if necessary
-4. **Clear conversation history** regularly
-5. **Restart application** periodically
-
----
-
-## 🎉 Success Indicators
-
-### When Everything is Working:
-- **Microphone levels:** 10,000+ when speaking
-- **Speech recognition:** Clear text output
-- **Wake word detection:** "Hey Jarvis" recognized
-- **Response time:** < 2 seconds
-- **UI responsiveness:** Smooth and fast
-- **Memory usage:** < 200MB
-- **CPU usage:** < 10%
-
-### Test Commands:
-```bash
-# Test microphone
-python tests/test_microphone_volume.py
-
-# Test speech recognition
-python tests/test_speech_recognition.py
-
-# Test full system
-python main_professional_ui.py
-```
-
----
-
-**Remember:** Most issues (90%) are caused by microphone volume/boost being too low. Always check this first!
-
-For more help, see:
-- [User Guide](USER_GUIDE.md)
-- [API Reference](API_REFERENCE.md)
-- [Performance Guide](PERFORMANCE.md)
+</div>

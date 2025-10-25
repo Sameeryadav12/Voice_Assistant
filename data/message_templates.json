@@ -1,0 +1,20 @@
+{
+  "templates": [
+    {
+      "name": "greeting",
+      "text": "Hello! How are you doing?"
+    },
+    {
+      "name": "meeting",
+      "text": "Hi! Can we schedule a meeting for tomorrow?"
+    },
+    {
+      "name": "thanks",
+      "text": "Thank you for your help!"
+    },
+    {
+      "name": "reminder",
+      "text": "Don't forget about our appointment today."
+    }
+  ]
+}
