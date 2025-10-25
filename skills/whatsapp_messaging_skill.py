@@ -71,18 +71,12 @@ class WhatsAppMessagingSkill(BaseSkill):
         """Check if this skill can handle the request."""
         user_input = context.user_input.lower()
         
-        # Debug output
-        print(f"[WhatsApp] Checking: '{user_input}'")
-        
-        # WhatsApp keywords - more specific and comprehensive
+        # WhatsApp keywords - very specific to avoid conflicts
         whatsapp_keywords = [
-            "whatsapp", "send message", "message", "text", "sms",
-            "send whatsapp", "whatsapp message", "send text", "open whatsapp",
-            "launch whatsapp", "start whatsapp", "whatsapp app", "messaging",
-            "send a message", "send message to", "text someone", "message someone",
-            "open whatsapp", "launch whatsapp", "start whatsapp", "whatsapp",
-            "send message to someone", "send a message to someone", "text someone",
-            "message someone", "send", "text", "message"
+            "whatsapp", "send whatsapp", "whatsapp message", "open whatsapp",
+            "launch whatsapp", "start whatsapp", "whatsapp app", "whatsapp web",
+            "send message to", "text someone", "message someone", "send a message to",
+            "send message to someone", "send a message to someone", "whatsapp message to"
         ]
         
         # Contact keywords - removed as requested
@@ -98,10 +92,7 @@ class WhatsAppMessagingSkill(BaseSkill):
         has_contact = any(keyword in user_input for keyword in contact_keywords)
         has_template = any(keyword in user_input for keyword in template_keywords)
         
-        result = has_whatsapp or has_contact or has_template
-        print(f"[WhatsApp] Result: {result} (whatsapp: {has_whatsapp}, contact: {has_contact}, template: {has_template})")
-        
-        return result
+        return has_whatsapp or has_contact or has_template
     
     def execute(self, context: SkillContext) -> SkillResult:
         """Execute WhatsApp/messaging functionality."""
